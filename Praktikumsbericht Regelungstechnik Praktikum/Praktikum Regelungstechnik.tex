@@ -34,6 +34,9 @@ Als Startwerte wurde gegeben:
 \begin{align}
    	c &= 1
 \end{align}
+\begin{align}
+   	k &= 300  \\\\ T& = 0,1
+\end{align}
 
 	
 	
@@ -52,21 +55,30 @@ Als Startwerte wurde gegeben:
 	\caption{Modell des Motors als Blockschaltbild}
 	\label{img:grafik-dummy}
 \end{figure}
-\item Gebautes Simulink Modell:
+\end{itemize}
+
+%Version von Jonas und Christian vom 24.07.2019
+
+\subsection{Aufgabe a) Gebautes Simulink Modell}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{SimulinkModell.jpeg}
-	\caption{in Simulink gebautes Modell des Systems des Roboterarms}
+	\caption{In Simulink gebautes Modell des Systems des Roboterarms}
 	\label{img:grafik-dummy}
 \end{figure}
-\end{itemize}
 
-%Aufgabe a
-\subsection{Aufgabe a)}
-
-
+%Version von Jonas und Christian vom 24.07.2019
 
 \subsection{Aufgabe b)}
+Das System wird simuliert und die Zustandsgrößen werden über einen Zeitverlauf dargestellt. Dabei entstehen folgende Diagramme:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{WinkelanzeigeinGrad3b.jpeg}
+	\caption{Darstellung des Winkels für eine anfängliche Auslenkung von 40 Grad. }
+	\label{img:grafik-dummy}
+\end{figure}
+Aus dem Diagramm Figure 4 geht hervor, dass das System ein ungeregelt stabiles System darstellt, welches eine Ruhelage bei 0\,$^\circ$ annehmen kann, wenn vorher keine Auslenkung vorgenommen wurde. Hier geht die Auslenkung auf keinen stationären Endwert, da die Expotentialfunktion zur Beschreibung der Dämpfung niemals null wird. In einem Realen System wird hier aber wahrscheinlich ein Stillstand nach beliebig langer Wartezeit eintreten, wenn der Roboterarm die Haftreibung nicht mehr Überwinden kann und die Bewegung im Aperiodischen Grenzfall endet.
 
 \subsection{Aufgabe c)}
 
