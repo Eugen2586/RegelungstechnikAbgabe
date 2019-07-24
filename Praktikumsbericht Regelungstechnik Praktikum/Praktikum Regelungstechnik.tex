@@ -131,6 +131,20 @@ u(t)  &= \binom{0\,\,\,\,\,\,\,\,\, für\,\, t<1}{0.18\,\, für\,\, t \geq 1}
 	\label{img:grafik-dummy}
 \end{figure}
 
+zu 3d:
+Anders als im Versuch 9.3c befindet sich der Roboterarm nun zum Zeitpunkt
+t = 0 nicht mehr in der Ruhelage bei einem Winkel von 0\,$^\circ$, sondern in einem 
+Winkel von 40\,$^\circ$. Dies hat zur Folge, dass der Arm zunächst 
+in der Zeit bis t = 1*s
+sowie in der darauffolgenden Sättigungszeit des pt1 Gliedes,
+das den Motor beschreibt, zurückschwingen kann.
+Sobald das Drehmoment des Motors aufgebaut ist legt der Roboterarm 
+an Geschwindigkeit zu und überschreitet dabei sogar die kritische 180\,$^\circ$
+Marke, ab der der Arm nicht mehr zurückschwingt, sondern einen Überschlag
+vollführt und weiter an Geschwindigkeit gewinnt.
+Da es sich bei dem betrachtetet Roboterarm um ein gedämpftes Model
+handelt, geht die Gewschwindigkeit in eine Sättigung über, bis diese um
+einen konstanten Wert fluktuiert.
  %$ \alpha\beta\gamma\delta\epsilon\varepsilon\zeta\eta\theta\vartheta\iota\kappa\lambda\mu\nu\xi\pi
  %\varpi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega\Gamma\Delta\Theta\Lambda\Xi
  %\Pi\Sigma\Upsilon\Phi\Psi\Omega $
@@ -152,4 +166,11 @@ u(t)  &= \binom{0\,\,\,\,\,\,\,\,\, für\,\, t<1}{0.18\,\, für\,\, t \geq 1}
 %	\label{img:grafik-dummy}
 %\end{figure}
 Hallo
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.2\textwidth]{untitled1.fig}
+	\caption{Darstellung des Winkels für eine anfängliche Auslenkung von 40 Grad. }
+	\label{img:grafik-dummy}
+\end{figure}
+
 \end{document}
