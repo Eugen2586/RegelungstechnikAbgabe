@@ -3,7 +3,7 @@ Hier die Abgabe zum RegelungstechnikPraktikum der Universität Kassel
 
 Hallo Leute, hier können wir mit Github alle Änderungen an unserer Abgabe sammeln. 
 
-#Hinweise zum Thema: Wie schreibe ich was?
+# Hinweise zum Thema: Wie schreibe ich was?
 
 Überschriften bauen:
 
@@ -11,17 +11,17 @@ Hallo Leute, hier können wir mit Github alle Änderungen an unserer Abgabe samm
 \subsection{Unterüberschrift}
 \subsubsection{Unterunterüberschrift}
 
-#Nummerierungen
+# Nummerierungen
 \begin{enumerate}
 \item Hier einfach reinschreiben
 \end{enumerate}
 
-#Aufzählung
+# Aufzählung
 \begin{itemize}
 \item
 \end{itemize}
 
-#Bild einfügen
+# Bild einfügen
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Hier den Namen der Datei einfügen}
