@@ -8,6 +8,7 @@
 \usepackage{amsfonts}   
 \usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage{epstopdf}
 
  
 \begin{document}
@@ -75,9 +76,10 @@ Für alle in diesem Bereich folgenden Auswertungen gibt folgende Farbkonvention
 \subsection{Aufgabe b)}
 Das System wird simuliert und die Zustandsgrößen werden über einen Zeitverlauf dargestellt. Dabei entstehen folgende Diagramme:
 
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{WinkelanzeigeinGrad3b.jpeg}
+	\includegraphics[width=1\textwidth]{9b}
 	\caption{Darstellung des Winkels für eine anfängliche Auslenkung von 40 Grad. }
 	\label{img:grafik-dummy}
 \end{figure}
@@ -96,7 +98,7 @@ u(t)  &= \binom{0\,\,\,\,\,\,\,\,\, für\,\, t<1}{0.17\,\, für\,\, t \geq 1}
 \end{align}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Aufgabe9c.jpeg}
+	\includegraphics[width=0.8\textwidth]{9c}
 	\caption{Darstellung des Winkels für eine anfängliche Auslenkung von 40 Grad. }
 	\label{img:grafik-dummy}
 \end{figure}
@@ -119,7 +121,7 @@ um die neue Ruhelage in eben diese auslenkt . Diese neue Ruhelage hängt von dem
 %Das Simulinkmodell des Roboterarms wird für die entsprechende Schaltung verändert. Alle Veränderungen werden in dieser Grafik dokumentiert.
 %Danach wird das Modell linearisiert und das dann entstehende Ergebnis wird
 
-\subsection{Aufgabe d}
+\subsection{Aufgabe d)}
 \begin{align}
 \varphi  (0) &= 0 \\
 \dot \varphi (0) &= 0 \\
@@ -132,12 +134,11 @@ u(t)  &= \binom{0\,\,\,\,\,\,\,\,\, für\,\, t<1}{0.18\,\, für\,\, t \geq 1}
 	\label{img:grafik-dummy}
 \end{figure}
 
-zu 3d:
 Anders als im Versuch 9.3c befindet sich der Roboterarm nun zum Zeitpunkt
 t = 0 nicht mehr in der Ruhelage bei einem Winkel von 0\,$^\circ$, sondern in einem 
 Winkel von 40\,$^\circ$. Dies hat zur Folge, dass der Arm zunächst 
 in der Zeit bis t = 1*s
-sowie in der darauffolgenden Sättigungszeit des pt1 Gliedes,
+sowie in der darauffolgenden Sättigungszeit des PT1-Gliedes,
 das den Motor beschreibt, zurückschwingen kann.
 Sobald das Drehmoment des Motors aufgebaut ist legt der Roboterarm 
 an Geschwindigkeit zu und überschreitet dabei sogar die kritische 180\,$^\circ$
@@ -145,10 +146,36 @@ Marke, ab der der Arm nicht mehr zurückschwingt, sondern einen Überschlag
 vollführt und weiter an Geschwindigkeit gewinnt.
 Da es sich bei dem betrachtetet Roboterarm um ein gedämpftes Model
 handelt, geht die Gewschwindigkeit in eine Sättigung über, bis diese um
-einen konstanten Wert fluktuiert.
+einen konstanten Wert fluktuiert. 
+
+\subsubsection{Hinweis:}
+
+Für alle weiteren Betrachtungen wird nicht die gegebene Musterlösung sondern die Lösung unserer Gruppe verwendet, da sich diese mit der Mathlab Version und den gegebenen Simulationsparametern von uns auch nachvollziehen lässt und damit die Korrektheit darstellbar bleibt.
+\begin{align}
+   G_s = \frac{428.6}{(s^3 + 10.14*s^2 + 8.944*s + 75.15)} 
+\end{align}
  %$ \alpha\beta\gamma\delta\epsilon\varepsilon\zeta\eta\theta\vartheta\iota\kappa\lambda\mu\nu\xi\pi
  %\varpi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega\Gamma\Delta\Theta\Lambda\Xi
  %\Pi\Sigma\Upsilon\Phi\Psi\Omega $
+
+
+\subsection{Aufgabe e)}
+Um zu überprüfen, ob der Motor bei einem Arm bei einem Eingangssignal von eine Ruhelage bei 40\,$^\circ$ zur Einstellung bringt. Wird dies in Mathlab mit folgendem Eingangssignal geprüft:
+
+\begin{align}
+   u_0 = \frac{m*g*l* sin( \varphi (0))}{300} = 0,1471
+\end{align}
+Dies entspricht einem Drehmoment von 44,1402 Nm. Dieses Drehmoment wird im Modell als Konstante Eingangsgröße Augegebenen. Der resultierende Winkel wird dann in Grad angegeben und sollte entsprechend der Erwartung einen Winkel von 40\,$^\circ$ entsprechen.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.2\textwidth]{Aufgabe9e}
+	\caption{Darstelung des Winkelgraphen bei einem gegebenen Drehmoment}
+	\label{img:grafik-dummy}
+\end{figure}
+An dem Diagramm ist explizit zu sehen, dass es sich bei der Auslenkung durch das Drehmoment u \textsubscript{0} einstellt. Diese Auslenkung entspricht im Mitte. einem Wert von 0,6971 Rad. Daraus ergibt sich eine neue Auslenkung von 40\,$^\circ$. Damit wird die Angabe aus dem Aufgabenscript bestätigt.
+
+
+\subsection{Aufgabe f)}
 
 
 
@@ -158,6 +185,21 @@ einen konstanten Wert fluktuiert.
 \section{Versuch Schwebekörper}
 
 \section{Versuch Kran}
+\subsubsection{Aufbau}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.2\textwidth]{BeschreibungDesKrans.png}
+	\caption{Darstellung des Krans aus dem Script Regelung eines Brückenkrans vom 18.02.2019 des Fachbereichs Regelungstechnik der Universität Kassel}
+	\label{img:grafik-dummy}
+\end{figure}
+
+
+
+\subsubsection{Durchführung}
+
+\subsubsection{Messung}
+
+\subsubsection{Ergebnis}
 
 %Modell zum Einfügen eines Bildes
 %\begin{figure}[H]
@@ -166,12 +208,6 @@ einen konstanten Wert fluktuiert.
 %	\caption{Teamlogo: Team A}
 %	\label{img:grafik-dummy}
 %\end{figure}
-Hallo
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1.2\textwidth]{untitled1.fig}
-	\caption{Darstellung des Winkels für eine anfängliche Auslenkung von 40 Grad. }
-	\label{img:grafik-dummy}
-\end{figure}
+
 
 \end{document}
