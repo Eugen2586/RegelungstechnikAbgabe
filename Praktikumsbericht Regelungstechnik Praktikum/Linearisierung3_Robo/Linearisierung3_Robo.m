@@ -47,7 +47,8 @@ G_Ps=Kr;
 
 %ltiview;
 %simulink;
-%sisotool;
+
+sisotool;
 
 
 %Resultat:
