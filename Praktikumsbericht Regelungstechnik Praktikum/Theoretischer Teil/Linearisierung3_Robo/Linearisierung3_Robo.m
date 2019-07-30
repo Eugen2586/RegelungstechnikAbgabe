@@ -40,7 +40,7 @@ G_PIs=Kr*(1+1/Ti*s);
 %G_PI=Kr*(Ti*s+1)/(Ti*s);
 G_PIDs=Kp*(1+1/(Ti*s)+Tv*s);
 G_Ps=Kr;
-
+ 
 
 
 %Tools:
@@ -116,7 +116,7 @@ G_Ps=Kr;
 %zu 3f:
 
 
-G_fs=tf(linsys1);
+%G_fs=tf(linsys1);
 %test=2.456e4;
 G_ffail=24560/(s^3 + 10.14*s^2 + 8.944*s + 75.15);
 %Übertragungsfkt. des Systems (egal ob linear oder nicht):
