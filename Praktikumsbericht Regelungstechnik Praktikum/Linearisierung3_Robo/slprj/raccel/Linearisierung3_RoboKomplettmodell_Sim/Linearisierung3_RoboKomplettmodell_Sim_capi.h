@@ -1,7 +1,0 @@
-#include "__cf_Linearisierung3_RoboKomplettmodell_Sim.h"
-#ifndef RTW_HEADER_Linearisierung3_RoboKomplettmodell_Sim_capi_h
-#define RTW_HEADER_Linearisierung3_RoboKomplettmodell_Sim_capi_h
-#include "Linearisierung3_RoboKomplettmodell_Sim.h"
-extern void Linearisierung3_RoboKomplettmodell_Sim_InitializeDataMapInfo ( )
-;
-#endif
