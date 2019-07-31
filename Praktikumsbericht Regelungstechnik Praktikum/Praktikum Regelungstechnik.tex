@@ -66,7 +66,7 @@ Für alle in diesem Bereich folgenden Auswertungen gibt folgende Farbkonvention
 \subsection{Aufgabe a) Gebautes Simulink Modell}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{SimulinkModell.jpeg}
+	\includegraphics[width=0.7\textwidth]{Theoretischer Teil/SimulinkModell.jpeg}
 	\caption{In Simulink gebautes Modell des Systems des Roboterarms}
 	\label{img:grafik-dummy}
 \end{figure}
@@ -129,7 +129,7 @@ u(t)  &= \binom{0\,\,\,\,\,\,\,\,\, für\,\, t<1}{0.18\,\, für\,\, t \geq 1}
 \end{align}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.2\textwidth]{Aufgabe9c.png}
+	\includegraphics[width=1.2\textwidth]{Theoretischer Teil/Aufgabe9c.png}
 	\caption{Darstellung des Winkels für eine anfängliche Auslenkung von 40 Grad. }
 	\label{img:grafik-dummy}
 \end{figure}
@@ -216,6 +216,7 @@ Die Sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
 \subsection{Digitale PD-Regelung von  y\textsubscript{w} und $\alpha$}
 \subsection{Regelung mit zusätzlicher Stellgrößenbeschränkung}
 \subsubsection{Einfluss der Abtastzeit}
+
 In diesem Versuch wird der Einfluss der Abtastzeit auf das Ergebnis der Regelung genommen. Da wir die Regelfunktion des PD-Regler diskretisiert haben und danach sich das Ergebnis im k Bereich befindet, muss dieses Ergebnis dann noch in die Bildebene Z gebracht werden. 
 %TODO Deltas aus dem Text entfernen!
 \begin{align}
@@ -225,13 +226,26 @@ In diesem Versuch wird der Einfluss der Abtastzeit auf das Ergebnis der Regelung
 \end{align}
 Was dabei einkalkuliert wurde, ist, dass T direkt die Abtastzeit des Reglers Berücksichtigt und daraus sich der Regelkreis beeinflussen lässt.
 \begin{enumerate}
-\item Die Abtastzeit wird auf t = festgelegt.
 \item Die Abstastzeit wird auf t = festgelegt.
-Fazit
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Figure45a200mT}
+	\caption{Verlauf des Experimentes mit einer Abtastzeit von 1ms}
+	\label{img:grafik-dummy}
+\end{figure}
+Beobachtung:
+Bei der Abtaszeit im oberen Grenzbereich schaukelt sich die eigentliche Grundbewegung auf und die Pendelbewegung wird eher verstärkt als gedämpft. Das sorgt für ein stärkere Pendelbewegung als die ungeregelte Bewegung. 
+\item Die Abtastzeit wird auf t = 1 ms festgelegt.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{45a1mT}
+	\caption{Verlauf des Experimentes mit einer Abtastzeit von 1ms}
+	\label{img:grafik-dummy}
+\end{figure}
+Beobachtung: 
+Bei dieser kleineren Abtastzeit arbeitet der Regler so, dass das Schwingen des Seils stark vermieden wird. Es sorgt dafür, dass das die Auslenkung des Seils verringert wird.
 \end{enumerate}
-
-
-Im Vergleich der Abtastzeiten schauen wir uns das 
+Fazit: Das Fazit, was aus diesem Versuch gezogen werden muss ist, dass die diskretisierung einer Messung und die diskretisierung eines Reglers in ausreichender Genauigkeit vorgenommen werden muss.
 \subsection{Regelung der x- und y- Achse}
 
 %Modell zum Einfügen eines Bildes
