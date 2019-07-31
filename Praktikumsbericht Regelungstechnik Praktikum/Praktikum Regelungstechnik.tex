@@ -210,22 +210,29 @@ Die Sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
 \section{Versuch Schwebekörper}
 
 \section{Versuch Kran}
-\subsubsection{Aufbau}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1.2\textwidth]{BeschreibungDesKrans.png}
-	\caption{Darstellung des Krans aus dem Script Regelung eines Brückenkrans vom 18.02.2019 des Fachbereichs Regelungstechnik der Universität Kassel}
-	\label{img:grafik-dummy}
-\end{figure}
+\subsection{Vorbereitungsaufgaben}
+\subsection{Regelung der Wagenposition y\textsubscript{w}}
+\subsection{Zusätzliche regelung des Winkels $\alpha$ }
+\subsection{Digitale PD-Regelung von  y\textsubscript{w} und $\alpha$}
+\subsection{Regelung mit zusätzlicher Stellgrößenbeschränkung}
+\subsubsection{Einfluss der Abtastzeit}
+In diesem Versuch wird der Einfluss der Abtastzeit auf das Ergebnis der Regelung genommen. Da wir die Regelfunktion des PD-Regler diskretisiert haben und danach sich das Ergebnis im k Bereich befindet, muss dieses Ergebnis dann noch in die Bildebene Z gebracht werden. 
+%TODO Deltas aus dem Text entfernen!
+\begin{align}
+   G_R(s) = K_P + K_D s = K_P *s + K_D *·(1 + s *T_D)  \\
+   y_k= K_P * k+ \frac{K_D}{T_D} *( k - 1 )  \\
+   G_R(z) = K_p * z + \frac{K_D}{T_D*T} *\frac{z-1}{z}
+\end{align}
+Was dabei einkalkuliert wurde, ist, dass T direkt die Abtastzeit des Reglers Berücksichtigt und daraus sich der Regelkreis beeinflussen lässt.
+\begin{enumerate}
+\item Die Abtastzeit wird auf t = festgelegt.
+\item Die Abstastzeit wird auf t = festgelegt.
+Fazit
+\end{enumerate}
 
 
-
-
-\subsubsection{Durchführung}
-
-\subsubsection{Messung}
-
-\subsubsection{Ergebnis}
+Im Vergleich der Abtastzeiten schauen wir uns das 
+\subsection{Regelung der x- und y- Achse}
 
 %Modell zum Einfügen eines Bildes
 %\begin{figure}[H]
