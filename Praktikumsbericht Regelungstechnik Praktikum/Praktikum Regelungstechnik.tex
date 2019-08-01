@@ -214,7 +214,6 @@ Die Sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
 \subsection{Regelung der Wagenposition y\textsubscript{w}}
 \subsection{Zusätzliche regelung des Winkels $\alpha$ }
 \subsection{Digitale PD-Regelung von  y\textsubscript{w} und $\alpha$}
-\subsection{Regelung mit zusätzlicher Stellgrößenbeschränkung}
 \subsubsection{Einfluss der Abtastzeit}
 
 In diesem Versuch wird der Einfluss der Abtastzeit auf das Ergebnis der Regelung genommen. Da wir die Regelfunktion des PD-Regler diskretisiert haben und danach sich das Ergebnis im k Bereich befindet, muss dieses Ergebnis dann noch in die Bildebene Z gebracht werden. 
@@ -229,8 +228,8 @@ Was dabei einkalkuliert wurde, ist, dass T direkt die Abtastzeit des Reglers Ber
 \item Die Abstastzeit wird auf t = festgelegt.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Figure45a200mT}
-	\caption{Verlauf des Experimentes mit einer Abtastzeit von 1ms}
+	\includegraphics[width=0.6\textwidth]{Figure45a200mT}
+	\caption{Verlauf des Experimentes mit einer Abtastzeit von 200ms}
 	\label{img:grafik-dummy}
 \end{figure}
 Beobachtung:
@@ -238,14 +237,56 @@ Bei der Abtaszeit im oberen Grenzbereich schaukelt sich die eigentliche Grundbew
 \item Die Abtastzeit wird auf t = 1 ms festgelegt.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{45a1mT}
+	\includegraphics[width=0.6\textwidth]{45a1mT}
 	\caption{Verlauf des Experimentes mit einer Abtastzeit von 1ms}
 	\label{img:grafik-dummy}
 \end{figure}
 Beobachtung: 
 Bei dieser kleineren Abtastzeit arbeitet der Regler so, dass das Schwingen des Seils stark vermieden wird. Es sorgt dafür, dass das die Auslenkung des Seils verringert wird.
 \end{enumerate}
-Fazit: Das Fazit, was aus diesem Versuch gezogen werden muss ist, dass die diskretisierung einer Messung und die diskretisierung eines Reglers in ausreichender Genauigkeit vorgenommen werden muss.
+\textbf { Fazit:} Das Fazit, was aus diesem Versuch gezogen werden muss ist, dass die diskretisierung einer Messung und die diskretisierung eines Reglers in ausreichender Genauigkeit vorgenommen werden muss.
+\subsubsection{Warum macht eine Erweiterung um einen PD-Regler Sinn?}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{PDRegler.png}
+	\caption{Aufbau der PD-Regelung im realen System}
+	\label{img:grafik-dummy}
+\end{figure}
+Dazu müssen wir uns die Beschreibung des Systems anschauen und mit den Zielen der Regelung vergleich. Es soll die Abweichung des Seilwinkels möglichst gering sein und die Position des Krans möglichst exakt erreicht werden. Da ein P-Regler immer eine dauerhafte Regelabweichung mit sich bringt, so kann mit dem PD-Regler gut auf eine schnelle Änderung reagiert werden, da dieser besser auf die Veränderung einer Regelgröße reagiert. Diese Veränderung kann gut mit einem D-Regler geregelt werden um weiter einer möglichen dauerhaften Abweichung Regelungstechnik zu begegnen werden die P-Regelanteile genutzt. Dies macht den PD-Regler an dieser Stelle zum idealen Regler für den Kran.
+
+\subsubsection{Test des PD-Regler im Realen System}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{PD-ReglerTestReal}
+	\caption{Aufbau der PD-Regelung im realen System}
+	\label{img:grafik-dummy}
+\end{figure}
+Bei diesem Versuch lässt sich beobachten, dass es in der Eingelphase, wenn die Überlagerung des P-Reglers nicht mehr mehr in der Sättigung des Stellmotors ist, ein zittern der Kurve zu beobachten. Auch beim Versuch im realen System gibt es dieses Regelflackern.
+
+\subsubsection{Filterung über ein PT-1 Glied}
+Es soll zu dem Regler ein PT-1 Filter implementiert werden. Die Idee bei diesem Versuch ist es, dass das Rauschen unterdrückt wird und die Zitterbewegungen am Ende zu vermeiden und damit gleichzeitig auch die Ausregelzeit verkürzen. Wir implementieren dazu das PT-1 Glied in das gegebene Simulinkmodell des Vorversuchs. Dieses Modell wird sowohl im Winkel, wie auch in der Streckenregelung im ein PT-1 Glied erweitert.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Figure45b1}
+	\caption{Aufbau der PD-Regelung im realen System ergänzt mit einer PT1-Strecke zur Filterung der Kleinstabweichungen}
+	\label{img:grafik-dummy}
+\end{figure}
+
+\subsection{Regelung mit zusätzlicher Stellgrößenbeschränkung}
+\subsubsection{Kann Stellgrößenbeschränkung für eine Regelverbesserung sorgen?}
+Die neue Struktur korregiert das Problem in gewisser Weise, weil das Verhältnis von Wegstreckeänderung zu Winkel eingeschränkt werden kann. Wenn der Stellgrößenanteil, der Wegstrecke nicht mehr voll ausgestreckt werden kann, begrenzt sich die Geschwindigkeit mit der der Krankwagen bewegt werden kann. Dieser Regelgrößenanteil steht dann der Regelung des Seilwinkels zu. Zusätzlich ist eine begrenzte Beschleunigung des Kranwagens nicht mehr dazu in der Lage einen unbegrenzt großen Winkel zu produzieren. Daraus lässt sich Schlussfolgern, dass eine Stellgrößenbeschäkung die Regelungsgenaurigkeit verbessert.
+\subsection{Testen dieser theoretische Stellgrößenbeschränkung im realen Versuchsaufbau}
+Nach einigen Versuchsreihen wurde ein Stellte sich der beste Kompromiss bei einer Stellgrößenbeschränkung auf einen Wert von 0,9 ergeben. Das Ergebnis dieser Dokumentation wurde hier dann festgehalten.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Figure45b5mitSaturation}
+	\caption{Regelungsdarstellung mit der Stellgrößenbeschränkung und einem PD-Regler}
+	\label{img:grafik-dummy}
+\end{figure}
+
+Es lässt sich dabei festhalten 
 \subsection{Regelung der x- und y- Achse}
 
 %Modell zum Einfügen eines Bildes
