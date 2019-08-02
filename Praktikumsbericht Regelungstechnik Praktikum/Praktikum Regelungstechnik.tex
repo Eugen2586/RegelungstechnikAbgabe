@@ -66,7 +66,7 @@ Für alle in diesem Bereich folgenden Auswertungen gibt folgende Farbkonvention
 \subsection{Aufgabe a) Gebautes Simulink Modell}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{SimulinkModell.jpeg}
+	\includegraphics[width=0.7\textwidth]{Theoretischer Teil/SimulinkModell.jpeg}
 	\caption{In Simulink gebautes Modell des Systems des Roboterarms}
 	\label{img:grafik-dummy}
 \end{figure}
@@ -129,7 +129,7 @@ u(t)  &= \binom{0\,\,\,\,\,\,\,\,\, für\,\, t<1}{0.18\,\, für\,\, t \geq 1}
 \end{align}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.2\textwidth]{Aufgabe9c.png}
+	\includegraphics[width=1.2\textwidth]{Theoretischer Teil/Aufgabe9c.png}
 	\caption{Darstellung des Winkels für eine anfängliche Auslenkung von 40 Grad. }
 	\label{img:grafik-dummy}
 \end{figure}
@@ -147,13 +147,6 @@ vollführt und weiter an Geschwindigkeit gewinnt.
 Da es sich bei dem betrachtetet Roboterarm um ein gedämpftes Model
 handelt, geht die Gewschwindigkeit in eine Sättigung über, bis diese um
 einen konstanten Wert fluktuiert. 
-
-\subsubsection{Hinweis:}
-
-Für alle weiteren Betrachtungen wird nicht die gegebene Musterlösung sondern die Lösung unserer Gruppe verwendet, da sich diese mit der Mathlab Version und den gegebenen Simulationsparametern von uns auch nachvollziehen lässt und damit die Korrektheit darstellbar bleibt.
-\begin{align}
-   G_s = \frac{428.6}{(s^3 + 10.14*s^2 + 8.944*s + 75.15)} 
-\end{align}
  %$ \alpha\beta\gamma\delta\epsilon\varepsilon\zeta\eta\theta\vartheta\iota\kappa\lambda\mu\nu\xi\pi
  %\varpi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega\Gamma\Delta\Theta\Lambda\Xi
  %\Pi\Sigma\Upsilon\Phi\Psi\Omega $
@@ -177,7 +170,39 @@ An dem Diagramm ist explizit zu sehen, dass es sich bei der Auslenkung durch das
 
 \subsection{Aufgabe f)}
 
+Bei der Linearisirung durch Softwarenutzung von Mathlab ergibt folgendes Ergebnis im Bogenmaß:
 
+\begin{align}
+   G_s = \frac{428.6}{(s^3 + 10.14*s^2 + 8.944*s + 75.15)} 
+\end{align}
+Die Abweichung in der dritten Nachkommastelle des Zählers lässt sich dabei auf ein veränderten Rundungsalgorithmus im Programm verweisen. 
+Die Ergebnisse stimmen also überein wodurch G\textsubscript{s} von nun an unsere Funktion der Strecke beschreibt.
+
+\subsection{Aufgabe g)}
+
+Um einen Regler zu finden, der die Stabilitätskriterien einhält stellen wir zunächst die orginale Wurzelortskurve dar.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{WOZ9f}
+	\caption{Wurzelortskurve des Systems G\textsubscript{s}}
+	\label{img:grafik-dummy}
+\end{figure}
+In der Wurzelortskurve kann man direkt sehen, dass zwei Nullstellen in Richtung der zwei Nullstellen im positiven Bereich einen guten Reglner darstellen würden. Diese müssen dabei nicht die die Polstellen kompensieren, sondern lediglich im Imaginären Anteil des Wurzel Ortskurve liegen um dort den die Zerphilien Anteile der Wurzelortskurve anzuziehen.
+Es entsteht folgende Ausgabe.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{WOZ9f2}
+	\caption{Anzeige des Ausgangswertes}
+	\label{img:grafik-dummy}
+\end{figure}
+
+Die Sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{WOZ9f3}
+	\caption{Wurzelortskurve des Systems G\textsubscript{s} mit der Anpassung zweier Nullstellen}
+	\label{img:grafik-dummy}
+\end{figure}
 
 %Präsensversuche
 \section{Versuch Antrieb}
@@ -185,21 +210,43 @@ An dem Diagramm ist explizit zu sehen, dass es sich bei der Auslenkung durch das
 \section{Versuch Schwebekörper}
 
 \section{Versuch Kran}
-\subsubsection{Aufbau}
+\subsection{Vorbereitungsaufgaben}
+\subsection{Regelung der Wagenposition y\textsubscript{w}}
+\subsection{Zusätzliche regelung des Winkels $\alpha$ }
+\subsection{Digitale PD-Regelung von  y\textsubscript{w} und $\alpha$}
+\subsection{Regelung mit zusätzlicher Stellgrößenbeschränkung}
+\subsubsection{Einfluss der Abtastzeit}
+
+In diesem Versuch wird der Einfluss der Abtastzeit auf das Ergebnis der Regelung genommen. Da wir die Regelfunktion des PD-Regler diskretisiert haben und danach sich das Ergebnis im k Bereich befindet, muss dieses Ergebnis dann noch in die Bildebene Z gebracht werden. 
+%TODO Deltas aus dem Text entfernen!
+\begin{align}
+   G_R(s) = K_P + K_D s = K_P *s + K_D *·(1 + s *T_D)  \\
+   y_k= K_P * k+ \frac{K_D}{T_D} *( k - 1 )  \\
+   G_R(z) = K_p * z + \frac{K_D}{T_D*T} *\frac{z-1}{z}
+\end{align}
+Was dabei einkalkuliert wurde, ist, dass T direkt die Abtastzeit des Reglers Berücksichtigt und daraus sich der Regelkreis beeinflussen lässt.
+\begin{enumerate}
+\item Die Abstastzeit wird auf t = festgelegt.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.2\textwidth]{BeschreibungDesKrans.png}
-	\caption{Darstellung des Krans aus dem Script Regelung eines Brückenkrans vom 18.02.2019 des Fachbereichs Regelungstechnik der Universität Kassel}
+	\includegraphics[width=0.8\textwidth]{Figure45a200mT}
+	\caption{Verlauf des Experimentes mit einer Abtastzeit von 1ms}
 	\label{img:grafik-dummy}
 \end{figure}
-
-
-
-\subsubsection{Durchführung}
-
-\subsubsection{Messung}
-
-\subsubsection{Ergebnis}
+Beobachtung:
+Bei der Abtaszeit im oberen Grenzbereich schaukelt sich die eigentliche Grundbewegung auf und die Pendelbewegung wird eher verstärkt als gedämpft. Das sorgt für ein stärkere Pendelbewegung als die ungeregelte Bewegung. 
+\item Die Abtastzeit wird auf t = 1 ms festgelegt.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{45a1mT}
+	\caption{Verlauf des Experimentes mit einer Abtastzeit von 1ms}
+	\label{img:grafik-dummy}
+\end{figure}
+Beobachtung: 
+Bei dieser kleineren Abtastzeit arbeitet der Regler so, dass das Schwingen des Seils stark vermieden wird. Es sorgt dafür, dass das die Auslenkung des Seils verringert wird.
+\end{enumerate}
+Fazit: Das Fazit, was aus diesem Versuch gezogen werden muss ist, dass die diskretisierung einer Messung und die diskretisierung eines Reglers in ausreichender Genauigkeit vorgenommen werden muss.
+\subsection{Regelung der x- und y- Achse}
 
 %Modell zum Einfügen eines Bildes
 %\begin{figure}[H]
