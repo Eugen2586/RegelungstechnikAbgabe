@@ -211,20 +211,20 @@ Die Sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
 
 %Präsensversuche
 \section{Versuch Antrieb}
-a)	Die Sprungantwort des Systems soll ohne Filter ermittelt werden. Dabei zeigt sich jedoch das die Sprungantwort stark um den Wert von 300 fluktuiert.
+\subsection{a)}	Die Sprungantwort des Systems soll ohne Filter ermittelt werden. Dabei zeigt sich jedoch das die Sprungantwort stark um den Wert von 300 fluktuiert.
 	Nun soll die Sprungantwort mit eingeschaltetem Filter aufgenommen werden. Daraus wurde die Übertragungsfunktion durch ein PT1 Glied angenähert. Das Überschwingen wurde vernachlässigt. Die bestimmte Näherung lautet: 
 \begin{align}
    G(s)_{PT1}=\frac{1275}{1+9,17s}
 \end{align}
-c)	Auf Basis der angenäherten Übertragungsfunktion kann nun ein Simulink Modell erstellt werden. Auf dies kann ein Regler ausgelegt werden und am realem Versuchsaufbau getestet werden.
-d)	Die Vorgabe für den Regler soll eine t \textsubscript{5\%} Zeit von 0,3 Sekunden sein. Mithilfe einer Faustformel kann nun der Der Realteil des Poles bestimmt werden. Es ergibt sich dafür ein Realteil von -10 für den Pol des Geschlossenen Regelkreises des P Reglers. Der Geschlossene Regelkreis weist folgende Form auf:
+\subsection{c)}	Auf Basis der angenäherten Übertragungsfunktion kann nun ein Simulink Modell erstellt werden. Auf dies kann ein Regler ausgelegt werden und am realem Versuchsaufbau getestet werden.
+\subsection{d)}	Die Vorgabe für den Regler soll eine t \textsubscript{5\%} Zeit von 0,3 Sekunden sein. Mithilfe einer Faustformel kann nun der Der Realteil des Poles bestimmt werden. Es ergibt sich dafür ein Realteil von -10 für den Pol des Geschlossenen Regelkreises des P Reglers. Der Geschlossene Regelkreis weist folgende Form auf:
 \begin{align}
    G(s)_{PT1-geschlossen}=\frac{1275K_p}{1275K_p+9,17s}
 \end{align}
 %nun werden daraus die Pole in Abhängigkeit des Faktors K_p bestimmt. Daraus folgt das der Wert für K \textsubscript{p}=0,0711 betragen muss. 
-e)	Der P-Regler wird nun am Simulink Modell getestet. Als Stationärer Endwert wird 1 angestrebt. Um diesen Zu erreichen wird eine Vorsteuerung mit dem Verstärkungsfaktor K \textsubscript{vor}= $ \frac{1600}{1581,5} $ die benötigte Stellgröße liegt über 5Volt aber im realistischen Bereich, dennoch liegt diese über 0,3 Sekunden lang an, sodass hier Handlungsbedarf besteht wenn das Reale System einen Error Code ausgibt.
-f)	Der P-Regler wird mit Vorsteuerung an der realen Maschine getestet. Es fällt auf das die Maschine trotz eines überschreitens der kritischen Überspannungszeit in der Simulation korrekt arbeitet. Hier sind die Modellabweichungen so groß, dass wir die kritische Spannung weniger als 0,3 Sekunden  lang halten. Es lässt sich durch die nur näherungsweise zutreffende Streckenübertragungsfunktion in form eines PT1 Gliedes erklären. Das System ist nur für den einen Sollwert von 1600 Grad/sec stationär genau. Umso mehr die Sollwertgröße von 1600 Grad/sec abweicht desto Größer wird die Abweichung des Stationären Endwertes. Dies fällt erst bei weniger als 800 Grad/sec deutlich auf und ist bei 400 Grad/sec gut zu erkennen.
-g)	Um Stationäre Genauigkeit für alle Sollwerte zu erreichen wird dem Regler ein I-Anteil hinzugefügt. Der PI-Regler wird über das SISO Tool ausgelegt. Aus den Anforderungen t \textsubscript{5\%}=0,4s und kein Überschwingen woraus sich ergibt das die Pole rein reell sein müssen ergibt sich für den schnellst möglichen Regler die Übertragungsfunktion
+\subsection{e)}	Der P-Regler wird nun am Simulink Modell getestet. Als Stationärer Endwert wird 1 angestrebt. Um diesen Zu erreichen wird eine Vorsteuerung mit dem Verstärkungsfaktor K \textsubscript{vor}= $ \frac{1600}{1581,5} $ die benötigte Stellgröße liegt über 5Volt aber im realistischen Bereich, dennoch liegt diese über 0,3 Sekunden lang an, sodass hier Handlungsbedarf besteht wenn das Reale System einen Error Code ausgibt.
+\subsection{f)}	Der P-Regler wird mit Vorsteuerung an der realen Maschine getestet. Es fällt auf das die Maschine trotz eines überschreitens der kritischen Überspannungszeit in der Simulation korrekt arbeitet. Hier sind die Modellabweichungen so groß, dass wir die kritische Spannung weniger als 0,3 Sekunden  lang halten. Es lässt sich durch die nur näherungsweise zutreffende Streckenübertragungsfunktion in form eines PT1 Gliedes erklären. Das System ist nur für den einen Sollwert von 1600 Grad/sec stationär genau. Umso mehr die Sollwertgröße von 1600 Grad/sec abweicht desto Größer wird die Abweichung des Stationären Endwertes. Dies fällt erst bei weniger als 800 Grad/sec deutlich auf und ist bei 400 Grad/sec gut zu erkennen.
+\subsection{g)}	Um Stationäre Genauigkeit für alle Sollwerte zu erreichen wird dem Regler ein I-Anteil hinzugefügt. Der PI-Regler wird über das SISO Tool ausgelegt. Aus den Anforderungen t \textsubscript{5\%}=0,4s und kein Überschwingen woraus sich ergibt das die Pole rein reell sein müssen ergibt sich für den schnellst möglichen Regler die Übertragungsfunktion
 \begin{align}
    G(s)_{PI}=0,0074*\frac{1-7,1s}{s}
 \end{align} 
@@ -424,7 +424,7 @@ Nach einigen Versuchsreihen wurde ein Stellte sich der beste Kompromiss bei eine
 	\label{img:grafik-dummy}
 \end{figure}
 
-Es lässt sich dabei festhalten 
+Es lässt sich dabei festhalten, dass zwar eine Regelverbesserung eintritt, allerdings das Zittern des Versuchs erneut vorhanden ist. Vielleicht könnte dies mit dem im Kapitel vorher gezeigten Filterglied in der Griff verbessert werden. Hierbei muss also die Abtastzeit der Messeinrichtung berücksichtigt werden um dieses Zittern zu vermieden und eine bessere Regelaussteuerung zu ermöglichen.
 \subsection{Regelung der x- und y- Achse}
 
 %Modell zum Einfügen eines Bildes
