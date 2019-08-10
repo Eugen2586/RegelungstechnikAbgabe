@@ -207,6 +207,8 @@ Die Sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
 	\label{img:grafik-dummy}
 \end{figure}
 
+Man sieht deutlich, dass es hier eine Stabilisierung der Funktion ergibt. Es ist natürlich keine unbegrenzte Stabilität von dem System zu erwarten. Der K-Wert sollte dabei so gewählt werden, dass die realen Pole alle im Linken teil der Kurve liegen sollten. Das wiederum hat dann die Folge, dass sich der K-Wert in einem gewissen Rahmen einstellen lassen können muss.
+
 %Präsensversuche
 \section{Versuch Antrieb}
 \subsection{a)}	Die Sprungantwort des Systems soll ohne Filter ermittelt werden. Dabei zeigt sich jedoch das die Sprungantwort stark um den Wert von 300 fluktuiert.
@@ -252,7 +254,41 @@ Die Faustformel aus der Vorlesung schreibt folgende berechnung der Führungsübe
    m=\frac{Im(\lambda)}{Re(\lambda)}
 \end{align} 
 Es soll der dominante Pol unter diesem hinblick untersucht werden. Dabei wird folgendes Ergebnis erziehlt:
- 
+\begin{itemize}
+\item Berechnen der Pole der Streckenübertragungsfunktion und das prozentuale Überschwingen:
+\begin{align}
+G_{w} = \frac{186,0496}{(s+13,46) * (s-13,46)}
+\end{align} 
+Daraus ergeben sich folgende Polstellen:
+\begin{align}
+ x_1 = 23.4600 ,\,\,\
+ x_2 =-10.0000 -13.4600i
+\end{align}
+
+\item Bestimmen der P-Regelkoeffizienten dieser Anordnung:
+Bei der Anordnung können die der beiden Regler hintereinander gilt folgende Formel und folgende Formel aus der Vorbereitung
+
+Allgemein gilt für die Formel:
+\begin{align}
+G_{w} = \frac{\frac{K_p * K_s*K_D}{T}}{s^2+(\frac{K_D*K_P}{T}+\frac{1}{T})*s+\frac{K_p*K_D*K_1}{T}}
+\end{align} 
+\begin{align}
+G_{w} = \frac{186,0496}{(s+13,46) * (s-13,46)}
+\end{align} 
+Aus der oben genanten Gleichung kann also gefolgert werden:
+\begin{align}
+\frac{K_p * K_s*K_D}{T} =186,0496
+\end{align}
+Wir können also K\textsubscript{R} bestimmen als:
+\begin{align}
+K_P * K_I = K = 0,04377637647
+\end{align}
+
+% m_{\Delta}=\frac{Im(\lambda)}{Re(\lambda)} ,\
+
+Die ursprüngliche Funktion  beschreibt den offenen Regelkreis mit nur einer geregelten Funktion. Dieses System wird danach erneut mit einem PD Regler versehen kann jetzt den erweiterten Regelkreis eingebaut werden.
+
+ \end{itemize}
 \subsubsection{Bestimmen der Verstärkung des p-Reglers}
 \subsubsection{Simulieren des Regler und Überprüfung auf die Vorgaben}
 \subsubsection{Implementation und versuch an der Maschine im Praktikum}
@@ -366,9 +402,9 @@ $G(s)_PI=0,0074*(1-7,1s)/s$ ferner ist keine Vorsteuerung erforderlich, da der P
 In diesem Versuch wird der Einfluss der Abtastzeit auf das Ergebnis der Regelung genommen. Da wir die Regelfunktion des PD-Regler diskretisiert haben und danach sich das Ergebnis im k Bereich befindet, muss dieses Ergebnis dann noch in die Bildebene Z gebracht werden. 
 %TODO Deltas aus dem Text entfernen!
 \begin{align}
-   G_R(s) = K_P + K_D s = K_P *s + K_D *·(1 + s *T_D)  \\
+   G(s)_R = K_P + K_D s = K_P *s + K_D *·(1 + s *T_D)  \\
    y_k= K_P * k+ \frac{K_D}{T_D} *( k - 1 )  \\
-   G_R(z) = K_p * z + \frac{K_D}{T_D*T} *\frac{z-1}{z}
+   G(z)_R = K_p * z + \frac{K_D}{T_D*T} *\frac{z-1}{z}
 \end{align}
 Was dabei einkalkuliert wurde, ist, dass T direkt die Abtastzeit des Reglers Berücksichtigt und daraus sich der Regelkreis beeinflussen lässt.
 \begin{enumerate}
