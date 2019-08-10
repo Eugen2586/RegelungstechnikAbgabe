@@ -22,8 +22,10 @@
 \renewcommand{\contentsname}{Inhaltsverzeichnis}
 \tableofcontents
 \newpage
-% ?????????das Abbildungsverzeichnis, falls wir das haben wollen?????????????????????
-\listoffigures
+%das Abbildungsverzeichnis, falls wir das haben wollen
+% Chris: Ja find ich cool, aber lass nach hinten machen :)
+
+
 
 
 
@@ -265,28 +267,41 @@ Daraus ergeben sich folgende Polstellen:
  x_2 =-10.0000 -13.4600i
 \end{align}
 
-\item Bestimmen der P-Regelkoeffizienten dieser Anordnung:
-Bei der Anordnung können die der beiden Regler hintereinander gilt folgende Formel und folgende Formel aus der Vorbereitung
+\item Bestimmen der P-Regelkoeffizienten dieser Anordnung kann folgend vorgenommen werden:
+Bei der Anordnung können die kaskadierten Werte der P-Regler K\textsubscript{P} und K\textsubscript{I} 
 
 Allgemein gilt für die Formel:
 \begin{align}
-G_{w} = \frac{\frac{K_p * K_s*K_D}{T}}{s^2+(\frac{K_D*K_P}{T}+\frac{1}{T})*s+\frac{K_p*K_D*K_1}{T}}
+G_{w} = \frac{\frac{K_P * K_s*K_D}{T}}{s^2+(\frac{K_D*K_P}{T}+\frac{1}{T})*s+\frac{K_P*K_I*K_S}{T}}
 \end{align} 
 \begin{align}
 G_{w} = \frac{186,0496}{(s+13,46) * (s-13,46)}
 \end{align} 
 Aus der oben genanten Gleichung kann also gefolgert werden:
 \begin{align}
-\frac{K_p * K_s*K_D}{T} =186,0496
+\frac{K_P * K_s*K_I}{T} =186,0496
 \end{align}
 Wir können also K\textsubscript{R} bestimmen als:
 \begin{align}
 K_P * K_I = K = 0,04377637647
 \end{align}
-
 % m_{\Delta}=\frac{Im(\lambda)}{Re(\lambda)} ,\
-
-Die ursprüngliche Funktion  beschreibt den offenen Regelkreis mit nur einer geregelten Funktion. Dieses System wird danach erneut mit einem PD Regler versehen kann jetzt den erweiterten Regelkreis eingebaut werden.
+\item
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.2\textwidth]{Antrieb/Drehzahl7irgendwas.png}
+	\caption{Simulation der berechneten Regelgrößen und der Berechneten K-Werte bei der Führungsgröße von 2000 und von 0.}
+	\label{img:grafik-dummy}
+\end{figure}
+Anhand der Führungsgröße bleibt zu sehen, dass nun angepasst Verhalten von  $\Delta$ m und t\textsubscript{5\%}.
+Beim Ablesen der Werte aus dem Diagramm können folgende Werte Festgehalten werden:
+\begin{itemize}
+\item bei einer Führungsgröße von 2000
+\begin{align}
+\Delta m = \frac{2100}{2000} = 1,05\,\frac{U}{s} \,\,und\,\,\, t\textsubscript{5\%} = 1,2\,s.
+\end{align}
+\item bei einer Führungsgröße mit 0
+\end{itemize}
 
  \end{itemize}
 \subsubsection{Bestimmen der Verstärkung des p-Reglers}
@@ -479,6 +494,8 @@ Es lässt sich dabei festhalten, dass zwar eine Regelverbesserung eintritt, alle
 %	\caption{Teamlogo: Team A}
 %	\label{img:grafik-dummy}
 %\end{figure}
+\newpage
+\listoffigures
 
 
 \end{document}
