@@ -1,3 +1,0 @@
-#ifndef CF_Linearisierung3_RoboKomplettmodell_Sim_H__
-#define CF_Linearisierung3_RoboKomplettmodell_Sim_H__
-#endif
