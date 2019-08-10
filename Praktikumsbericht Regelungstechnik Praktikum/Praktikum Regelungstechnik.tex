@@ -247,9 +247,29 @@ Mithilfe des SISO Tools kann ein P-Regler ausgelegt werden der die t \textsubscr
  Allerdings ist dies ohne weiteres nicht möglich da das reale System einen Error Code ausgibt. 
 Dies liegt an mehreren Problemen.
 	Zuerst muss das Problem der Überspannung gelöst werden. Dies kann dadurch geschehen, dass ein Sättigungsblock in den Regelkreis eingebaut wird, sodass der Motor mit Maximal 5 Volt versorgt wird. Als nächstes muss die zu große Winkelgeschwindigkeit verringert werden. Dazu wird wieder ein Sättigungsblock eingebaut, weher die Winkelgeschwindigkeit auf Maximal 2000 Grad/sec wachsen lässt. Sind diese Probleme behoben kann der Motor in diesem Versuch einwandfrei benutzt werden. 
-
+\newpage
 \section{Versuch Schwebekörper}
 
+
+
+
+
+
+
+\begin{figure} 
+\begin{center}
+    \subfigure[Stellgröße]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Sch-Stell37}} 
+    \subfigure[Regelgröße]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Sch-Regel37}} 
+\caption{Aufgabe 7 } 
+\end{center}
+\end{figure}
+
+\begin{figure} 
+    \subfigure[Stellgröße ]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Sch-Stell39}} 
+    \subfigure[Regelgröße]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Sch-Regel39}} 
+\caption{Aufgabe 9} 
+\end{figure}
+\newpage
 \section{Versuch Kran}
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Vorbereitungsaufgaben}
@@ -303,11 +323,11 @@ t_{(5\%)}=\frac{-3}{Re(s_D)}=33,3
 %e)
 Mithilfe des SISO Tools kann der Regler Parameter R \textsubscript{a}
 über die Wurzelortskurve und die Sprungantwort bestimmt werden.
-R \textsubscript{a} = - 2,6
+R \textsubscript{a} = - 2,6 \\
 %f)
-Das System soll nun simuliert werden für die festgelegten Parameter
+Das System wird für folgende Parameter simuliert:
 R \textsubscript{a} = 1
- y \textsubscript{w} = 1
+ y \textsubscript{w} = 1\\
 % \begin{align}
 %   R _a = 1
 % \end{align}
@@ -315,12 +335,11 @@ R \textsubscript{a} = 1
  %  y_w &= 1
 % \end{align}
 Daraus ergibt sich das folgende Ergebnis: 
-%MUss noch in eps format umgewandelt werden
-%\begin{figure} 
- %   \subfigure[4.4b]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Fig44b}} 
-%    \subfigure[XXXX]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Fig44b}} 
-%\caption{XXXXXXXXXXXXXXX} 
-%\end{figure}
+\begin{figure} 
+    \subfigure[Simulation Sprungantwort lila: y , braun: $\alpha$]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Figure44f}} 
+    \subfigure[Reale System]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Figure44g}} 
+\caption{ Gegenüberstellung Simulation und Experiment} 
+\end{figure}
 (g+h) Der Regler soll nun am Realem System getestet werden
 Der Regler dämpft die Schwingung deutlich besser als das ungeregelte System. Es liegt aber trotzdem weit weg von der Simulation bei der wir nach 3,3 Sekunden im 5\% Band liegen. Im Vergleich, dieser Zustand ist im realem System erst nach ca. 5,5 Sekunden erreicht. Dennoch liegt die Maximale Winkelauslenkung des Realem Systems unter der der Simulation. Das verlangsamte einschwingen kann durch die Sättigung des Motors erklärt werden, welcher nur bei Spannungen bis ?5Volt? die Regelung des Winkes einbeziehen kann. Das führt dazu, dass die Regelung erst später beginnt zu arbeiten und damit das System langsamer wird. Die Regelung arbeitet die Erste 2,5 Sekunden nicht und diese Braucht das reale System länger um die Ruhelage zu erreichen. Das Maximale Überschwingen ist geringer, da der Motor auch die Bewegung in y Richtung nicht beliebig Schnell durchführen kann sondern auch hier gesättigt ist. Außerdem wurde im Modell keine Gleitreibung berücksichtigt.
 
