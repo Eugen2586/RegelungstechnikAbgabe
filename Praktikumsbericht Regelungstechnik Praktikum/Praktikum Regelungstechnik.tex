@@ -248,12 +248,44 @@ Mithilfe des SISO Tools kann ein P-Regler ausgelegt werden der die t \textsubscr
 Dies liegt an mehreren Problemen.
 	Zuerst muss das Problem der Überspannung gelöst werden. Dies kann dadurch geschehen, dass ein Sättigungsblock in den Regelkreis eingebaut wird, sodass der Motor mit Maximal 5 Volt versorgt wird. Als nächstes muss die zu große Winkelgeschwindigkeit verringert werden. Dazu wird wieder ein Sättigungsblock eingebaut, weher die Winkelgeschwindigkeit auf Maximal 2000 Grad/sec wachsen lässt. Sind diese Probleme behoben kann der Motor in diesem Versuch einwandfrei benutzt werden. 
 
-\section{Versuch Schwebekörper}
 
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\section{Versuch Schwebekörper}
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\subsection{Einstieg in den Praktikumsversuch}
+Zu Begin dieses Praktikumsversuchs gilt es, sich Mittels Joystick mit der Anlage vertraut zu machen. Dabei fällt schnell auf, dass die Voreinstellungen der Scope-Blöcke noch nicht sinnvoll gewählt worden sind. Um die graphische Ausgabe physikalisch sinn-voll darzustellen, müssen die Skalierung der Eingangsgröße sowie eine y-Achsenver-schiebung wie folgt vorgenommen werden:
+\begin{enumerate}
+\item Die Stellgröße des Systems muss auf Grund des im Experiment verbauten Leistungsteil für den Lüfter mit dem Faktor 1,2 skaliert werden.
+\item Die Regelgröße muss zunächst negiert werden, um einen positiven Ausschlag zu erzeugen. Anschließen wird der Offset eliminiert und der Maximale Ausschlag des Systems richtig skaliert, sodass sich eine Anpassung von:
+\begin{align}
+   G_{(s)}=\frac{-Tatsächliche Maximale Höhe}{(Vorläufige Maximale Höhe)*(Eingang-Offset)}
+\end{align}
+\begin{align}
+= -18,34*(u-6)
+\end{align}
+\end{enumerate}
+
+\subsection{Mathematisches Modell erstellen}
+Ein mathematisches Modell lässt sich dank des zur Verfügung stehenden Mathlab-Skripts grafident.m durch Ausführen des Skriptes leicht erstellen. Das Skript gibt einen Grafischen Verlauf der Sprungantwort und die wichtigsten Kenngrößen aus.
+(Hier Bild einfügen)
+
+\subsection{Regelungsziele definieren}
+Generell sind natürlich minimale Einschwingzeit und möglichst geringes Überschwingen erwünscht. Häufig lassen sich jedoch diese beiden Parameter nicht gentrennt von einander optimieren. Unser Regelziel ist an dieser Stelle eine Einschwingzeit von t5\%=3 und ein Überschwingen, dass nicht den Versuchsaufbau verletzt.
+
+\subsection {Entwurf eines einfachen Reglers}
+Es soll nun mithilfe des jetzigen Kenntnisstands ein möglichst einfacher Regler entworfen werden, der den Schwebekörper auf einer Wunschposition halten kann. Hier erfüllt ein P-Regler mit einer Verstärkung von \textit K \textit= 0,012954 zunächst noch die vorgegebenen Vorraussetzungen.
+\subsection{Test des einfachen Reglers am System}
+Testet man nun das Modell am realen System, treten deutliche Abweichungen auf. Es benötigt wesentlich länger um die vorgegebene Höhe zu erreichen. Hat es die Wunschhöhe erreicht, kommt es vor, dass der Schwebekörper nochmal aus der Position ausbricht und anschließend neu eingeregelt werden muss. Das System scheint auf Störungen zu reagieren, wie zum Beispiel das Berühren der Röhrenwand, die im Modell nicht berücksichtigt wurden.
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \section{Versuch Kran}
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Vorbereitungsaufgaben}
+
 \subsection{Regelung der Wagenposition y\textsubscript{w}}
+
+
+
 \subsection{Zusätzliche regelung des Winkels $\alpha$ }
 Februar 2019 durchgeführt.
 a)	Es handelt sich um ein um die Ruhelage linearisiertes Zeitinvariantes System. Dies im LTI Block implementiert wird. Die Rückkopplungen sind ebenfalls Linear weshalb die gesamte Regler Struktur Linear ist.
@@ -268,7 +300,7 @@ Wir benutzten den 1. Weg.
 %    \subfigure[Bezeichnung der rechten Grafik]{\includegraphics[width=0.49\textwidth]{ordner/name2.jpg}} 
 %\caption{Titel unterm gesamten Bild} 
 %\end{figure}
-\begin{figure} 
+\begin{figure}  %Darauf achten, dass diese Figur an der richtigen Stelle ist
     \subfigure[Simulink Modell ]{\includegraphics[width=0.6\textwidth]{Leon-PRT-Bilder/Simulink1}} 
     \subfigure[Simulink LTI Block]{\includegraphics[width=0.42\textwidth]{Leon-PRT-Bilder/Simulink2}} 
 \caption{Simulink Modell mit aufgetrennter Rückkoplung} 
