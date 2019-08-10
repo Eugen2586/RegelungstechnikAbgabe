@@ -94,8 +94,6 @@ Aus dem Diagramm Figure 4 geht hervor, dass das System ein stabiles System darst
 %Version von Jonas und Christian vom 24.07.2019
 \newpage
 \subsection{Aufgabe c)}
-Es soll eine Simulation angezeigt werden, die die Startwerte 
-
 \begin{align}
 \varphi  (0) &= 0 \\
 \dot \varphi (0) &= 0 \\
@@ -247,6 +245,17 @@ Mithilfe des SISO Tools kann ein P-Regler ausgelegt werden der die t \textsubscr
  Allerdings ist dies ohne weiteres nicht möglich da das reale System einen Error Code ausgibt. 
 Dies liegt an mehreren Problemen.
 	Zuerst muss das Problem der Überspannung gelöst werden. Dies kann dadurch geschehen, dass ein Sättigungsblock in den Regelkreis eingebaut wird, sodass der Motor mit Maximal 5 Volt versorgt wird. Als nächstes muss die zu große Winkelgeschwindigkeit verringert werden. Dazu wird wieder ein Sättigungsblock eingebaut, weher die Winkelgeschwindigkeit auf Maximal 2000 Grad/sec wachsen lässt. Sind diese Probleme behoben kann der Motor in diesem Versuch einwandfrei benutzt werden. 
+\subsection{Verbesserte Positionsregelung}
+\subsubsection{Berechnen der Kaskadenregelung und der Führungsübertragungsfunktion}
+Die Faustformel aus der Vorlesung schreibt folgende berechnung der Führungsübertragungsfunktion dar:
+\begin{align}
+   m=\frac{Im(\lambda)}{Re(\lambda)}
+\end{align} 
+Es soll der dominante Pol unter diesem hinblick untersucht werden. Dabei wird folgendes Ergebnis erziehlt:
+ 
+\subsubsection{Bestimmen der Verstärkung des p-Reglers}
+\subsubsection{Simulieren des Regler und Überprüfung auf die Vorgaben}
+\subsubsection{Implementation und versuch an der Maschine im Praktikum}
 
 \section{Versuch Schwebekörper}
 
