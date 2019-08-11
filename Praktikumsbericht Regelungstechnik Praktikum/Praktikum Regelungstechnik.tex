@@ -10,6 +10,9 @@
 \usepackage{mathtools}
 \usepackage{epstopdf}
 \usepackage{subfigure} 
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{textcomp}
 
  
 \begin{document}
@@ -24,7 +27,11 @@
 \newpage
 % ?????????das Abbildungsverzeichnis, falls wir das haben wollen?????????????????????
 \listoffigures
-
+%Textumflossenes Bild 
+%\begin{wrapfigure}{r}{5cm}
+%  \includegraphics[width=4.5cm]{Testbild.jpg}
+%  \caption{Bildunterschrift}
+%\end{wrapfigure}
 
 
 %Mathlab Aufgabe
@@ -211,45 +218,65 @@ Die Sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
 
 %Präsensversuche
 \section{Versuch Antrieb}
-a)	Die Sprungantwort des Systems soll ohne Filter ermittelt werden. Dabei zeigt sich jedoch das die Sprungantwort stark um den Wert von 300 fluktuiert.
-	Nun soll die Sprungantwort mit eingeschaltetem Filter aufgenommen werden. Daraus wurde die Übertragungsfunktion durch ein PT1 Glied angenähert. Das Überschwingen wurde vernachlässigt. Die bestimmte Näherung lautet: 
+%Antrieb 
+%5: 
+Drehzahlregelung\\
+Die Sprungantwort des Systems soll ohne Filter ermittelt werden. Dabei zeigt sich jedoch das die Sprungantwort stark um den Wert von 1400 fluktuiert, die Abweichung beträgt dabei $\pm$ 150.
+%b)
+Nun soll die Sprungantwort mit eingeschaltetem Filter aufgenommen werden. Das ansteigen der Sprungantwort verläftt nur unwesentlich langsammer dafür ergibt sich ein im Verhältnis zur Anfangsmessung nun eine restwelligkeit von $\pm$ 10. Daraus kann die Übertragungsfunktion durch ein PT1 Glied angenähert werden. Es gilt dabei jedoch zu beachten, dass diue Übertragungsfunktion lediglich als Näherung angesehen werden kann, da die wirkliche Sprungantwort um ca 50 überschwingt. Die bestimmte Näherung lautet: 
 \begin{align}
    G(s)_{PT1}=\frac{1275}{1+9,17s}
 \end{align}
-c)	Auf Basis der angenäherten Übertragungsfunktion kann nun ein Simulink Modell erstellt werden. Auf dies kann ein Regler ausgelegt werden und am realem Versuchsaufbau getestet werden.
-d)	Die Vorgabe für den Regler soll eine t \textsubscript{5\%} Zeit von 0,3 Sekunden sein. Mithilfe einer Faustformel kann nun der Der Realteil des Poles bestimmt werden. Es ergibt sich dafür ein Realteil von -10 für den Pol des Geschlossenen Regelkreises des P Reglers. Der Geschlossene Regelkreis weist folgende Form auf:
+%c)
+Auf Basis der angenäherten Übertragungsfunktion kann nun ein Simulink Modell erstellt werden, in Figure 9 dargestellt. Durch dies kann ein Regler ausgelegt werden um ihn im realem Versuchsaufbau einzusetzen.\\
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+  \includegraphics[scale=0.51]{Leon-PRT-Bilder/Drehzahl5cklein}
+  \caption{Simulink PT1}
+\end{wrapfigure}
+%d)
+Die Vorgabe für den Regler soll eine t\textsubscript{5\%} Zeit von 0,3 Sekunden sein. Mithilfe einer Faustformel kann nun der der Realteil des Poles bestimmt werden. Es ergibt sich dafür ein Realteil von -10 für den Pol des Geschlossenen Regelkreises des P Reglers. Der Geschlossene Regelkreis weist folgende Form auf: 
 \begin{align}
-   G(s)_{PT1-geschlossen}=\frac{1275K_p}{1275K_p+9,17s}
+G(s)_{(geschl.)}&=\frac{1275K_p}{1275K_p+ 1+9,17s}
 \end{align}
-%nun werden daraus die Pole in Abhängigkeit des Faktors K_p bestimmt. Daraus folgt das der Wert für K \textsubscript{p}=0,0711 betragen muss. 
-e)	Der P-Regler wird nun am Simulink Modell getestet. Als Stationärer Endwert wird 1 angestrebt. Um diesen Zu erreichen wird eine Vorsteuerung mit dem Verstärkungsfaktor K \textsubscript{vor}= $ \frac{1600}{1581,5} $ die benötigte Stellgröße liegt über 5Volt aber im realistischen Bereich, dennoch liegt diese über 0,3 Sekunden lang an, sodass hier Handlungsbedarf besteht wenn das Reale System einen Error Code ausgibt.
-f)	Der P-Regler wird mit Vorsteuerung an der realen Maschine getestet. Es fällt auf das die Maschine trotz eines überschreitens der kritischen Überspannungszeit in der Simulation korrekt arbeitet. Hier sind die Modellabweichungen so groß, dass wir die kritische Spannung weniger als 0,3 Sekunden  lang halten. Es lässt sich durch die nur näherungsweise zutreffende Streckenübertragungsfunktion in form eines PT1 Gliedes erklären. Das System ist nur für den einen Sollwert von 1600 Grad/sec stationär genau. Umso mehr die Sollwertgröße von 1600 Grad/sec abweicht desto Größer wird die Abweichung des Stationären Endwertes. Dies fällt erst bei weniger als 800 Grad/sec deutlich auf und ist bei 400 Grad/sec gut zu erkennen.
-g)	Um Stationäre Genauigkeit für alle Sollwerte zu erreichen wird dem Regler ein I-Anteil hinzugefügt. Der PI-Regler wird über das SISO Tool ausgelegt. Aus den Anforderungen t \textsubscript{5\%}=0,4s und kein Überschwingen woraus sich ergibt das die Pole rein reell sein müssen ergibt sich für den schnellst möglichen Regler die Übertragungsfunktion
+Daraus werden die Pole in Abhängigkeit des Faktors Kp bestimmt. Es folgt ein K\textsubscript{p} Wert von 0,0711 \\
+%e)
+Der P-Regler wird nun am Simulink Modell getestet. Der Sollwert betägt 1600\textdegree/s  als Stationärer Endwert wird 1 angestrebt. Um diesen Zu erreichen wird eine Vorsteuerung mit dem Verstärkungsfaktor  K\textsubscript{vor}=$\frac{1600}{1581,5}$ implementiert.
+ die benötigte Stellgröße liegt über 5 Volt aber im realistischen Bereich, dennoch liegt diese über 0,3 Sekunden lang an, sodass hier Handlungsbedarf besteht falls das Reale System einen Error Code ausgibt.\\
+%f)
+Der P-Regler wird mit Vorsteuerung an der realen Maschine getestet. Der Filter ist dabei einzuschalten. Es fällt auf das die Maschine trotz eines überschreitens der kritischen Überspannungszeit, welche in der Simulation auftritt, korrekt arbeitet. Hier sind die Modellabweichungen so groß, dass wir die kritische Spannung weniger als 0,3 Sekunden  lang halten. Es lässt sich durch die nur näherungsweise zutreffende Streckenübertragungsfunktion in Form eines PT1 Gliedes erklären. Das System ist nur für den einen Sollwert von 1600 Grad/s stationär genau. Umso mehr die Sollwertgröße von 1600 Grad/sec abweicht desto Größer wird die Abweichung des Stationären Endwertes. Dies fällt erst bei weniger als 800 Grad/s deutlich auf und ist bei 400 Grad/s gut zu erkennen.\\
+%g)
+Um Stationäre Genauigkeit für alle Sollwerte zu erreichen wird dem Regler ein I-Anteil hinzugefügt. Der PI-Regler wird über das SISO Tool ausgelegt. Aus den Anforderungen t\textsubscript{5\%}=0,4s und keinem Überschwingen, woraus sich ergibt das die Pole rein reell sein müssen, ergibt sich für den schnellst möglichen Regler die Übertragungsfunktion:
 \begin{align}
-   G(s)_{PI}=0,0074*\frac{1-7,1s}{s}
-\end{align} 
-ferner ist keine Vorsteuerung erforderlich, da der PI-Regler ohnehin eine stationäre Genauigkeit aufweist. 
-6
-	Statt dem PI-Regler soll nun eine Regelstruktur bestehend aus einem kaskadiertem P-Regler verwendet werden. Die Übertragungsfunktion 
-\begin{align}
-   G(s)_{p}=\frac{90653}{91,653+9,17s}
-\end{align} 
-	Die Übertragungsfunktion des Kaskadierten Reglers 
-\begin{align}
-G(s)_{ \dot{\theta}}=\frac{1}{s} = \frac{90,653}{91,653s+9,17s^2}
+G(s)_{PI}&=0,00745*\frac{1-7,1s}{s}
 \end{align}
+ ferner ist keine Vorsteuerung erforderlich, da der PI-Regler ohnehin eine stationäre Genauigkeit aufweist. \\
+
+
+%6------------------------------------
+Statt dem PI-Regler soll nun eine Regelstruktur bestehend aus einem kaskadiertem P-Regler verwendet werden. Die Übertragungsfunktion des geschlossenen Regelkreises lautet:
+\begin{align}
+G(s)_{ua\dot{\theta}}&=G(s)_{PT1}*G(s)_{p} \notag \\
+   G(s)_{ua\dot{\theta}}&=\frac{90,6525}{91,6252+9,17s}
+\end{align} 
+%b)
+Erweitert man diese Gleichung um die Eigenschaften der Positionsregelung so ergibt sich die folgende Übertragungsfunktion:
+\begin{align}
+G(s)_{ ua\theta}=G(s)_{ua\dot{\theta}}*\frac{1}{s} = \frac{90,653}{91,653s+9,17s^2}
+\end{align}
+%c)
 Mithilfe des SISO Tools kann ein P-Regler ausgelegt werden der die t \textsubscript{5\%} Zeit minimiert ohne dabei überzuschwingen. 
-	Als Verstärkungsfaktor des P-Reglers wurde 2,5262 ermittelt.
+Als Verstärkungsfaktor des P-Reglers wurde 2,5262 ermittelt.
 	Die im bestimmte Kaskadenregelung soll nun in Simulink getestet werden. Als Sollwert wird dabei 90 Grad angenommen. Die dabei Benötigte Stellgröße liegt in einem realistischen Bereich und ist der Simulation nach zu Urteilen keine Gefahr für das reale System, da sie nicht länger als 0,3 Sekunden über einem Wert von 5 Volt liegt.\\
 	Der zuvor in Simulink überprüfte Regler wird in das Reale System eingebaut und als Sollwert werden 90 Grad angelegt. Der Regler im echtem System bietet im Gegensatz zur Simulation keine Stationäre Genauigkeit. Dies liegt daran, dass das Modell keine Reibung berücksichtigt.
 	Als Sollwert werden 10000 Grad angelegt.
-%Ist Sollwert richtig?
  Allerdings ist dies ohne weiteres nicht möglich da das reale System einen Error Code ausgibt. 
 Dies liegt an mehreren Problemen.
 	Zuerst muss das Problem der Überspannung gelöst werden. Dies kann dadurch geschehen, dass ein Sättigungsblock in den Regelkreis eingebaut wird, sodass der Motor mit Maximal 5 Volt versorgt wird. Als nächstes muss die zu große Winkelgeschwindigkeit verringert werden. Dazu wird wieder ein Sättigungsblock eingebaut, weher die Winkelgeschwindigkeit auf Maximal 2000 Grad/sec wachsen lässt. Sind diese Probleme behoben kann der Motor in diesem Versuch einwandfrei benutzt werden. 
+%----------------------
+%-----begin---------------------------------Schwebekörper----------------------------------------------Schwebekörper-----------------------------
 \newpage
 \section{Versuch Schwebekörper}
-
 7) Weiterhin ist der im Vorherigem aufgabenteil behandelte P-Regler der einfachste Regler Typ. Anstelle des P-Reglers entschieden wir uns in diesem Aufgabenteil für einen PI-Regler. Der I-Anteil macht den gesamt Regler zwar langsamer verleiht ihm aber eine wesentlich bessere Sportgrößen aus Regelung. Der PI-Regler schafft es im Gegensatz zum P-Regler sämtliche Störgrößen komplett aus zu regeln und wieder stationär Genau zu werden. Dafür hat der I-Anteil in der Streckenübertragungsfunktion nicht ausgereicht. Gemäß den im Vorherigem Aufgabenteil definierten Regelungszielen und den am PI-Regler zur Verfügung stehenden Freiheitsgraden wurde die folgende Übertragungsfunktion gewählt. 
 \begin{align}
    G(s)_{PI}=0,0023995*\frac{1+5,9s}{s}
@@ -265,70 +292,63 @@ Es ergibt sich dabei die Übertragungsfunktion
 \begin{align}
    G(s)_{PID}=0,0071761*\frac{(1+3,3s)(1+0,67s)}{s(1+0,02)}
 \end{align} \\
-10) Der oben entworfene PID-Regler wird in das Reale Modell implementiert.
-Das System Soll die Endlage bei 60 cm Höhe erreichen. Nach ca 20 Sekunden wird wie in Aufgabe 8 die Störgröße aufgeschaltet. Diese Regelt der regler sehr schnell aus. In ca 5 Sekunden hat sich das System in das 5\% Band eingependelt. Das sind ca 50\% weniger Zeit als der PI-Regler benötigt hat und damit ist der PID Regler trotz des Komplexeren aufbaus bisher die Beste Wahl.
-Bei ca 35 Sekunden wird erneut eine Störgröße aufgeschaltet, auch hier benötigt der PID-Regler wider 5 Sekunden um in das 5\% Band zurück zu kommen.
-Auffällig ist das die Stellgröße außer direkt nach dem Anlegen eines Sollwertes am anfang der Grafik sehr konstant wirkt, was an der im vergleich zum PI-Regler geäderten Skalierung liegt.
-Der Peak am Start lässt sich durch den D-Anteil erklären welcher Differenzierendes Verhalten besitzt. Idealerweise wäre der Peak beim Sprung zwischen zwei Werten damit unendlich groß. Dies kann in einem Realem Modell nicht der Fall sein. Dennnoch liegt der Sprung mit einer Höhe von ca 55 schon sehr hoch.
-
-
-
-
-\begin{figure} 
+\begin{figure} [H]
 \begin{center}
     \subfigure[Stellgröße]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Sch-Stell37}} 
     \subfigure[Regelgröße]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Sch-Regel37}} 
 \caption{PI Regelung } 
 \end{center}
 \end{figure}
-
-\begin{figure} 
+10) Der oben entworfene PID-Regler wird in das Reale Modell implementiert.
+Das System Soll die Endlage bei 60 cm Höhe erreichen. Nach ca 20 Sekunden wird wie in Aufgabe 8 die Störgröße aufgeschaltet. Diese Regelt der regler sehr schnell aus. In ca 5 Sekunden hat sich das System in das 5\% Band eingependelt. Das sind ca 50\% weniger Zeit als der PI-Regler benötigt hat und damit ist der PID Regler trotz des Komplexeren aufbaus bisher die Beste Wahl.
+Bei ca 35 Sekunden wird erneut eine Störgröße aufgeschaltet, auch hier benötigt der PID-Regler wider 5 Sekunden um in das 5\% Band zurück zu kommen.
+Auffällig ist das die Stellgröße außer direkt nach dem Anlegen eines Sollwertes am anfang der Grafik sehr konstant wirkt, was an der im vergleich zum PI-Regler geäderten Skalierung liegt.
+Der Peak am Start lässt sich durch den D-Anteil erklären welcher Differenzierendes Verhalten besitzt. Idealerweise wäre der Peak beim Sprung zwischen zwei Werten damit unendlich groß. Dies kann in einem Realem Modell nicht der Fall sein. Dennnoch liegt der Sprung mit einer Höhe von ca 55 schon sehr hoch.
+\begin{figure} [H]
     \subfigure[Stellgröße ]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Sch-Stell39}} 
     \subfigure[Regelgröße]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Sch-Regel39}} 
 \caption{PID Regelung} 
 \end{figure}
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\newpage
-\section{Versuch Kran}
-\subsection{Vorbereitungsaufgaben}
-\subsection{Regelung der Wagenposition y\textsubscript{w}}
-\subsection{Zusätzliche regelung des Winkels $\alpha$ }
-Februar 2019 durchgeführt.
-a)	Es handelt sich um ein um die Ruhelage linearisiertes Zeitinvariantes System. Dies im LTI Block implementiert wird. Die Rückkopplungen sind ebenfalls Linear weshalb die gesamte Regler Struktur Linear ist.
-Das Linearisierte Modell kann in zwei Versionen in Mathlab bzw. Simulink implementiert werden:
-1) Es kann über die Verschiedenen Beziehungen der einzelnen Zustandsgrößen und Eingangsgrößen ein Simulink Modell erstellt werden.
-2) Die Linearisierten Gleichungen in Matrizen Form können direkt in Mathlab eingegeben werden, woraus Mathlab selbstständig ein LTI System realiesiert. 
-Beide Varianten liefern das gleiche Ergebnis.
-Wir benutzten den 1. Weg. 
 %Zweigrafiken nebeneinander: Schema
 %\begin{figure} 
 %    \subfigure[Bezeichnung der linken Grafik]{\includegraphics[width=0.49\textwidth]{ordner/name1.jpg}} 
 %    \subfigure[Bezeichnung der rechten Grafik]{\includegraphics[width=0.49\textwidth]{ordner/name2.jpg}} 
 %\caption{Titel unterm gesamten Bild} 
 %\end{figure}
-\begin{figure} 
+\newpage
+\section{Versuch Kran}
+\subsection{Vorbereitungsaufgaben}
+\subsection{Regelung der Wagenposition y\textsubscript{w}}
+\subsection{Zusätzliche regelung des Winkels $\alpha$ }
+%a)	+ b)
+Das im folgenden beschriebene System ist in Figure 11 dargestellt. 
+Es handelt sich um ein um die Ruhelage linearisiertes Zeitinvariantes System, das heißt der Zeitpunkt bei dem beispielsweise ein Sprung in das System eingeprägt wird ist irrelevant, das folgende Verhalten des Systemes im Rahmen der Messungenauigkeit und Statistischen Abweichung ist immer identisch. Dies wird im LTI Block implementiert. Die Rückkopplungen sind ebenfalls Linear weshalb die gesamte Regler Struktur Linear ist.
+Das Linearisierte Modell kann in zwei Versionen in Mathlab bzw. Simulink implementiert werden:\\
+1. Es kann über die Verschiedenen Beziehungen der einzelnen Zustandsgrößen und Eingangsgrößen ein Simulink Modell erstellt werden.\\
+2. Die Linearisierten Gleichungen in Matrizen Form können direkt in Mathlab eingegeben werden, woraus Mathlab selbstständig ein LTI System realiesiert. \\
+Beide Varianten liefern das gleiche Ergebnis.
+Wir benutzten den 1. Weg. \\
+Die Konstante R \textsubscript{y} besitzt den Wert 5 und die Startwerte der Integratorenkette sind identisch, gleich Null.\\
+\begin{figure} [H]
     \subfigure[Simulink Modell ]{\includegraphics[width=0.6\textwidth]{Leon-PRT-Bilder/Simulink1}} 
     \subfigure[Simulink LTI Block]{\includegraphics[width=0.42\textwidth]{Leon-PRT-Bilder/Simulink2}} 
 \caption{Simulink Modell mit aufgetrennter Rückkoplung} 
 \end{figure}
 Aus dem Modell werden die Übertragungsfunktion und ihre Pole bestimmt.
+%
 \begin{align}
-   G_{(s)}=\frac{-34,18s+0,04443}{s^3+48,51s^2+954,4}
+   G(s)_{offen}=\frac{s}{(s+49)(s+0,05\pm4,5i}
 \end{align}
-Diese Übertragungsfunktion besitzt folgende Pole:
+Diese Übertragungsfunktion besitzt folgende Pole aufgeteilt nach Last und Wagen\\ 
+Last: 
 \begin{align}
--48,3558 \notag \\
--0,0939+4,437i  \notag \\
--0,0939-4,437i \notag 
- \end{align} 
-Davon entfallen folgende Pole auf die Last: 
-\begin{align}
--0,0939+4,437i  \notag \\
--0,0939-4,437i  \notag 
+-0,05+4,5i  \notag \\
+-0,05-4,5i  \notag 
 \end{align}
-Und dementsprechend entfällt auf den Kran der folgende Pol:
+Wagen:
 \begin{align}
--48,3558  \notag 
+-49  \notag 
 \end{align}
 Die Last ist, im Gegensatz zum Wagen, schwingungsfähig, weshalb diese Pole einen imaginären Anteil aufweisen. Die Pole des Wagens werden hingegen rein reell modelliert. 
 Daraus ergibt sich die über die Faustformel für das Einschwingen in das 5\% Band Folgender Ausdruck
@@ -336,52 +356,36 @@ Daraus ergibt sich die über die Faustformel für das Einschwingen in das 5\% Ba
 t_{(5\%)}=\frac{-3}{Re(s_D)}=33,3
 \end{align}
 %d)
- Als sinnvolle Einschwingzeit für das geregelte System wurde eine Einschwingzeit von  3,3 Sekunden gewählt, was einer Dekade weniger als die des ungeregelten Systems beträgt. Aus dieser Überlegung ergibt sich als gewünschter Überlegung über die obrige Faustformel ein Realteil des dominanten Poles der Last von -1. Über eine Bedingung für die Maximale Überschwingweite könnten nun die Imaginär Anteile bestimmt werden. (Hier nicht gegeben.) \\
+ Als sinnvolle Einschwingzeit für das geregelte System wurde eine Einschwingzeit von  3,3 Sekunden gewählt, was einer Dekade weniger als die des ungeregelten Systems beträgt. Aus dieser Überlegung ergibt sich als gewünschter Überlegung über die obrige Faustformel ein Realteil des dominanten Poles der Last von -1. Über eine Bedingung für die Maximale Überschwingweite könnte an dieser Stelle ein eventueller Imaginäranteil des Pols bestimmt werden.\\ 
 %e)
-Mithilfe des SISO Tools kann der Regler Parameter R \textsubscript{a}
+\\Mithilfe des SISO Tools kann der Regler Parameter R \textsubscript{a}
 über die Wurzelortskurve und die Sprungantwort bestimmt werden.
 R \textsubscript{a} = - 2,6 \\
+Legt man die Gleichung 16 des offenen Regelkreises zugrunde kann die Gleichung des geschlossenen Regelkreises hergeleitet werden.
+Daraus ergeben sich die Pole des geschlossenen Regelkreises:
+\begin{align}
+G(s)_{geschlossen} &=\frac{G(s)_{offen}}{1+G(s)_{offen}} \notag\\
+G(s)_{geschlossen}&=\frac{-34,18s+0,04443}{s^3+48,51s^2+954,4}
+\end{align}
+Diese Übertragungsfunktion besitzt folgende Pole:
+\begin{align}
+-48,3558 \notag \\
+-0,0939+4,437i  \notag \\
+-0,0939-4,437i \notag 
+ \end{align} \\
 %f)
-Das System wird für folgende Parameter simuliert:
+\\Das System wird für folgende Parameter simuliert:
 R \textsubscript{a} = 1
  y \textsubscript{w} = 1\\
-
-Daraus ergibt sich das folgende Ergebnis: 
-\begin{figure} 
+\\Das Ergebniss der Simulation ist in Figure 12 a) dargestellt. 
+\begin{figure} [H]
     \subfigure[Simulation Sprungantwort lila: y , braun: $\alpha$]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Figure44f}} 
     \subfigure[Reale System]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Figure44g}} 
 \caption{ Gegenüberstellung Simulation und Experiment} 
 \end{figure}
-(g+h) Der Regler soll nun am Realem System getestet werden
-Der Regler dämpft die Schwingung deutlich besser als das ungeregelte System. Es liegt aber trotzdem weit weg von der Simulation bei der wir nach 3,3 Sekunden im 5\% Band liegen. Im Vergleich, dieser Zustand ist im realem System erst nach ca. 5,5 Sekunden erreicht. Dennoch liegt die Maximale Winkelauslenkung des Realem Systems unter der der Simulation. Das verlangsamte einschwingen kann durch die Sättigung des Motors erklärt werden, welcher nur bei Spannungen bis ?5Volt? die Regelung des Winkes einbeziehen kann. Das führt dazu, dass die Regelung erst später beginnt zu arbeiten und damit das System langsamer wird. Die Regelung arbeitet die Erste 2,5 Sekunden nicht und diese Braucht das reale System länger um die Ruhelage zu erreichen. Das Maximale Überschwingen ist geringer, da der Motor auch die Bewegung in y Richtung nicht beliebig Schnell durchführen kann sondern auch hier gesättigt ist. Außerdem wurde im Modell keine Gleitreibung berücksichtigt.
-
-Antrieb 
-5: Drehzahlregelung
-	Die Sprungantwort des Systems soll ohne Filter ermittelt werden. Dabei zeigt sich jedoch das die Sprungantwort stark um den Wert von 300 fluktuiert.
- 
-	Nun soll die Sprungantwort mit eingeschaltetem Filter aufgenommen werden. Daraus wurde die Übertragungsfunktion durch ein PT1 Glied angenähert. Das Überschwingen wurde vernachlässigt. Die bestimmte Näherung lautet: 
-\begin{align}
-G(s)_{PT1}=1275/(1+9,17s)
- \end{align}
-	Auf Basis der angenäherten Übertragungsfunktion kann nun ein Simulink Modell erstellt werden. Auf dies kann ein Regler ausgelegt werden und am realem Versuchsaufbau getestet werden.
-	Die Vorgabe für den Regler soll eine t(5\%) Zeit von 0,3 Sekunden sein. Mithilfe einer Faustformel kann nun der Der Realteil des Poles bestimmt werden. Es ergibt sich dafür ein Realteil von -10 für den Pol des Geschlossenen Regelkreises des P Reglers. Der Geschlossene Regelkreis weist folgende Form auf: 
-\begin{align}
-G(s)_(geschl.)=(1275K_p)/(1275K_p+ 1+9,17s)
- \end{align}
- nun werden daraus die Pole in Abhängigkeit des Faktors Kp bestimmt. Daraus folgt das der Wert für 
-\begin{align}
-K_p=0,0711
- \end{align} 
-betragen muss. 
-	Der P-Regler wird nun am Simulink Modell getestet. Als Stationärer Endwert wird 1 angestrebt. Um diesen Zu erreichen wird eine Vorsteuerung mit dem Verstärkungsfaktor 
-\begin{align}
-K_vor=\frac{1600}{1581,5}
- \end{align} 
- die benötigte Stellgröße liegt über 5Volt aber im realistischen Bereich, dennoch liegt diese über 0,3 Sekunden lang an, sodass hier Handlungsbedarf besteht wenn das Reale System einen Error Code ausgibt.
-	Der P-Regler wird mit Vorsteuerung an der realen Maschine getestet. Es fällt auf das die Maschine trotz eines überschreitens der kritischen Überspannungszeit in der Simulation korrekt arbeitet. Hier sind die Modellabweichungen so groß, dass wir die kritische Spannung weniger als 0,3 Sekunden  lang halten. Es lässt sich durch die nur näherungsweise zutreffende Streckenübertragungsfunktion in form eines PT1 Gliedes erklären. Das System ist nur für den einen Sollwert von 1600 Grad/sec stationär genau. Umso mehr die Sollwertgröße von 1600 Grad/sec abweicht desto Größer wird die Abweichung des Stationären Endwertes. Dies fällt erst bei weniger als 800 Grad/sec deutlich auf und ist bei 400 Grad/sec gut zu erkennen.
-	Um Stationäre Genauigkeit für alle Sollwerte zu erreichen wird dem Regler ein I-Anteil hinzugefügt. Der PI-Regler wird über das SISO Tool ausgelegt. Aus den Anforderungen t(5\%)=0,4s und kein Überschwingen woraus sich ergibt das die Pole rein reell sein müssen ergibt sich für den schnellst möglichen Regler die Übertragungsfunktion 
-$G(s)_PI=0,0074*(1-7,1s)/s$ ferner ist keine Vorsteuerung erforderlich, da der PI-Regler ohnehin eine stationäre Genauigkeit aufweist. 
-
+%(g+h) 
+Der Regler soll nun am Realem System getestet werden, dabei fällt auf, dass
+der Regler die Schwingung deutlich besser  dämpft  als das ungeregelte System. Es liegt aber trotzdem weit weg von der Simulation bei der wir nach 3,3 Sekunden im 5\% Band liegen. Im Vergleich, dieser Zustand ist im realem System erst nach ca. 5,5 Sekunden erreicht. Dennoch liegt die Maximale Winkelauslenkung des Realem Systems unter der der Simulation. Das verlangsamte einschwingen kann durch die Sättigung des Motors erklärt werden, welcher nur bei Spannungen bis 5Volt die Regelung des Winkes einbeziehen kann. Das führt dazu, dass die Regelung erst später beginnt zu arbeiten und damit das System langsamer wird. Die Regelung arbeitet die Erste 2,5 Sekunden nicht und diese Braucht das reale System länger um die Ruhelage zu erreichen. Das Maximale Überschwingen ist geringer, da der Motor auch die Bewegung in y Richtung nicht beliebig Schnell durchführen kann sondern auch hier gesättigt ist. Außerdem wurde im Modell keine Gleitreibung berücksichtigt.\\
 \subsection{Digitale PD-Regelung von  y\textsubscript{w} und $\alpha$}
 \subsubsection{Einfluss der Abtastzeit}
 
