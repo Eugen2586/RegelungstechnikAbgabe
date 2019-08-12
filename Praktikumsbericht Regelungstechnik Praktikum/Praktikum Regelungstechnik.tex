@@ -217,10 +217,12 @@ Die Sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
 \end{figure}
 
 %Präsensversuche
+%------------------------------------------Antrieb--------------------------------------------------Antrieb-------------------------------------------------------------------
 \section{Versuch Antrieb}
+\subsection{Drehzahlregelung}
 %Antrieb 
 %5: 
-Drehzahlregelung\\
+%Drehzahlregelung\\
 Die Sprungantwort des Systems soll ohne Filter ermittelt werden. Dabei zeigt sich jedoch das die Sprungantwort stark um den Wert von 1400 fluktuiert, die Abweichung beträgt dabei $\pm$ 150.
 %b)
 Nun soll die Sprungantwort mit eingeschaltetem Filter aufgenommen werden. Das ansteigen der Sprungantwort verläftt nur unwesentlich langsammer dafür ergibt sich ein im Verhältnis zur Anfangsmessung nun eine restwelligkeit von $\pm$ 10. Daraus kann die Übertragungsfunktion durch ein PT1 Glied angenähert werden. Es gilt dabei jedoch zu beachten, dass diue Übertragungsfunktion lediglich als Näherung angesehen werden kann, da die wirkliche Sprungantwort um ca 50 überschwingt. Die bestimmte Näherung lautet: 
@@ -254,6 +256,7 @@ G(s)_{PI}&=0,00745*\frac{1-7,1s}{s}
 
 
 %6------------------------------------
+\subsection{Kaskadierte Positionsregelung}
 Statt dem PI-Regler soll nun eine Regelstruktur bestehend aus einem kaskadiertem P-Regler verwendet werden. Die Übertragungsfunktion des geschlossenen Regelkreises lautet:
 \begin{align}
 G(s)_{ua\dot{\theta}}&=G(s)_{PT1}*G(s)_{p} \notag \\
@@ -267,25 +270,37 @@ G(s)_{ ua\theta}=G(s)_{ua\dot{\theta}}*\frac{1}{s} = \frac{90,653}{91,653s+9,17s
 %c)
 Mithilfe des SISO Tools kann ein P-Regler ausgelegt werden der die t \textsubscript{5\%} Zeit minimiert ohne dabei überzuschwingen. 
 Als Verstärkungsfaktor des P-Reglers wurde 2,5262 ermittelt.
-	Die im bestimmte Kaskadenregelung soll nun in Simulink getestet werden. Als Sollwert wird dabei 90 Grad angenommen. Die dabei Benötigte Stellgröße liegt in einem realistischen Bereich und ist der Simulation nach zu Urteilen keine Gefahr für das reale System, da sie nicht länger als 0,3 Sekunden über einem Wert von 5 Volt liegt.\\
-	Der zuvor in Simulink überprüfte Regler wird in das Reale System eingebaut und als Sollwert werden 90 Grad angelegt. Der Regler im echtem System bietet im Gegensatz zur Simulation keine Stationäre Genauigkeit. Dies liegt daran, dass das Modell keine Reibung berücksichtigt.
-	Als Sollwert werden 10000 Grad angelegt.
- Allerdings ist dies ohne weiteres nicht möglich da das reale System einen Error Code ausgibt. 
+%d)
+Die im bestimmte Kaskadenregelung soll nun in Simulink getestet werden. Als Sollwert wird dabei 90 Grad angenommen. Die dabei Benötigte Stellgröße liegt in einem realistischen Bereich und ist der Simulation nach zu Urteilen keine Gefahr für das reale System, da sie nicht länger als 0,3 Sekunden über einem Wert von 5 Volt liegt.\\
+%e)
+Der zuvor in Simulink überprüfte Kaskaden Regler wird in das Reale System eingebaut und als Sollwert werden 90 Grad angelegt. Der Regler im echtem System bietet im Gegensatz zur Simulation keine Stationäre Genauigkeit. Dies liegt daran, dass das Modell keine Reibung berücksichtigt.
+Die Unterschiede zwischen Simulation und Experiment sind in Figure 10 dargestellt. Es fällt auf das das Experiment durch die nicht ideale Simulation, PT1 näherung und keine Reibung berücksichtigt, signifikant langsammer ist als die Simulation, dies fällt vorallem im Bereich zwischen 1,5 Sekunden und 2 Sekunden auf, wo der Graf der Simulation eine höhere Steigung besitzt.
+%-----------------Stimmt die Figure Nummer noch?--------------???????????????????????????????????????????????????????????????????????????
+\begin{figure} [H]
+    \subfigure[Simulation $\theta$\textsubscript{ist}]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Drehzahl6d1neu}} 
+    \subfigure[Reale System $\theta$\textsubscript{ist}]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Drehzahl6e1neu}} 
+\caption{ Simulation $\theta$\textsubscript{ist} und Experiment $\theta$\textsubscript{ist}  } 
+\end{figure}
+%f)
+Als Sollwert werden 10000 Grad angelegt.
+Allerdings ist dies ohne weiteres nicht möglich da das reale System einen Error Code ausgibt. 
 Dies liegt an mehreren Problemen.
-	Zuerst muss das Problem der Überspannung gelöst werden. Dies kann dadurch geschehen, dass ein Sättigungsblock in den Regelkreis eingebaut wird, sodass der Motor mit Maximal 5 Volt versorgt wird. Als nächstes muss die zu große Winkelgeschwindigkeit verringert werden. Dazu wird wieder ein Sättigungsblock eingebaut, weher die Winkelgeschwindigkeit auf Maximal 2000 Grad/sec wachsen lässt. Sind diese Probleme behoben kann der Motor in diesem Versuch einwandfrei benutzt werden. 
+%g)
+Zuerst muss das Problem der Überspannung gelöst werden. Dies kann dadurch geschehen, dass ein Sättigungsblock in den Regelkreis eingebaut wird, sodass der Motor mit Maximal 5 Volt versorgt wird. Als nächstes muss die zu große Winkelgeschwindigkeit verringert werden. Dazu wird wieder ein Sättigungsblock eingebaut, weher die Winkelgeschwindigkeit auf Maximal 2000 Grad/sec wachsen lässt. Sind diese Probleme behoben kann der Motor in diesem Versuch einwandfrei benutzt werden.
 %----------------------
 %-----begin---------------------------------Schwebekörper----------------------------------------------Schwebekörper-----------------------------
 \newpage
 \section{Versuch Schwebekörper}
-7) Weiterhin ist der im Vorherigem aufgabenteil behandelte P-Regler der einfachste Regler Typ. Anstelle des P-Reglers entschieden wir uns in diesem Aufgabenteil für einen PI-Regler. Der I-Anteil macht den gesamt Regler zwar langsamer verleiht ihm aber eine wesentlich bessere Sportgrößen aus Regelung. Der PI-Regler schafft es im Gegensatz zum P-Regler sämtliche Störgrößen komplett aus zu regeln und wieder stationär Genau zu werden. Dafür hat der I-Anteil in der Streckenübertragungsfunktion nicht ausgereicht. Gemäß den im Vorherigem Aufgabenteil definierten Regelungszielen und den am PI-Regler zur Verfügung stehenden Freiheitsgraden wurde die folgende Übertragungsfunktion gewählt. 
+%7)
+Weiterhin ist der im Vorherigem aufgabenteil behandelte P-Regler der einfachste Regler Typ. Anstelle des P-Reglers entschieden wir uns in diesem Aufgabenteil für einen PI-Regler. Der I-Anteil macht den gesamt Regler zwar langsamer verleiht ihm aber eine wesentlich bessere Störgrößen Ausregelung. Der PI-Regler schafft es im Gegensatz zum P-Regler sämtliche Störgrößen komplett aus zu regeln, um wieder stationär genau zu werden. Dafür hat der I-Anteil in der Streckenübertragungsfunktion nicht ausgereicht. Gemäß den im vorherigem Aufgabenteil definierten Regelungszielen und den am PI-Regler zur Verfügung stehenden Freiheitsgraden wurde die folgende Übertragungsfunktion gewählt. 
 \begin{align}
    G(s)_{PI}=0,0023995*\frac{1+5,9s}{s}
 \end{align} \\
-Die Sprungantwort kann im Diagramm XXa abgelesen werden.
-%Einfügen der Diagramnummer !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-8) Der Regler wird nun in das Reale Modell eingebaut und getestet. Die Sprungantwort kann im Diagram XX abgelesen werden.
-Nach etwa 30 Sekunden Simulationszeit wird wie im Versuch 6 eine Störgröße aufgeschaltet. Das füht dazu, dass die Kugel wider absinkt. Die Stellgröße damit ansteigt und der Regler den über ihn gesteuerten Luftstrom erhöt. Nach ca 13 Sekunden hat der Regler die Störgröße ausgeregelt.\\
-9) Um den Regler schneller in den Stationären endwert zu bekommen ist es ratsam einen D-Anteil hin zu zufügen. Dies liefert der PID-Regler.
+%8) 
+Der Regler wird nun in das Reale Modell eingebaut und getestet.
+Nach etwa 30 Sekunden Simulationszeit wird wie im Versuch 6 eine Störgröße aufgeschaltet. Das füht dazu, dass die Kugel wider absinkt. Die Stellgröße damit ansteigt und der Regler den über ihn gesteuerten Luftstrom erhöt. Nach ca 13 Sekunden hat der Regler die Störgröße ausgeregelt. Insgesamt entspricht das Ergebniss den Erwartungen.\\
+%9) 
+Um den Regler schneller in den Stationären endwert zu bekommen ist es ratsam einen D-Anteil hin zu zufügen. Dies liefert der PID-Regler.
 Mit diesem soll die einschwingzeit möglichst kurz sein sowie die Störungsausregelung möglichst schnell geschehen. Als weitere Einschränkung soll der Regler eine reelle Nulstelle zwischen 0 und -3 enthalten. Als Überschwingweite sollten ca 50\% eingehalten werden.
 Um dies zu erreichen wird der Regler im SISO Tool ausgeegt.
 Es ergibt sich dabei die Übertragungsfunktion
@@ -299,7 +314,8 @@ Es ergibt sich dabei die Übertragungsfunktion
 \caption{PI Regelung } 
 \end{center}
 \end{figure}
-10) Der oben entworfene PID-Regler wird in das Reale Modell implementiert.
+%10) 
+Der oben entworfene PID-Regler wird in das Reale Modell implementiert.
 Das System Soll die Endlage bei 60 cm Höhe erreichen. Nach ca 20 Sekunden wird wie in Aufgabe 8 die Störgröße aufgeschaltet. Diese Regelt der regler sehr schnell aus. In ca 5 Sekunden hat sich das System in das 5\% Band eingependelt. Das sind ca 50\% weniger Zeit als der PI-Regler benötigt hat und damit ist der PID Regler trotz des Komplexeren aufbaus bisher die Beste Wahl.
 Bei ca 35 Sekunden wird erneut eine Störgröße aufgeschaltet, auch hier benötigt der PID-Regler wider 5 Sekunden um in das 5\% Band zurück zu kommen.
 Auffällig ist das die Stellgröße außer direkt nach dem Anlegen eines Sollwertes am anfang der Grafik sehr konstant wirkt, was an der im vergleich zum PI-Regler geäderten Skalierung liegt.
@@ -386,9 +402,9 @@ R \textsubscript{a} = 1
 %(g+h) 
 Der Regler soll nun am Realem System getestet werden, dabei fällt auf, dass
 der Regler die Schwingung deutlich besser  dämpft  als das ungeregelte System. Es liegt aber trotzdem weit weg von der Simulation bei der wir nach 3,3 Sekunden im 5\% Band liegen. Im Vergleich, dieser Zustand ist im realem System erst nach ca. 5,5 Sekunden erreicht. Dennoch liegt die Maximale Winkelauslenkung des Realem Systems unter der der Simulation. Das verlangsamte einschwingen kann durch die Sättigung des Motors erklärt werden, welcher nur bei Spannungen bis 5Volt die Regelung des Winkes einbeziehen kann. Das führt dazu, dass die Regelung erst später beginnt zu arbeiten und damit das System langsamer wird. Die Regelung arbeitet die Erste 2,5 Sekunden nicht und diese Braucht das reale System länger um die Ruhelage zu erreichen. Das Maximale Überschwingen ist geringer, da der Motor auch die Bewegung in y Richtung nicht beliebig Schnell durchführen kann sondern auch hier gesättigt ist. Außerdem wurde im Modell keine Gleitreibung berücksichtigt.\\
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Digitale PD-Regelung von  y\textsubscript{w} und $\alpha$}
 \subsubsection{Einfluss der Abtastzeit}
-
 In diesem Versuch wird der Einfluss der Abtastzeit auf das Ergebnis der Regelung genommen. Da wir die Regelfunktion des PD-Regler diskretisiert haben und danach sich das Ergebnis im k Bereich befindet, muss dieses Ergebnis dann noch in die Bildebene Z gebracht werden. 
 %TODO Deltas aus dem Text entfernen!
 \begin{align}
