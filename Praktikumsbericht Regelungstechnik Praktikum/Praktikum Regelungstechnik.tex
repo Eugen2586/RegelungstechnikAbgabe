@@ -13,38 +13,73 @@
 
  
 \begin{document}
+
+\begin {document}
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ %Infobereich: nice to have:
+
+
+
+%Griechisches Alphabet:
+
+ %$ \alpha\beta\gamma\delta\epsilon\varepsilon\zeta\eta\theta\vartheta\iota\kappa\lambda\mu\nu\xi\pi
+ %\varpi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega\Gamma\Delta\Theta\Lambda\Xi
+ %\Pi\Sigma\Upsilon\Phi\Psi\Omega $
+
+
+
+
+%(gerne ergänzen)
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 \title{Praktiukumsarbeit zum Praktikum Regelungstechnik}
 \author{Christian Küllmer, Jonas Kallweidt, Leon Blum}
 \date{\today{}, Kassel}
 \maketitle
 \newpage
+%------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 %Inhaltsverzeichnis
 \renewcommand{\contentsname}{Inhaltsverzeichnis}
 \tableofcontents
 \newpage
+<<<<<<< HEAD
 %das Abbildungsverzeichnis, falls wir das haben wollen
 % Chris: Ja find ich cool, aber lass nach hinten machen :)
 
+=======
+% ?????????das Abbildungsverzeichnis, falls wir das haben wollen?????????????????????
+\listoffigures
+\newpage
+>>>>>>> Jonas
 
 
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%Mathlab Roboteraufgabe:
+%Version von 13.08.2019 Jonas: Überarbeitung aller Überschriften und Texte
 
+\section{Rechnerteil Aufgaben aus Kapitel 9.3 des Praktikumsskripts}
+In diesem Praktikumsteil geht es darum, einen Roboterarm am Computer mit Hilfe von Mathlab zu simulieren und zu analysiere. 
 
-%Mathlab Aufgabe
-\section{Rechnerteil Aufgaben aus Kapitel 9.3. des Praktikumsskrips}
-In diesem Anteil geht es um die in Aufgabe 9.3a. Dieser bezeichnet das Aufstellen der Gleichungen aus den gegeben Gleichungen. Die Gleichungen sind gegen als Blockschaltbild gegeben. Diese werden jetzt übersetzt in Mathlab Simulink.
+\subsection{Aufgabe 9.3a Simulink-Modell erstellen}
+Es sind diverse Konstanten und ein Blockschaltbild des Roboterarms gegeben, aus denen es zunächst ein Simulink-Modell zu erstellen gilt. Dabei ist zu beachten, dass das Modell initialisierbar sein soll und deshalb der Motor als eigener geschlossener Regelkreis implementiert werden muss. Aus diesen Vorgabenen resultiert das folgende Simulink-Modell:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Theoretischer Teil/SimulinkModell.jpeg}
+	\caption{In Simulink gebautes Modell des Systems des Roboterarms}
+	\label{img:grafik-dummy}
+\end{figure}
+%--------------------------------------------
+%alte Grütze:
+%Dieser bezeichnet das Aufstellen der Gleichungen aus den gegebenen Gleichungen. Die Gleichungen sind als Blockschaltbild gegeben. Diese werden jetzt %übersetzt in Mathlab Simulink.
 
 %\begin{itemize}
 %\item Startwerte
 %Als Startwerte wurde gegeben:
-
 %\begin{align}
 %   	c &= 1 \\k &= 300  \\ T& = 0,1\\ g &= 9,81\, \frac{m}{s^2} \\l &= 1\, m\\m &= 7\, kg
 %\end{align}
-
-	
-	
-
-
 %\item Gegebenes Blockschaltbild:
 %\begin{figure}[H]
 %	\centering
@@ -59,6 +94,8 @@ In diesem Anteil geht es um die in Aufgabe 9.3a. Dieser bezeichnet das Aufstelle
 %	\label{img:grafik-dummy}
 %\end{figure}
 %\end{itemize}
+%--------------------------------------------
+
 
 \subsection{Wichtiger Hinweis:}
 Für alle in diesem Bereich folgenden Auswertungen gibt folgende Farbkonvention
@@ -67,22 +104,12 @@ Für alle in diesem Bereich folgenden Auswertungen gibt folgende Farbkonvention
 \item Die blaue Kurve entspricht dann der Winkelgeschwindigkeit $\dot \varphi$
 \item Die grüne Kurve entspricht der Winkelbeschleunigung  $ \ddot \varphi$
 \end{itemize}
+%Version von Jonas und Christian vom 24.07.2019 am 13.08.2019 von Jonas überarbeitet
 
-%Version von Jonas und Christian vom 24.07.2019
 
-\subsection{Aufgabe a) Gebautes Simulink Modell}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\textwidth]{Theoretischer Teil/SimulinkModell.jpeg}
-	\caption{In Simulink gebautes Modell des Systems des Roboterarms}
-	\label{img:grafik-dummy}
-\end{figure}
 
-%Version von Jonas und Christian vom 24.07.2019
-\newpage
-\subsection{Aufgabe b)}
-Das System wird simuliert und die Zustandsgrößen werden über einen Zeitverlauf dargestellt. Dabei entstehen folgende Diagramme:
-
+\subsection{Aufgabe 9.3.b Simulation ohne Eingangssignal mit Startwert}
+Das System wird gemäß den Vorgaben simuliert und die Zustandsgrößen werden über einen Zeitverlauf dargestellt. Dabei entstehen das folgende Diagramm:
 
 \begin{figure}[H]
 	\centering
@@ -90,48 +117,53 @@ Das System wird simuliert und die Zustandsgrößen werden über einen Zeitverlau
 	\caption{Darstellung des Winkels für eine anfängliche Auslenkung von 40 Grad. }
 	\label{img:grafik-dummy}
 \end{figure}
-%Ungeregelt ist hier der Falsche Ausdruck, das was als Regelung bezeichnet wurde ist eig die Stellgröße
-Aus dem Diagramm Figure 4 geht hervor, dass das System ein stabiles System darstellt,solange keine Stellgröße eingeprägt wird und dabei für gewöhlich eine Ruhelage bei 0\,$^\circ$ annehmen kann, wenn vorher keine Auslenkung vorgenommen wurde. Hier geht die Auslenkung auf keinen stationären Endwert, da die Expotentialfunktion zur Beschreibung der Dämpfung niemals null wird. In einem Realen System wird hier aber wahrscheinlich ein Stillstand nach beliebig langer Wartezeit eintreten, wenn der Roboterarm die Haftreibung nicht mehr Überwinden kann und die Bewegung im Aperiodischen Grenzfall endet.
 
-%Version von Jonas und Christian vom 24.07.2019
+Aus dem obenstehenden Diagramm geht hervor, dass das System ein stabiles System darstellt, solange keine Stellgröße eingeprägt wird. Für gewöhlich kann das System eine Ruhelage bei 0\,$^\circ$ annehmen, wenn vorher keine Auslenkung vorgenommen wurde. Hier geht die Auslenkung auf keinen stationären Endwert, da die Expotentialfunktion zur Beschreibung der Dämpfung niemals null wird. In einem Realen System wird hier aber wahrscheinlich ein Stillstand nach beliebig langer Wartezeit eintreten, wenn der Roboterarm die Haftreibung nicht mehr Überwinden kann und die Bewegung im Aperiodischen Grenzfall endet.
 \newpage
+<<<<<<< HEAD
 \subsection{Aufgabe c)}
+=======
+%Version von Jonas und Christian vom 24.07.2019 am 13.08.2019 von Jonas überarbeitet
+
+
+
+\subsection{Aufgabe 9.3.c  Simulation mit Eingangssignal ohne Startwert}
+Es soll eine Simulation mit den folgenden Vorgaben durchgeführt werden: 
+>>>>>>> Jonas
 \begin{align}
 \varphi  (0) &= 0 \\
 \dot \varphi (0) &= 0 \\
 u(t)  &= \binom{0\,\,\,\,\,\,\,\,\, für\,\, t<1}{0.17\,\, für\,\, t \geq 1}
 \end{align}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{9c}
-	\caption{Darstellung des Winkels für eine anfängliche Auslenkung von 40 Grad. }
-	\label{img:grafik-dummy}
-\end{figure}
-Das System befindet sich zunächst in Ruhelage
-zum Zeitpunkt t=1 wird ein Drehmoment vom Motor aufgebaut,
-das den Roboterarm nach Durchlaufen eines Einschwingvorgangs 
-um die neue Ruhelage in eben diese auslenkt . Diese neue Ruhelage hängt von dem Eingangsdrehmoment ab. Der Einschwingvorgang hat dabei ein gleiches Verhalten, wie der Einschwingvorgang von Aufgabe 9.3.b). 
-
-
 %\varphi (0) &= 0 
 %f(0) &= 0 
 %
 %u(t) &= 0 für t<1\\
 %	0.17 für t >= 1;
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{9c}
+	\caption{Darstellung des Winkels für eine anfängliche Auslenkung von 40 Grad. }
+	\label{img:grafik-dummy}
+\end{figure}
 
-
-
-
+Das System befindet sich zunächst in Ruhelage zum Zeitpunkt \textit t = 1 wird ein Drehmoment vom Motor aufgebaut,
+das den Roboterarm nach Durchlaufen eines Einschwingvorgangs um die neue Ruhelage in eben diese auslenkt.
+Diese neue Ruhelage hängt von dem Eingangsdrehmoment ab. Der Einschwingvorgang weist dabei ein ähnliches Verhalten wie der Einschwingvorgang von Aufgabe 9.3b auf.
 %Das Simulinkmodell des Roboterarms wird für die entsprechende Schaltung verändert. Alle Veränderungen werden in dieser Grafik dokumentiert.
-%Danach wird das Modell linearisiert und das dann entstehende Ergebnis wird
+%Danach wird das Modell linearisiert und das dann entstehende Ergebnis wird festgehalten
 
-\subsection{Aufgabe d)}
+
+
+\subsection{Aufgabe 9.3.d Simulation mit Eingangssignal mit Startwert}
+gegeben sei:
 \begin{align}
 \varphi  (0) &= 0 \\
 \dot \varphi (0) &= 0 \\
 u(t)  &= \binom{0\,\,\,\,\,\,\,\,\, für\,\, t<1}{0.18\,\, für\,\, t \geq 1}
 \end{align}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.2\textwidth]{Theoretischer Teil/Aufgabe9c.png}
@@ -139,61 +171,65 @@ u(t)  &= \binom{0\,\,\,\,\,\,\,\,\, für\,\, t<1}{0.18\,\, für\,\, t \geq 1}
 	\label{img:grafik-dummy}
 \end{figure}
 
-Anders als im Versuch 9.3c befindet sich der Roboterarm nun zum Zeitpunkt
-t = 0 nicht mehr in der Ruhelage bei einem Winkel von 0\,$^\circ$, sondern in einem 
-Winkel von 40\,$^\circ$. Dies hat zur Folge, dass der Arm zunächst 
-in der Zeit bis t = 1*s
-sowie in der darauffolgenden Sättigungszeit des PT1-Gliedes,
-das den Motor beschreibt, zurückschwingen kann.
-Sobald das Drehmoment des Motors aufgebaut ist legt der Roboterarm 
-an Geschwindigkeit zu und überschreitet dabei sogar die kritische 180\,$^\circ$
-Marke, ab der der Arm nicht mehr zurückschwingt, sondern einen Überschlag
-vollführt und weiter an Geschwindigkeit gewinnt.
-Da es sich bei dem betrachtetet Roboterarm um ein gedämpftes Model
-handelt, geht die Gewschwindigkeit in eine Sättigung über, bis diese um
+Anders als im Versuch 9.3.c befindet sich der Roboterarm nun zum Zeitpunkt \textit t = 0 nicht mehr in der Ruhelage bei einem Winkel von 0\,$^\circ$, 
+sondern in einem Winkel von 40\,$^\circ$. Dies hat zur Folge, dass der Arm zunächst in der Zeit bis  \textit t = 1 sowie in der darauffolgenden Sättigungszeit des PT1-Gliedes das den Motor beschreibt, zurückschwingen kann.
+Sobald das Drehmoment des Motors aufgebaut ist legt der Roboterarm an Geschwindigkeit zu und überschreitet dabei sogar die kritische 180\,$^\circ$
+Marke, ab der der Arm nicht mehr zurückschwingt, sondern einen Überschlag vollführt und weiter an Geschwindigkeit gewinnt.
+Da es sich bei dem betrachtetet Roboterarm um ein gedämpftes Model handelt, geht die Gewschwindigkeit in eine Sättigung über, bis diese um
 einen konstanten Wert fluktuiert. 
- %$ \alpha\beta\gamma\delta\epsilon\varepsilon\zeta\eta\theta\vartheta\iota\kappa\lambda\mu\nu\xi\pi
- %\varpi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega\Gamma\Delta\Theta\Lambda\Xi
- %\Pi\Sigma\Upsilon\Phi\Psi\Omega $
 
 
-\subsection{Aufgabe e)}
+
+
+\subsection{Aufgabe 9.3.e Überprüfung der These zur Positionsbeibehaltung}
+
 Um zu überprüfen, ob der Motor bei einem Arm bei einem Eingangssignal von eine Ruhelage bei 40\,$^\circ$ zur Einstellung bringt. Wird dies in Mathlab mit folgendem Eingangssignal geprüft:
 
 \begin{align}
    u_0 = \frac{m*g*l* sin( \varphi (0))}{300} = 0,1471
 \end{align}
-Dies entspricht einem Drehmoment von 44,1402 Nm. Dieses Drehmoment wird im Modell als Konstante Eingangsgröße Augegebenen. Der resultierende Winkel wird dann in Grad angegeben und sollte entsprechend der Erwartung einen Winkel von 40\,$^\circ$ entsprechen.
+Dies entspricht einem Drehmoment von 44,1402 \textit N\textit m. Dieses Drehmoment wird im Modell als konstante Eingangsgröße augegebenen. Der resultierende Winkel wird dann in Grad angegeben und sollte entsprechend der Erwartung einen Winkel von 40\,$^\circ$ entsprechen.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.2\textwidth]{Aufgabe9e}
 	\caption{Darstelung des Winkelgraphen bei einem gegebenen Drehmoment}
 	\label{img:grafik-dummy}
 \end{figure}
+
 An dem Diagramm ist explizit zu sehen, dass es sich bei der Auslenkung durch das Drehmoment u \textsubscript{0} einstellt. Diese Auslenkung entspricht im Mitte. einem Wert von 0,6971 Rad. Daraus ergibt sich eine neue Auslenkung von 40\,$^\circ$. Damit wird die Angabe aus dem Aufgabenscript bestätigt.
 
 
-\subsection{Aufgabe f)}
 
-Bei der Linearisirung durch Softwarenutzung von Mathlab ergibt folgendes Ergebnis im Bogenmaß:
+
+\subsection{Aufgabe 9.3.f Linearisierung des Modells}
+
+Bei der Linearisirung durch Softwarenutzung von Mathlab ergibt sich folgendes Ergebnis für Winkel im Bogenmaß:
 
 \begin{align}
    G_s = \frac{428.6}{(s^3 + 10.14*s^2 + 8.944*s + 75.15)} 
 \end{align}
-Die Abweichung in der dritten Nachkommastelle des Zählers lässt sich dabei auf ein veränderten Rundungsalgorithmus im Programm verweisen. 
+
+Die Abweichung zur Musterlösung in der dritten Nachkommastelle des Zählers lässt sich dabei durch einen veränderten Rundungsalgorithmus im Programm begründen. 
 Die Ergebnisse stimmen also überein wodurch G\textsubscript{s} von nun an unsere Funktion der Strecke beschreibt.
 
-\subsection{Aufgabe g)}
+
+
+
+\subsection{Aufgabe 9.3.g Reglerentwurf zur Stabilisierung}
 
 Um einen Regler zu finden, der die Stabilitätskriterien einhält stellen wir zunächst die orginale Wurzelortskurve dar.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{WOZ9f}
 	\caption{Wurzelortskurve des Systems G\textsubscript{s}}
 	\label{img:grafik-dummy}
 \end{figure}
-In der Wurzelortskurve kann man direkt sehen, dass zwei Nullstellen in Richtung der zwei Nullstellen im positiven Bereich einen guten Reglner darstellen würden. Diese müssen dabei nicht die die Polstellen kompensieren, sondern lediglich im Imaginären Anteil des Wurzel Ortskurve liegen um dort den die Zerphilien Anteile der Wurzelortskurve anzuziehen.
-Es entsteht folgende Ausgabe.
+
+In der Wurzelortskurve kann man direkt sehen, dass zwei Nullstellen in Richtung der zwei Nullstellen im positiven Bereich einen guten Regler darstellen würden. Diese müssen dabei nicht die die Polstellen kompensieren, sondern lediglich im Imaginären Anteil des Wurzel Ortskurve liegen um dort den die Zerphilien Anteile der Wurzelortskurve anzuziehen.
+Es entsteht folgende Ausgabe:
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{WOZ9f2}
@@ -201,7 +237,7 @@ Es entsteht folgende Ausgabe.
 	\label{img:grafik-dummy}
 \end{figure}
 
-Die Sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
+Die sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{WOZ9f3}
@@ -209,9 +245,15 @@ Die Sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
 	\label{img:grafik-dummy}
 \end{figure}
 
+<<<<<<< HEAD
 Man sieht deutlich, dass es hier eine Stabilisierung der Funktion ergibt. Es ist natürlich keine unbegrenzte Stabilität von dem System zu erwarten. Der K-Wert sollte dabei so gewählt werden, dass die realen Pole alle im Linken teil der Kurve liegen sollten. Das wiederum hat dann die Folge, dass sich der K-Wert in einem gewissen Rahmen einstellen lassen können muss.
+=======
+\subsection{Aufgabe 9.3.h}
+%missing input
+>>>>>>> Jonas
 
 %Präsensversuche
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \section{Versuch Antrieb}
 \subsection{a)}	Die Sprungantwort des Systems soll ohne Filter ermittelt werden. Dabei zeigt sich jedoch das die Sprungantwort stark um den Wert von 300 fluktuiert.
 	Nun soll die Sprungantwort mit eingeschaltetem Filter aufgenommen werden. Daraus wurde die Übertragungsfunktion durch ein PT1 Glied angenähert. Das Überschwingen wurde vernachlässigt. Die bestimmte Näherung lautet: 
@@ -308,13 +350,139 @@ Beim Ablesen der Werte aus dem Diagramm können folgende Werte Festgehalten werd
 \subsubsection{Simulieren des Regler und Überprüfung auf die Vorgaben}
 \subsubsection{Implementation und versuch an der Maschine im Praktikum}
 
-\section{Versuch Schwebekörper}
 
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\section{Versuch Schwebekörper}
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\subsection{Einstieg in den Praktikumsversuch}
+Zu Begin dieses Praktikumsversuchs gilt es, sich Mittels Joystick mit der Anlage vertraut zu machen. Dabei fällt schnell auf, dass die Voreinstellungen der Scope-Blöcke noch nicht sinnvoll gewählt worden sind. Um die graphische Ausgabe physikalisch sinn-voll darzustellen, müssen die Skalierung der Eingangsgröße sowie eine y-Achsenver-schiebung wie folgt vorgenommen werden:
+
+\begin{enumerate}
+\item Die Stellgröße des Systems muss auf Grund des im Experiment verbauten Leistungsteil für den Lüfter mit dem Faktor 1,2 skaliert werden.
+\item Die Regelgröße muss zunächst negiert werden, um einen positiven Ausschlag zu erzeugen. Anschließen wird der Offset eliminiert und der Maximale Ausschlag des Systems richtig skaliert, sodass sich eine Anpassung von
+
+
+\begin{align}
+   G_{(s)}=\frac{-Tatsächliche Maximale Höhe*(Eingang-Offset)}{Vorläufige Maximale Höhe}
+\end{align}
+\begin{align}
+= -18,34*(u-6)
+\end{align}
+\end{enumerate}
+ergibt.
+
+
+\subsection{Mathematisches Modell erstellen}
+Ein mathematisches Modell lässt sich dank des zur Verfügung stehenden Mathlab-Skripts \textit {grafident.m} durch Ausführen des Skriptes leicht erstellen. Das Skript gibt einen grafischen Verlauf der Sprungantwort und die wichtigsten Kenngrößen aus.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{SchwMod}
+	\caption{Anzeige des Ausgangswertes}
+	\label{img:grafik-dummy}
+\end{figure}
+
+
+
+\subsection{Regelungsziele definieren}
+Generell sind natürlich minimale Einschwingzeit und möglichst geringes Überschwingen erwünscht. Häufig lassen sich jedoch diese beiden Parameter nicht gentrennt von einander optimieren. Unser Regelziel ist an dieser Stelle eine Einschwingzeit von
+\begin{align}
+t\textsubscript{5\%} = 3
+\end{align}
+ und ein Überschwingen, dass nicht den Versuchsaufbau verletzt.
+
+
+
+\subsection {Entwurf eines einfachen Reglers}
+Es soll nun mithilfe des jetzigen Kenntnisstands ein möglichst einfacher Regler entworfen werden, der den Schwebekörper auf einer Wunschposition halten kann. Hier erfüllt ein P-Regler mit einer Verstärkung von \textit K = 0,012954 zunächst noch die vorgegebenen Vorraussetzungen.
+
+%Hier wird bei Jonas ein Bild angezeigt, dass gar nicht hier her gehört
+
+\subsection{Test des einfachen Reglers am System}
+Testet man nun das Modell am realen System, treten deutliche Abweichungen auf. Es benötigt wesentlich länger um die vorgegebene Höhe zu erreichen. Hat es die Wunschhöhe erreicht, kommt es vor, dass der Schwebekörper nochmal aus der Position ausbricht und anschließend neu eingeregelt werden muss. Das System scheint auf Störungen zu reagieren, wie zum Beispiel das Berühren der Röhrenwand, die im Modell nicht berücksichtigt wurden.
+
+
+\newpage
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \section{Versuch Kran}
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Vorbereitungsaufgaben}
+% subsection sollte rausfliegen
+%\subsection{Vorbereitungsaufgaben}
+%Welcome to Jonas part3
 \subsection{Regelung der Wagenposition y\textsubscript{w}}
-\subsection{Zusätzliche regelung des Winkels $\alpha$ }
+
+
+\subsubsection {Arbeitsposition einnehmen}
+Der Kran ist in die zukünftige Arbeitsposition zu bewegen, das bedeutet er soll sich auf der mittleren x\textsubscript{w}-Position sowie auf der mittleren R-Position (Höhenposition) befinden. Diese beiden Parameter sowie die dazugehörigen Stellgrößen bleiben für den Rest des Versuchs unverändert, während in der y\textsubscript{w}-Richtung gearbeiten wird. 
+Dafür gibt es prinzipiell verschiedene Möglichkeiten:
+
+\begin{enumerate}
+\item Man kann den Kran mit Hilfe der Bedienoberfläche (Aufruf mit Hilfe des commands \textit{cr}) „3DCrane“ ansteuern. Hier ist unter dem Begriff Tools der Button „Go To Center“ zu finden, der dafür sorgt, dass der Kran sich automatisch in die mittlere x\textsubscript{w}- sowie R-Position begibt.
+\item In der Bedienoberfläche finden sich neben diversen Commandpresets auch das Tool „Manual Setup“ mit dem man die Parameter des Krans sowohl ablesen als auch manuell einstellen kann.
+\end{enumerate}
+
+
+\subsubsection {Messung der Haftreibung}
+
+In Aufgabe 4.3.b gilt es, die Haftreibung des Kransystems zu bestimmen, da diese später eine direkte Auswirkung auf die Regelung haben wird. Dafür wird  zunächst sichergestellt, dass sich der Kran in Ruhe befindet und alle Stellgrößen gleich Null sind. Nun kann die Spannung die als „Y control“ Stellgröße benötigt wird, um den die Haftreibung des Wagens zu überwinden zunächst grob geraten werden und in einem zweiten Schritt genauer bestimmt werden. Es ergibt sich experimentell eine Spannung von:
+
+\begin {align}
+ u\textsubscript{y} = 0,059 
+\end{align}
+
+
+\subsubsection {Einfacher Proportionalregler}
+In Aufgabenteil 4.3.c soll ein linearer Positionsregler herangezogen werden, der direkt proportional zur Abweichung der Position zur Wunschposition die Spannung \textit{ u\textsubscript{y}} bestimmt.
+Nach der im Skript geforderten Vorgabe, soll die aus einer Positionsabweichung von 2\textit{cm} resultierende Stellspannung \textit{ u\textsubscript{y}} gerade noch so genügen, um die Haftreibung des Systems zu überwinden. (Dies bedeutet gleichzeitig, dass wir versuchen, den Wagen mind. auf 2\textit{cm} genau einzuregeln.) 
+Durch Umstellen der gegebenen Formel 
+
+\begin {align}
+u\textsubscript{y}=R\textsubscript{y}*(\bar{y}\textsubscript{w}-y\textsubscript{w}) 
+\end{align}
+
+ergibt sich ein Verstärkungsfaktor von 
+
+\begin {align}
+Ry=2,95
+\end{align}
+
+
+\subsubsection {Maximale Auslenkung innerhalb der Sättigung}
+
+Nun soll ermittelt werden, ab welchem Regelfehler das Stellsignal für 
+\textit{R\textsubscript{y}} = 5 die Sättigung erreicht. 
+Dies lässt sich mit der vorangestellten Formel durch Einsetzen lösen. 
+Man erhält eine Abweichung von 20\textit{cm}, ab denen das System nicht stärker regelt.
+
+
+%\subsubsection {Implementierung des Reglers mit verschiedenen Parametern}
+%
+%Im Folgenden werden drei verschiedene Implementierungen dieses Reglers betrachtet (und hinsichtlich der Positionsgenauigkeit, Geschwindigkeit und %Pendeldauer begutachtet):\newline
+%Gegeben sind der Verstärkungsfaktor\textit{R\textsubscript{y}} und die Positionsabweichung von der Wunschposition
+
+%\begin{enumerate}
+%\item \textit{R\textsubscript{y}} = 5 \bar{y}\textsubscript{w}-y\textsubscript{w} = 0,2 
+%
+%
+%
+%\end{enumerate}
+
+%1.	Ry = 5		yquerw-yw = 0.2
+%2.	Ry = 5		yquerw-yw = 1
+%3.	Ry = 1,5	yquerw-yw = 1
+
+
+
+
+
+
+
+
+\newpage
+%end of Jonas part3
+\subsection{ZusätzlicheRregelung des Winkels $\alpha$ }
 Februar 2019 durchgeführt.
 a)	Es handelt sich um ein um die Ruhelage linearisiertes Zeitinvariantes System. Dies im LTI Block implementiert wird. Die Rückkopplungen sind ebenfalls Linear weshalb die gesamte Regler Struktur Linear ist.
 Das Linearisierte Modell kann in zwei Versionen in Mathlab bzw. Simulink implementiert werden:
@@ -328,7 +496,7 @@ Wir benutzten den 1. Weg.
 %    \subfigure[Bezeichnung der rechten Grafik]{\includegraphics[width=0.49\textwidth]{ordner/name2.jpg}} 
 %\caption{Titel unterm gesamten Bild} 
 %\end{figure}
-\begin{figure} 
+\begin{figure}  %Darauf achten, dass diese Figur an der richtigen Stelle ist
     \subfigure[Simulink Modell ]{\includegraphics[width=0.6\textwidth]{Leon-PRT-Bilder/Simulink1}} 
     \subfigure[Simulink LTI Block]{\includegraphics[width=0.42\textwidth]{Leon-PRT-Bilder/Simulink2}} 
 \caption{Simulink Modell mit aufgetrennter Rückkoplung} 
