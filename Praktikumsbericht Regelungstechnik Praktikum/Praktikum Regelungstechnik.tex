@@ -32,7 +32,7 @@
 
 %--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-\title{Praktiukumsarbeit zum Praktikum Regelungstechnik}
+\title{Praktikumsarbeit zum Praktikum Regelungstechnik}
 \author{Christian Küllmer, Jonas Kallweidt, Leon Blum}
 \date{\today{}, Kassel}
 \maketitle
@@ -42,15 +42,12 @@
 \renewcommand{\contentsname}{Inhaltsverzeichnis}
 \tableofcontents
 \newpage
-<<<<<<< HEAD
 %das Abbildungsverzeichnis, falls wir das haben wollen
 % Chris: Ja find ich cool, aber lass nach hinten machen :)
-
-=======
 % ?????????das Abbildungsverzeichnis, falls wir das haben wollen?????????????????????
 \listoffigures
 \newpage
->>>>>>> Jonas
+
 
 
 %--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -59,7 +56,7 @@
 
 \section{Rechnerteil Aufgaben aus Kapitel 9.3 des Praktikumsskripts}
 In diesem Praktikumsteil geht es darum, einen Roboterarm am Computer mit Hilfe von Mathlab zu simulieren und zu analysiere. 
-
+% Der Satz ist halt einfach viel besser, Chris
 \subsection{Aufgabe 9.3a Simulink-Modell erstellen}
 Es sind diverse Konstanten und ein Blockschaltbild des Roboterarms gegeben, aus denen es zunächst ein Simulink-Modell zu erstellen gilt. Dabei ist zu beachten, dass das Modell initialisierbar sein soll und deshalb der Motor als eigener geschlossener Regelkreis implementiert werden muss. Aus diesen Vorgabenen resultiert das folgende Simulink-Modell:
 \begin{figure}[H]
@@ -118,9 +115,8 @@ Das System wird gemäß den Vorgaben simuliert und die Zustandsgrößen werden �
 
 Aus dem obenstehenden Diagramm geht hervor, dass das System ein stabiles System darstellt, solange keine Stellgröße eingeprägt wird. Für gewöhlich kann das System eine Ruhelage bei 0\,$^\circ$ annehmen, wenn vorher keine Auslenkung vorgenommen wurde. Hier geht die Auslenkung auf keinen stationären Endwert, da die Expotentialfunktion zur Beschreibung der Dämpfung niemals null wird. In einem Realen System wird hier aber wahrscheinlich ein Stillstand nach beliebig langer Wartezeit eintreten, wenn der Roboterarm die Haftreibung nicht mehr Überwinden kann und die Bewegung im Aperiodischen Grenzfall endet.
 \newpage
-<<<<<<< HEAD
 \subsection{Aufgabe c)}
-=======
+
 %Version von Jonas und Christian vom 24.07.2019 am 13.08.2019 von Jonas überarbeitet
 
 
@@ -307,7 +303,7 @@ Daraus ergeben sich folgende Polstellen:
  x_2 =-10.0000 -13.4600i
 \end{align}
 
-\item Bestimmen der P-Regelkoeffizienten dieser Anordnung kann folgend vorgenommen werden:
+\item \subsubsection{Bestimmen der Verstärkung des P-Reglers} Bestimmen der P-Regelkoeffizienten dieser Anordnung kann folgend vorgenommen werden:
 Bei der Anordnung können die kaskadierten Werte der P-Regler K\textsubscript{P} und K\textsubscript{I} 
 
 Allgemein gilt für die Formel:
@@ -326,11 +322,11 @@ Wir können also K\textsubscript{R} bestimmen als:
 K_P * K_I = K = 0,04377637647
 \end{align}
 % m_{\Delta}=\frac{Im(\lambda)}{Re(\lambda)} ,\
-\item
+\item \subsubsection{Simulieren des Regler und Überprüfung auf die Vorgaben}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.2\textwidth]{Antrieb/Drehzahl7irgendwas.png}
-	\caption{Simulation der berechneten Regelgrößen und der Berechneten K-Werte bei der Führungsgröße von 2000 und von 0.}
+	\includegraphics[width=1.2\textwidth]{Drehzahl6e3neu.png}
+	\caption{Simulation der berechneten Regelgrößen und der Berechneten K-Werte bei der Führungsgröße 90 $^\circ$.}
 	\label{img:grafik-dummy}
 \end{figure}
 Anhand der Führungsgröße bleibt zu sehen, dass nun angepasst Verhalten von  $\Delta$ m und t\textsubscript{5\%}.
@@ -338,15 +334,26 @@ Beim Ablesen der Werte aus dem Diagramm können folgende Werte Festgehalten werd
 \begin{itemize}
 \item Das Ergebnis ist bei einer Führungsgröße von 2000
 \begin{align}
+% Muss noch geändert werden. Hier müssen Winkel rein.
 \Delta m = \frac{2100}{2000} = 1,05\,\frac{U}{s} \,\,und\,\,\, t\textsubscript{5\%} = 1,2\,s.
 \end{align}
-\item Das Ergebnis ist bei einer Führungsgröße mit 0 gleicht dem Wert der 2000 U/s. Dabei bleibt festzuhalten, dass der Motor einen Error wirft, wenn 
+\item Das Ergebnis ist bei einer Führungsgröße mit 0 gleicht dem Wert der 2000 U/s. Dabei bleibt festzuhalten, dass der Motor einen Error meldet sobald dieser Versuch arbeitet. Dies liegt daran, dass die Stellgrößerenwerte des Motors stark überschritten werden würden.
 \end{itemize}
 
- \end{itemize}
-\subsubsection{Bestimmen der Verstärkung des p-Reglers}
-\subsubsection{Simulieren des Regler und Überprüfung auf die Vorgaben}
 \subsubsection{Implementation und versuch an der Maschine im Praktikum}
+Der Test im realen System zeigt eine bedeutend kürzere einschwingzeit und eine bedeutend kleinere Überschwinggröße. Dies ist vorallem mit den sehr hohen Reibungskoeffizienten am Versuchsaufbau zu erklären. Daraus ergibt sich folgendes Diagramm der Drehung um 90 $^\circ$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.2\textwidth]{Drehzahl57B.png}
+	\caption{Realer Messwert des Systems bei einer geregelten Drehung um 90 $^\circ$}
+	\label{img:grafik-dummy}
+\end{figure}
+
+
+
+ \end{itemize}
+
+
 
 
 %--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
