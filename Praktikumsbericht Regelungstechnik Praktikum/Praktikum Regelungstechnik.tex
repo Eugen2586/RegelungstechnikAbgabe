@@ -223,9 +223,9 @@ Die Sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
 %Antrieb 
 %5: 
 %Drehzahlregelung\\
-Die Sprungantwort des Systems soll ohne Filter ermittelt werden. Dabei zeigt sich jedoch das die Sprungantwort stark um den Wert von 1400 fluktuiert, die Abweichung beträgt dabei $\pm$ 150.
+Die Sprungantwort des Systems soll ohne Filter ermittelt werden. Dabei zeigt sich, dass die Sprungantwort stark um den Wert von 1400 fluktuiert, die Abweichung beträgt dabei $\pm$ 150.
 %b)
-Nun soll die Sprungantwort mit eingeschaltetem Filter aufgenommen werden. Das ansteigen der Sprungantwort verläftt nur unwesentlich langsammer dafür ergibt sich ein im Verhältnis zur Anfangsmessung nun eine restwelligkeit von $\pm$ 10. Daraus kann die Übertragungsfunktion durch ein PT1 Glied angenähert werden. Es gilt dabei jedoch zu beachten, dass diue Übertragungsfunktion lediglich als Näherung angesehen werden kann, da die wirkliche Sprungantwort um ca 50 überschwingt. Die bestimmte Näherung lautet: 
+Wird die Sprungantwort mit eingeschaltetem Filter aufgenommen, so fallen signifikante Unterschiede auf. Das ansteigen der Sprungantwort verläuft nur unwesentlich langsammer dafür ergibt sich ein im Verhältnis zur Anfangsmessung geglättetes Signal, die Restwelligkeit  beträgt nur noch $\pm$ 10. Daraus kann die Übertragungsfunktion durch ein PT1 Glied angenähert werden. Es gilt dabei jedoch zu beachten, dass diue Übertragungsfunktion lediglich als Näherung angesehen werden kann, da die wirkliche Sprungantwort um ca 50 überschwingt. Die bestimmte Näherung lautet: 
 \begin{align}
    G(s)_{PT1}=\frac{1275}{1+9,17s}
 \end{align}
@@ -243,7 +243,7 @@ G(s)_{(geschl.)}&=\frac{1275K_p}{1275K_p+ 1+9,17s}
 \end{align}
 Daraus werden die Pole in Abhängigkeit des Faktors Kp bestimmt. Es folgt ein K\textsubscript{p} Wert von 0,0711 \\
 %e)
-Der P-Regler wird nun am Simulink Modell getestet. Der Sollwert betägt 1600\textdegree/s  als Stationärer Endwert wird 1 angestrebt. Um diesen Zu erreichen wird eine Vorsteuerung mit dem Verstärkungsfaktor  K\textsubscript{vor}=$\frac{1600}{1581,5}$ implementiert.
+Der P-Regler wird nun am Simulink Modell getestet. Der Sollwert betägt 1600\textdegree/s , als Stationärer Endwert wird 1 angestrebt. Um diesen Zu erreichen wird eine Vorsteuerung mit dem Verstärkungsfaktor  K\textsubscript{vor}=$\frac{1600}{1581,5}$ implementiert.
  die benötigte Stellgröße liegt über 5 Volt aber im realistischen Bereich, dennoch liegt diese über 0,3 Sekunden lang an, sodass hier Handlungsbedarf besteht falls das Reale System einen Error Code ausgibt.\\
 %f)
 Der P-Regler wird mit Vorsteuerung an der realen Maschine getestet. Der Filter ist dabei einzuschalten. Es fällt auf das die Maschine trotz eines überschreitens der kritischen Überspannungszeit, welche in der Simulation auftritt, korrekt arbeitet. Hier sind die Modellabweichungen so groß, dass wir die kritische Spannung weniger als 0,3 Sekunden  lang halten. Es lässt sich durch die nur näherungsweise zutreffende Streckenübertragungsfunktion in Form eines PT1 Gliedes erklären. Das System ist nur für den einen Sollwert von 1600 Grad/s stationär genau. Umso mehr die Sollwertgröße von 1600 Grad/sec abweicht desto Größer wird die Abweichung des Stationären Endwertes. Dies fällt erst bei weniger als 800 Grad/s deutlich auf und ist bei 400 Grad/s gut zu erkennen.\\
@@ -271,10 +271,10 @@ G(s)_{ ua\theta}=G(s)_{ua\dot{\theta}}*\frac{1}{s} = \frac{90,653}{91,653s+9,17s
 Mithilfe des SISO Tools kann ein P-Regler ausgelegt werden der die t \textsubscript{5\%} Zeit minimiert ohne dabei überzuschwingen. 
 Als Verstärkungsfaktor des P-Reglers wurde 2,5262 ermittelt.
 %d)
-Die im bestimmte Kaskadenregelung soll nun in Simulink getestet werden. Als Sollwert wird dabei 90 Grad angenommen. Die dabei Benötigte Stellgröße liegt in einem realistischen Bereich und ist der Simulation nach zu Urteilen keine Gefahr für das reale System, da sie nicht länger als 0,3 Sekunden über einem Wert von 5 Volt liegt.\\
+Die bestimmte Kaskadenregelung wird in Simulink getestet. Als Sollwert wird dabei 90 Grad angenommen. Die dabei benötigte Stellgröße liegt in einem realistischen Bereich und ist der Simulation nach zu Urteilen keine Gefahr für das reale System, da sie nicht länger als 0,3 Sekunden über einem Wert von 5 Volt liegt.\\
 %e)
-Der zuvor in Simulink überprüfte Kaskaden Regler wird in das Reale System eingebaut und als Sollwert werden 90 Grad angelegt. Der Regler im echtem System bietet im Gegensatz zur Simulation keine Stationäre Genauigkeit. Dies liegt daran, dass das Modell keine Reibung berücksichtigt.
-Die Unterschiede zwischen Simulation und Experiment sind in Figure 10 dargestellt. Es fällt auf das das Experiment durch die nicht ideale Simulation, PT1 näherung und keine Reibung berücksichtigt, signifikant langsammer ist als die Simulation, dies fällt vorallem im Bereich zwischen 1,5 Sekunden und 2 Sekunden auf, wo der Graf der Simulation eine höhere Steigung besitzt.
+Der zuvor in Simulink überprüfte Kaskaden-Regler wird in das Reale System eingebaut und als Sollwert werden 90 Grad angelegt. Der Regler im echtem System bietet im Gegensatz zur Simulation keine Stationäre Genauigkeit. Dies liegt daran, dass das Modell keine Reibung berücksichtigt.
+Die Unterschiede zwischen Simulation und Experiment sind in Figure 10 dargestellt. Es fällt auf das das Experiment durch die nicht ideale Simulation, PT1 Näherung und es wurde keine Reibung berücksichtigt. Weiterhin steigt der Graf des Realem Systems im Bereich bis ca 60 Grad schneller an, als der Graf der Simulation. Dies kann mithilfe des in Abschnitt 5b beobachteten Überschwingens, welches auf Imaginäre Pole in der Realen Übertragungsfunktion hindeutet, erkärt werden. Diese verursachen oft ein schnelleres Ansteigen als es bei Übertragungsfunktionen mit rein Reellen Polen der Fall wäre.\\
 %-----------------Stimmt die Figure Nummer noch?--------------???????????????????????????????????????????????????????????????????????????
 \begin{figure} [H]
     \subfigure[Simulation $\theta$\textsubscript{ist}]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Drehzahl6d1neu}} 
