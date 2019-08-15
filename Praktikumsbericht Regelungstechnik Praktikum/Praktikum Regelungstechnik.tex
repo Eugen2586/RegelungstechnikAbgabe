@@ -292,17 +292,17 @@ Zuerst muss das Problem der Überspannung gelöst werden. Dies kann dadurch gesc
 \newpage
 \section{Versuch Schwebekörper}
 %7)
-Weiterhin ist der im Vorherigem aufgabenteil behandelte P-Regler der einfachste Regler Typ. Anstelle des P-Reglers entschieden wir uns in diesem Aufgabenteil für einen PI-Regler. Der I-Anteil macht den gesamt Regler zwar langsamer verleiht ihm aber eine wesentlich bessere Störgrößen Ausregelung. Der PI-Regler schafft es im Gegensatz zum P-Regler sämtliche Störgrößen komplett aus zu regeln, um wieder stationär genau zu werden. Dafür hat der I-Anteil in der Streckenübertragungsfunktion nicht ausgereicht. Gemäß den im vorherigem Aufgabenteil definierten Regelungszielen und den am PI-Regler zur Verfügung stehenden Freiheitsgraden wurde die folgende Übertragungsfunktion gewählt. 
+Weiterhin ist der im Vorherigem aufgabenteil behandelte P-Regler der einfachste Regler Typ. Anstelle des P-Reglers entschieden wir uns in diesem Aufgabenteil für einen PI-Regler. Der I-Anteil macht den gesamt Regler zwar langsamer verleiht ihm aber eine wesentlich bessere Störgrößen Ausregelung. Der PI-Regler schafft es im Gegensatz zum P-Regler sämtliche konstante Störgrößen komplett aus zu regeln, um wieder stationär genau zu werden. Dafür hat der I-Anteil in der Streckenübertragungsfunktion nicht ausgereicht. Gemäß den im vorherigem Aufgabenteil definierten Regelungszielen und den am PI-Regler zur Verfügung stehenden Freiheitsgraden wurde die folgende Übertragungsfunktion gewählt. 
 \begin{align}
    G(s)_{PI}=0,0023995*\frac{1+5,9s}{s}
 \end{align} \\
 %8) 
-Der Regler wird nun in das Reale Modell eingebaut und getestet.
-Nach etwa 30 Sekunden Simulationszeit wird wie im Versuch 6 eine Störgröße aufgeschaltet. Das füht dazu, dass die Kugel wider absinkt. Die Stellgröße damit ansteigt und der Regler den über ihn gesteuerten Luftstrom erhöt. Nach ca 13 Sekunden hat der Regler die Störgröße ausgeregelt. Insgesamt entspricht das Ergebniss den Erwartungen.\\
+Der Regler wird in das Reale Modell eingebaut und getestet.
+Nach etwa 30 Sekunden Simulationszeit wird wie im Versuch 6 eine Störgröße aufgeschaltet. Das füht dazu, dass die Kugel wieder absinkt. Die Stellgröße damit ansteigt und der Regler den über ihn gesteuerten Luftstrom erhöt. Nach ca 13 Sekunden hat der Regler die Störgröße ausgeregelt. Insgesamt entspricht das Ergebniss den Erwartungen.\\
 %9) 
-Um den Regler schneller in den Stationären endwert zu bekommen ist es ratsam einen D-Anteil hin zu zufügen. Dies liefert der PID-Regler.
-Mit diesem soll die einschwingzeit möglichst kurz sein sowie die Störungsausregelung möglichst schnell geschehen. Als weitere Einschränkung soll der Regler eine reelle Nulstelle zwischen 0 und -3 enthalten. Als Überschwingweite sollten ca 50\% eingehalten werden.
-Um dies zu erreichen wird der Regler im SISO Tool ausgeegt.
+Um die t\textsubscript{5\%} Zeit zu minimieren, ist es ratsam einen D-Anteil einzufügen. Dies liefert der PID-Regler.
+Mit diesem soll die Einschwingzeit möglichst kurz sein, sowie die Störungsausregelung möglichst schnell geschehen. Als weitere Einschränkung soll der Regler eine reelle Nulstelle zwischen 0 und -3 enthalten. Als Überschwingweite sollten ca 50\% eingehalten werden.
+Um dies zu erreichen wird der Regler im SISO Tool ausgelegt.
 Es ergibt sich dabei die Übertragungsfunktion
 \begin{align}
    G(s)_{PID}=0,0071761*\frac{(1+3,3s)(1+0,67s)}{s(1+0,02)}
@@ -401,7 +401,7 @@ R \textsubscript{a} = 1
 \end{figure}
 %(g+h) 
 Der Regler soll nun am Realem System getestet werden, dabei fällt auf, dass
-der Regler die Schwingung deutlich besser  dämpft  als das ungeregelte System. Es liegt aber trotzdem weit weg von der Simulation bei der wir nach 3,3 Sekunden im 5\% Band liegen. Im Vergleich, dieser Zustand ist im realem System erst nach ca. 5,5 Sekunden erreicht. Dennoch liegt die Maximale Winkelauslenkung des Realem Systems unter der der Simulation. Das verlangsamte einschwingen kann durch die Sättigung des Motors erklärt werden, welcher nur bei Spannungen bis 5Volt die Regelung des Winkes einbeziehen kann. Das führt dazu, dass die Regelung erst später beginnt zu arbeiten und damit das System langsamer wird. Die Regelung arbeitet die Erste 2,5 Sekunden nicht und diese Braucht das reale System länger um die Ruhelage zu erreichen. Das Maximale Überschwingen ist geringer, da der Motor auch die Bewegung in y Richtung nicht beliebig Schnell durchführen kann sondern auch hier gesättigt ist. Außerdem wurde im Modell keine Gleitreibung berücksichtigt.\\
+der Regler die Schwingung deutlich besser  dämpft  als das ungeregelte System. Es liegt aber trotzdem weit weg von der Simulation, bei der wir nach 3,3 Sekunden im 5\% Band liegen. Im Vergleich, dieser Zustand ist im realem System erst nach ca. 5,5 Sekunden erreicht. Dennoch liegt die Maximale Winkelauslenkung des Realem Systems unter der der Simulation. Das verlangsamte einschwingen kann durch die Sättigung des Motors erklärt werden, welcher nur bei Spannungen bis 5Volt die Regelung des Winkes einbeziehen kann. Das führt dazu, dass die Regelung erst später beginnt zu arbeiten und damit das System langsamer wird. Die Regelung arbeitet die Erste 2,5 Sekunden nicht und diese Braucht das reale System länger um die Ruhelage zu erreichen. Das Maximale Überschwingen ist geringer, da der Motor auch die Bewegung in y Richtung nicht beliebig Schnell durchführen kann sondern auch hier gesättigt ist. Außerdem wurde im Modell keine Gleitreibung berücksichtigt.\\
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Digitale PD-Regelung von  y\textsubscript{w} und $\alpha$}
 \subsubsection{Einfluss der Abtastzeit}
