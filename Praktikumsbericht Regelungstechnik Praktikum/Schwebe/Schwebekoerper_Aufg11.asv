@@ -1,8 +1,0 @@
-clc
-s=tf('s');
-
-%Variablen:
-Tstrich
-
-Gbruch=(1+C*G)/(C*G);
-Gvor=1/((1+Tstrich*s)^(n+1))*Gbruch;
