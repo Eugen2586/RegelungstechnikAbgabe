@@ -14,6 +14,9 @@
 
 \begin {document}
 
+<<<<<<< HEAD
+\title{Praktiukumsarbeit zum Praktikum Regelungstechnik}
+=======
 %--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  %Infobereich: nice to have:
 
@@ -33,6 +36,7 @@
 %--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 \title{Praktikumsarbeit zum Praktikum Regelungstechnik}
+>>>>>>> Christian
 \author{Christian Küllmer, Jonas Kallweidt, Leon Blum}
 \date{\today{}, Kassel}
 \maketitle
@@ -53,6 +57,27 @@
 %--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 %Mathlab Roboteraufgabe:
 %Version von 13.08.2019 Jonas: Überarbeitung aller Überschriften und Texte
+
+
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ %Infobereich: nice to have:
+
+
+
+%Griechisches Alphabet:
+
+ %$ \alpha\beta\gamma\delta\epsilon\varepsilon\zeta\eta\theta\vartheta\iota\kappa\lambda\mu\nu\xi\pi
+ %\varpi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega\Gamma\Delta\Theta\Lambda\Xi
+ %\Pi\Sigma\Upsilon\Phi\Psi\Omega $
+
+
+
+
+%(gerne ergänzen)
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 \section{Rechnerteil Aufgaben aus Kapitel 9.3 des Praktikumsskripts}
 In diesem Praktikumsteil geht es darum, einen Roboterarm am Computer mit Hilfe von Mathlab zu simulieren und zu analysiere. 
@@ -460,17 +485,14 @@ Dies lässt sich mit der vorangestellten Formel durch Einsetzen lösen.
 Man erhält eine Abweichung von 20\textit{cm}, ab denen das System nicht stärker regelt.
 
 
-%\subsubsection {Implementierung des Reglers mit verschiedenen Parametern}
-%
-%Im Folgenden werden drei verschiedene Implementierungen dieses Reglers betrachtet (und hinsichtlich der Positionsgenauigkeit, Geschwindigkeit und %Pendeldauer begutachtet):\newline
-%Gegeben sind der Verstärkungsfaktor\textit{R\textsubscript{y}} und die Positionsabweichung von der Wunschposition
+\subsubsection {Implementierung des Reglers mit verschiedenen Parametern}
 
-%\begin{enumerate}
-%\item \textit{R\textsubscript{y}} = 5 \bar{y}\textsubscript{w}-y\textsubscript{w} = 0,2 
-%
-%
-%
-%\end{enumerate}
+Im Folgenden werden drei verschiedene Implementierungen dieses Reglers betrachtet (und hinsichtlich der Positionsgenauigkeit, Geschwindigkeit und Pendeldauer begutachtet):\newline
+Gegeben sind der Verstärkungsfaktor\textit{R\textsubscript{y}} und die Positionsabweichung von der Wunschposition
+
+\begin{align}
+\textit{R\textsubscript{y}} = 5 \bar{y}\textsubscript{w}-y\textsubscript{w} = 0,2 
+\end{align}
 
 %1.	Ry = 5		yquerw-yw = 0.2
 %2.	Ry = 5		yquerw-yw = 1
