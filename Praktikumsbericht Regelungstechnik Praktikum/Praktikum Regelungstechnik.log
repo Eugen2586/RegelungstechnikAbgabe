@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.10)  15 AUG 2019 21:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.10)  15 AUG 2019 21:19
 entering extended mode
 **"./Praktikum Regelungstechnik.tex"
 ("Praktikum Regelungstechnik.tex"
@@ -364,170 +364,306 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfig@top=\skip68
 \subfig@bottom=\skip69
 )
-("Praktikum Regelungstechnik.aux"
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
-
-LaTeX Warning: Label `img:grafik-dummy' multiply defined.
-
+("C:\Program Files\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen125
+\WF@size=\dimen126
+\c@WF@wrappedlines=\count110
+\WF@box=\box33
+\WF@everypar=\toks24
+Package: wrapfig 2003/01/31  v 3.6
 )
+("C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption.sty"
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption3.sty"
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen127
+\captionmargin@=\dimen128
+\captionwidth=\dimen129
+\caption@tempdima=\dimen130
+\caption@indent=\dimen131
+\caption@parindent=\dimen132
+\caption@hangindent=\dimen133
+)
+Package caption Info: KOMA-Script document class.
+\c@caption@flags=\count111
+\c@ContinuedFloat=\count112
+Package caption Info: float package is loaded.
+Package caption Info: subfigure package is loaded.
+Package caption Info: wrapfig package is loaded.
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\textcomp.sty"
+Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1enc.dfu"
+File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+FEFF (decimal 65279)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+No file "Praktikum Regelungstechnik".aux.
 \openout1 = `"Praktikum Regelungstechnik.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 15.
- ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 18.
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 18.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
-\scratchdimen=\dimen125
-\scratchbox=\box33
-\nofMPsegments=\count111
-\nofMParguments=\count112
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count113
-\MPscratchDim=\dimen126
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
-\everyMPtoPDFconversion=\toks25
-) [1
-
-{C:/Users/Jonas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 51.
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmss.fd"
+\scratchcounter=\count113
+\scratchdimen=\dimen134
+\scratchbox=\box34
+\nofMPsegments=\count114
+\nofMParguments=\count115
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen135
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
+\everyMPtoPDFconversion=\toks26
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 50.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmss.fd"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 51.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 50.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 51.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 50.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 51.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 50.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 51.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 50.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 51.
+(Font)              <14.4> on input line 50.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 51.
+(Font)              <10> on input line 50.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 51.
-LaTeX Font Info:    Try loading font information for U+msa on input line 51.
+(Font)              <7> on input line 50.
+LaTeX Font Info:    Try loading font information for U+msa on input line 50.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 51.
+LaTeX Font Info:    Try loading font information for U+msb on input line 50.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2
+) [1
 
-]
-("Praktikum Regelungstechnik.toc"
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 2.
 
-Overfull \hbox (4.43246pt too wide) in paragraph at lines 19--19
- [][] []\T1/lmr/m/n/10 Berechnen der Kaskaden-regelung und der Führungsüber-tra
--gungs- 
- []
-
-[3])
+{C:/Users/Jonas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+No file "Praktikum Regelungstechnik".toc.
 \tf@toc=\write3
 \openout3 = `"Praktikum Regelungstechnik.toc"'.
 
- [4] ("Praktikum Regelungstechnik.lof")
+[2]
+No file "Praktikum Regelungstechnik".lof.
 \tf@lof=\write4
 \openout4 = `"Praktikum Regelungstechnik.lof"'.
 
- [5]
+[3]
 
 LaTeX Warning: File `Theoretischer Teil/SimulinkModell.jpeg' not found on input
- line 101.
+ line 105.
 
-<Theoretischer Teil/SimulinkModell.jpeg, id=23, 463.13025pt x 418.56375pt>
+<Theoretischer Teil/SimulinkModell.jpeg, id=14, 463.13025pt x 418.56375pt>
 File: Theoretischer Teil/SimulinkModell.jpeg Graphic file (type jpg)
 <use Theoretischer Teil/SimulinkModell.jpeg>
 Package pdftex.def Info: Theoretischer Teil/SimulinkModell.jpeg  used on input 
-line 101.
+line 105.
 (pdftex.def)             Requested size: 261.40857pt x 236.25264pt.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 110.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 114.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omslmr.fd"
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 110.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 114.
 Package epstopdf Info: Source file: <9b.eps>
 (epstopdf)                    date: 2019-08-05 11:30:34
 (epstopdf)                    size: 48003 bytes
@@ -536,29 +672,29 @@ Package epstopdf Info: Source file: <9b.eps>
 (epstopdf)                    size: 40155 bytes
 (epstopdf)             Command: <epstopdf --outfile=9b-eps-converted-to.pdf 9b.
 eps>
-(epstopdf)             \includegraphics on input line 123.
+(epstopdf)             \includegraphics on input line 127.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./9b-eps-converted-to.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<9b-eps-converted-to.pdf, id=24, 385.44pt x 231.86626pt>
+<9b-eps-converted-to.pdf, id=15, 385.44pt x 231.86626pt>
 File: 9b-eps-converted-to.pdf Graphic file (type pdf)
 <use 9b-eps-converted-to.pdf>
-Package pdftex.def Info: 9b-eps-converted-to.pdf  used on input line 123.
+Package pdftex.def Info: 9b-eps-converted-to.pdf  used on input line 127.
 (pdftex.def)             Requested size: 373.44246pt x 224.64818pt.
-[6 <./Theoretischer Teil/SimulinkModell.jpeg>] [7 <./9b-eps-converted-to.pdf>]
+[4 <./Theoretischer Teil/SimulinkModell.jpeg>] [5 <./9b-eps-converted-to.pdf>]
 
-LaTeX Warning: Command \" invalid in math mode on input line 141.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 141.
+LaTeX Warning: Command \" invalid in math mode on input line 145.
 
 
-LaTeX Warning: Command \" invalid in math mode on input line 141.
+LaTeX Warning: Command \" invalid in math mode on input line 145.
 
 
-LaTeX Warning: Command \" invalid in math mode on input line 141.
+LaTeX Warning: Command \" invalid in math mode on input line 145.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 145.
 
 Package epstopdf Info: Source file: <9c.eps>
 (epstopdf)                    date: 2019-08-05 11:30:34
@@ -568,45 +704,45 @@ Package epstopdf Info: Source file: <9c.eps>
 (epstopdf)                    size: 43061 bytes
 (epstopdf)             Command: <epstopdf --outfile=9c-eps-converted-to.pdf 9c.
 eps>
-(epstopdf)             \includegraphics on input line 145.
+(epstopdf)             \includegraphics on input line 149.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./9c-eps-converted-to.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<9c-eps-converted-to.pdf, id=40, 385.44pt x 231.86626pt>
+<9c-eps-converted-to.pdf, id=32, 385.44pt x 231.86626pt>
 File: 9c-eps-converted-to.pdf Graphic file (type pdf)
 <use 9c-eps-converted-to.pdf>
-Package pdftex.def Info: 9c-eps-converted-to.pdf  used on input line 145.
+Package pdftex.def Info: 9c-eps-converted-to.pdf  used on input line 149.
 (pdftex.def)             Requested size: 298.7551pt x 179.71924pt.
 
-LaTeX Warning: Command \" invalid in math mode on input line 165.
+LaTeX Warning: Command \" invalid in math mode on input line 169.
 
 
-LaTeX Warning: Command \" invalid in math mode on input line 165.
+LaTeX Warning: Command \" invalid in math mode on input line 169.
 
 
-LaTeX Warning: Command \" invalid in math mode on input line 165.
+LaTeX Warning: Command \" invalid in math mode on input line 169.
 
 
-LaTeX Warning: Command \" invalid in math mode on input line 165.
+LaTeX Warning: Command \" invalid in math mode on input line 169.
 
 
 LaTeX Warning: File `Theoretischer Teil/Aufgabe9c.png' not found on input line 
-169.
+173.
 
-<Theoretischer Teil/Aufgabe9c.png, id=41, 795.57225pt x 186.09525pt>
+<Theoretischer Teil/Aufgabe9c.png, id=33, 795.57225pt x 186.09525pt>
 File: Theoretischer Teil/Aufgabe9c.png Graphic file (type png)
 <use Theoretischer Teil/Aufgabe9c.png>
 Package pdftex.def Info: Theoretischer Teil/Aufgabe9c.png  used on input line 1
-69.
+73.
 (pdftex.def)             Requested size: 448.1298pt x 104.82312pt.
 
-Overfull \hbox (74.68735pt too wide) in paragraph at lines 169--170
+Overfull \hbox (74.68735pt too wide) in paragraph at lines 173--174
  [] 
  []
 
-[8 <./9c-eps-converted-to.pdf>]
+[6 <./9c-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Aufgabe9e.eps>
 (epstopdf)                    date: 2019-08-05 11:30:34
 (epstopdf)                    size: 131134 bytes
@@ -615,63 +751,120 @@ Package epstopdf Info: Source file: <Aufgabe9e.eps>
 (epstopdf)                    size: 128952 bytes
 (epstopdf)             Command: <epstopdf --outfile=Aufgabe9e-eps-converted-to.
 pdf Aufgabe9e.eps>
-(epstopdf)             \includegraphics on input line 196.
+(epstopdf)             \includegraphics on input line 200.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./Aufgabe9e-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Aufgabe9e-eps-converted-to.pdf, id=53, 1156.32pt x 512.91624pt>
+<Aufgabe9e-eps-converted-to.pdf, id=46, 1156.32pt x 512.91624pt>
 File: Aufgabe9e-eps-converted-to.pdf Graphic file (type pdf)
 <use Aufgabe9e-eps-converted-to.pdf>
-Package pdftex.def Info: Aufgabe9e-eps-converted-to.pdf  used on input line 196
+Package pdftex.def Info: Aufgabe9e-eps-converted-to.pdf  used on input line 200
 .
 (pdftex.def)             Requested size: 448.1298pt x 198.77646pt.
 
-Overfull \hbox (74.68735pt too wide) in paragraph at lines 196--197
+Overfull \hbox (74.68735pt too wide) in paragraph at lines 200--201
  [][] 
  []
 
-[9 <./Theoretischer Teil/Aufgabe9c.png>]
-<WOZ9f.png, id=58, 820.2645pt x 487.8225pt>
+[7 <./Theoretischer Teil/Aufgabe9c.png>]
+<WOZ9f.png, id=52, 820.2645pt x 487.8225pt>
 File: WOZ9f.png Graphic file (type png)
 <use WOZ9f.png>
-Package pdftex.def Info: WOZ9f.png  used on input line 226.
+Package pdftex.def Info: WOZ9f.png  used on input line 230.
 (pdftex.def)             Requested size: 298.7551pt x 177.67038pt.
- [10 <./Aufgabe9e-eps-converted-to.pdf>]
-<WOZ9f2.png, id=79, 434.8245pt x 405.31425pt>
+ [8 <./Aufgabe9e-eps-converted-to.pdf>]
+<WOZ9f2.png, id=74, 434.8245pt x 405.31425pt>
 File: WOZ9f2.png Graphic file (type png)
 <use WOZ9f2.png>
-Package pdftex.def Info: WOZ9f2.png  used on input line 239.
+Package pdftex.def Info: WOZ9f2.png  used on input line 243.
 (pdftex.def)             Requested size: 224.06775pt x 208.86595pt.
-<WOZ9f3.png, id=80, 420.3705pt x 243.91125pt>
+<WOZ9f3.png, id=75, 420.3705pt x 243.91125pt>
 File: WOZ9f3.png Graphic file (type png)
 <use WOZ9f3.png>
-Package pdftex.def Info: WOZ9f3.png  used on input line 247.
+Package pdftex.def Info: WOZ9f3.png  used on input line 251.
 (pdftex.def)             Requested size: 298.7551pt x 173.35683pt.
- [11 <./WOZ9f.png> <./WOZ9f2.png>] [12 <./WOZ9f3.png>] [13] [14]
-<Drehzahl6e3neu.png, id=95, 1440.88312pt x 723.45282pt>
-File: Drehzahl6e3neu.png Graphic file (type png)
-<use Drehzahl6e3neu.png>
-Package pdftex.def Info: Drehzahl6e3neu.png  used on input line 341.
-(pdftex.def)             Requested size: 410.78897pt x 206.25243pt.
+[9 <./WOZ9f.png> <./WOZ9f2.png>] [10 <./WOZ9f3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
 
-Overfull \hbox (37.34651pt too wide) in paragraph at lines 341--342
- [][] 
  []
 
-[15]
-<Drehzahl57B.png, id=100, 1417.54594pt x 704.6325pt>
-File: Drehzahl57B.png Graphic file (type png)
-<use Drehzahl57B.png>
-Package pdftex.def Info: Drehzahl57B.png  used on input line 361.
-(pdftex.def)             Requested size: 448.1298pt x 222.75604pt.
+<Leon-PRT-Bilder/Drehzahl5cklein.png, id=83, 296.60812pt x 130.98938pt>
+File: Leon-PRT-Bilder/Drehzahl5cklein.png Graphic file (type png)
+<use Leon-PRT-Bilder/Drehzahl5cklein.png>
+Package pdftex.def Info: Leon-PRT-Bilder/Drehzahl5cklein.png  used on input lin
+e 286.
+(pdftex.def)             Requested size: 151.26813pt x 66.80368pt.
 
-Overfull \hbox (74.68735pt too wide) in paragraph at lines 361--362
- [][] 
+Overfull \hbox (1.89343pt too wide) in paragraph at lines 286--287
+[][] 
  []
 
-[16 <./Drehzahl6e3neu.png>] [17 <./Drehzahl57B.png>]
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 29
+0.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--311
+
+ []
+
+[11 <./Leon-PRT-Bilder/Drehzahl5cklein.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 312--314
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--329
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 351--353
+
+ []
+
+<Leon-PRT-Bilder/Drehzahl6d1neu.png, id=90, 1431.84938pt x 715.17188pt>
+File: Leon-PRT-Bilder/Drehzahl6d1neu.png Graphic file (type png)
+<use Leon-PRT-Bilder/Drehzahl6d1neu.png>
+Package pdftex.def Info: Leon-PRT-Bilder/Drehzahl6d1neu.png  used on input line
+ 358.
+(pdftex.def)             Requested size: 182.98885pt x 91.39326pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 358.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 358.
+<Leon-PRT-Bilder/Drehzahl6e1neu.png, id=91, 1431.84938pt x 715.17188pt>
+File: Leon-PRT-Bilder/Drehzahl6e1neu.png Graphic file (type png)
+<use Leon-PRT-Bilder/Drehzahl6e1neu.png>
+Package pdftex.def Info: Leon-PRT-Bilder/Drehzahl6e1neu.png  used on input line
+ 359.
+(pdftex.def)             Requested size: 182.98885pt x 91.39326pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--361
+
+ []
+
+[13]
+Overfull \hbox (10.68628pt too wide) in paragraph at lines 370--373
+\T1/lmr/m/n/10 Zuerst muss das Prob-lem der Überspan-nung gelöst wer-den. Dies 
+kann dadurch geschehen,
+ []
+
+
+Overfull \hbox (48.21487pt too wide) in paragraph at lines 370--373
+\T1/lmr/m/n/10 ringert wer-den. Dazu wird wieder ein Sät-ti-gungs-block einge-b
+aut, we-her die Winkelgeschwindigkeit
+ []
+
+[14 <./Leon-PRT-Bilder/Drehzahl6d1neu.png> <./Leon-PRT-Bilder/Drehzahl6e1neu.pn
+g>]
 
 LaTeX Warning: Command \" invalid in math mode on input line 385.
 
@@ -710,59 +903,192 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: miktex-pdftex.exe (file ./SchwMod-eps-converted-to.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<SchwMod-eps-converted-to.pdf, id=107, 421.575pt x 571.13374pt>
+<SchwMod-eps-converted-to.pdf, id=102, 421.575pt x 571.13374pt>
 File: SchwMod-eps-converted-to.pdf Graphic file (type pdf)
 <use SchwMod-eps-converted-to.pdf>
 Package pdftex.def Info: SchwMod-eps-converted-to.pdf  used on input line 398.
 (pdftex.def)             Requested size: 224.06775pt x 303.56221pt.
-[18] [19 <./SchwMod-eps-converted-to.pdf>] [20]
+[15] [16 <./SchwMod-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 426--428
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--432
+
+ []
+
+<Leon-PRT-Bilder/Sch-Stell37.png, id=114, 1442.38875pt x 713.66624pt>
+File: Leon-PRT-Bilder/Sch-Stell37.png Graphic file (type png)
+<use Leon-PRT-Bilder/Sch-Stell37.png>
+Package pdftex.def Info: Leon-PRT-Bilder/Sch-Stell37.png  used on input line 44
+2.
+(pdftex.def)             Requested size: 182.98885pt x 90.53659pt.
+<Leon-PRT-Bilder/Sch-Regel37.png, id=115, 1443.89438pt x 723.45282pt>
+File: Leon-PRT-Bilder/Sch-Regel37.png Graphic file (type png)
+<use Leon-PRT-Bilder/Sch-Regel37.png>
+Package pdftex.def Info: Leon-PRT-Bilder/Sch-Regel37.png  used on input line 44
+3.
+(pdftex.def)             Requested size: 182.98885pt x 91.67879pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--446
+
+ []
+
+[17]
+<Leon-PRT-Bilder/Sch-Stell39.png, id=119, 1440.88312pt x 710.655pt>
+File: Leon-PRT-Bilder/Sch-Stell39.png Graphic file (type png)
+<use Leon-PRT-Bilder/Sch-Stell39.png>
+Package pdftex.def Info: Leon-PRT-Bilder/Sch-Stell39.png  used on input line 45
+5.
+(pdftex.def)             Requested size: 182.98885pt x 90.24133pt.
+<Leon-PRT-Bilder/Sch-Regel39.png, id=120, 1443.14156pt x 712.91344pt>
+File: Leon-PRT-Bilder/Sch-Regel39.png Graphic file (type png)
+<use Leon-PRT-Bilder/Sch-Regel39.png>
+Package pdftex.def Info: Leon-PRT-Bilder/Sch-Regel39.png  used on input line 45
+6.
+(pdftex.def)             Requested size: 182.98885pt x 90.3867pt.
+ [18 <./Leon-PRT-Bilder/Sch-Stell37.png> <./Leon-PRT-Bilder/Sch-Regel37.png> <.
+/Leon-PRT-Bilder/Sch-Stell39.png> <./Leon-PRT-Bilder/Sch-Regel39.png>]
+Package epstopdf Info: Source file: <Figure312Regel.eps>
+(epstopdf)                    date: 2019-08-15 21:06:19
+(epstopdf)                    size: 70297 bytes
+(epstopdf)             Output file: <Figure312Regel-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-08-15 21:09:28
+(epstopdf)                    size: 61647 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figure312Regel-eps-converte
+d-to.pdf Figure312Regel.eps>
+(epstopdf)             \includegraphics on input line 472.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: miktex-pdftex.exe (file ./Figure312Regel-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figure312Regel-eps-converted-to.pdf, id=128, 1156.32pt x 564.1075pt>
+File: Figure312Regel-eps-converted-to.pdf Graphic file (type pdf)
+<use Figure312Regel-eps-converted-to.pdf>
+Package pdftex.def Info: Figure312Regel-eps-converted-to.pdf  used on input lin
+e 472.
+(pdftex.def)             Requested size: 410.78897pt x 200.40158pt.
+
+Overfull \hbox (37.34651pt too wide) in paragraph at lines 472--473
+ [][] 
+ []
+
+
+Overfull \hbox (6.13199pt too wide) in paragraph at lines 483--484
+\T1/lmr/m/n/10 mit Max-i-mal 5 Volt ver-sorgt wird. Als näch-stes muss die zu g
+roÿe Winkelgeschwindigkeit
+ []
+
+
+Overfull \hbox (61.57625pt too wide) in paragraph at lines 483--484
+\T1/lmr/m/n/10 ver-ringert wer-den. Dazu wird wieder ein Sät-ti-gungs-block ein
+ge-baut, we-her die Winkelgeschwindigkeit
+ []
+
+[19 <./Figure312Regel-eps-converted-to.pdf>]
+<Drehzahl6e3neu.png, id=139, 1440.88312pt x 723.45282pt>
+File: Drehzahl6e3neu.png Graphic file (type png)
+<use Drehzahl6e3neu.png>
+Package pdftex.def Info: Drehzahl6e3neu.png  used on input line 524.
+(pdftex.def)             Requested size: 410.78897pt x 206.25243pt.
+
+Overfull \hbox (37.34651pt too wide) in paragraph at lines 524--525
+ [][] 
+ []
+
+[20]
+<Drehzahl57B.png, id=144, 1417.54594pt x 704.6325pt>
+File: Drehzahl57B.png Graphic file (type png)
+<use Drehzahl57B.png>
+Package pdftex.def Info: Drehzahl57B.png  used on input line 544.
+(pdftex.def)             Requested size: 448.1298pt x 222.75604pt.
+
+Overfull \hbox (74.68735pt too wide) in paragraph at lines 544--545
+ [][] 
+ []
+
+[21 <./Drehzahl6e3neu.png>] [22 <./Drehzahl57B.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 430.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 430.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 430.
- [21]
-Overfull \hbox (16.84927pt too wide) in paragraph at lines 478--480
+(Font)              <12> on input line 578.
+ [23]
+Overfull \hbox (16.84927pt too wide) in paragraph at lines 624--626
 \T1/lmr/m/n/10 (und hin-sichtlich der Po-si-tion-s-ge-nauigkeit, Geschwindigkei
 t und Pen-del-dauer be-gutachtet): 
  []
 
-[22]
-<Leon-PRT-Bilder/Simulink1.jpg, id=129, 1186.4325pt x 536.0025pt>
+[24] [25]
+Overfull \hbox (8.81297pt too wide) in paragraph at lines 670--678
+\T1/lmr/m/n/10 2. Die Lin-earisierten Gle-ichun-gen in Ma-trizen Form kön-nen d
+i-rekt in Math-lab eingegeben
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 670--678
+
+ []
+
+<Leon-PRT-Bilder/Simulink1.jpg, id=162, 1186.4325pt x 536.0025pt>
 File: Leon-PRT-Bilder/Simulink1.jpg Graphic file (type jpg)
 <use Leon-PRT-Bilder/Simulink1.jpg>
-Package pdftex.def Info: Leon-PRT-Bilder/Simulink1.jpg  used on input line 513.
+Package pdftex.def Info: Leon-PRT-Bilder/Simulink1.jpg  used on input line 680.
 
 (pdftex.def)             Requested size: 224.06775pt x 101.22812pt.
-<Leon-PRT-Bilder/Simulink2.jpg, id=130, 1044.90375pt x 577.40718pt>
+<Leon-PRT-Bilder/Simulink2.jpg, id=163, 1044.90375pt x 577.40718pt>
 File: Leon-PRT-Bilder/Simulink2.jpg Graphic file (type jpg)
 <use Leon-PRT-Bilder/Simulink2.jpg>
-Package pdftex.def Info: Leon-PRT-Bilder/Simulink2.jpg  used on input line 514.
+Package pdftex.def Info: Leon-PRT-Bilder/Simulink2.jpg  used on input line 681.
 
 (pdftex.def)             Requested size: 156.84514pt x 86.669pt.
 
-Overfull \hbox (9.69264pt too wide) in paragraph at lines 513--515
+Overfull \hbox (9.69264pt too wide) in paragraph at lines 680--682
 [][] [] 
  []
 
-[23 <./Leon-PRT-Bilder/Simulink1.jpg> <./Leon-PRT-Bilder/Simulink2.jpg>]
-[24]
+[26 <./Leon-PRT-Bilder/Simulink1.jpg> <./Leon-PRT-Bilder/Simulink2.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 708--710
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 6
-04.
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 725--727
+
+ []
+
+<Leon-PRT-Bilder/Figure44f.png, id=170, 1444.64719pt x 716.6775pt>
+File: Leon-PRT-Bilder/Figure44f.png Graphic file (type png)
+<use Leon-PRT-Bilder/Figure44f.png>
+Package pdftex.def Info: Leon-PRT-Bilder/Figure44f.png  used on input line 733.
+
+(pdftex.def)             Requested size: 182.98885pt x 90.77644pt.
+<Leon-PRT-Bilder/Figure44g.png, id=171, 1428.83812pt x 715.17188pt>
+File: Leon-PRT-Bilder/Figure44g.png Graphic file (type png)
+<use Leon-PRT-Bilder/Figure44g.png>
+Package pdftex.def Info: Leon-PRT-Bilder/Figure44g.png  used on input line 734.
+
+(pdftex.def)             Requested size: 182.98885pt x 91.58969pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 739--742
+
+ []
+
+[28 <./Leon-PRT-Bilder/Figure44f.png> <./Leon-PRT-Bilder/Figure44g.png>]
+
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 7
+50.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 6
-04.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 7
+50.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 6
-04.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 7
+50.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 6
-04.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 7
+50.
 
 Package epstopdf Info: Source file: <Figure45a200mT.eps>
 (epstopdf)                    date: 2019-08-05 11:32:18
@@ -772,20 +1098,20 @@ Package epstopdf Info: Source file: <Figure45a200mT.eps>
 (epstopdf)                    size: 5898 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figure45a200mT-eps-converte
 d-to.pdf Figure45a200mT.eps>
-(epstopdf)             \includegraphics on input line 610.
+(epstopdf)             \includegraphics on input line 756.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./Figure45a200mT-eps-converted-to.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figure45a200mT-eps-converted-to.pdf, id=139, 421.575pt x 277.035pt>
+<Figure45a200mT-eps-converted-to.pdf, id=177, 421.575pt x 277.035pt>
 File: Figure45a200mT-eps-converted-to.pdf Graphic file (type pdf)
 <use Figure45a200mT-eps-converted-to.pdf>
 Package pdftex.def Info: Figure45a200mT-eps-converted-to.pdf  used on input lin
-e 610.
+e 756.
 (pdftex.def)             Requested size: 224.06775pt x 147.24634pt.
-[25]
-Overfull \hbox (17.18214pt too wide) in paragraph at lines 614--616
+
+Overfull \hbox (17.18214pt too wide) in paragraph at lines 760--762
 []\T1/lmr/m/n/10 Beobachtung: Bei der Ab-taszeit im oberen Grenzbere-ich schauk
 elt sich die eigentliche
  []
@@ -798,35 +1124,35 @@ Package epstopdf Info: Source file: <45a1mT.eps>
 (epstopdf)                    size: 129561 bytes
 (epstopdf)             Command: <epstopdf --outfile=45a1mT-eps-converted-to.pdf
  45a1mT.eps>
-(epstopdf)             \includegraphics on input line 619.
+(epstopdf)             \includegraphics on input line 765.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./45a1mT-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<45a1mT-eps-converted-to.pdf, id=144, 421.575pt x 277.035pt>
+<45a1mT-eps-converted-to.pdf, id=178, 421.575pt x 277.035pt>
 File: 45a1mT-eps-converted-to.pdf Graphic file (type pdf)
 <use 45a1mT-eps-converted-to.pdf>
-Package pdftex.def Info: 45a1mT-eps-converted-to.pdf  used on input line 619.
+Package pdftex.def Info: 45a1mT-eps-converted-to.pdf  used on input line 765.
 (pdftex.def)             Requested size: 224.06775pt x 147.24634pt.
-
-Overfull \hbox (3.02007pt too wide) in paragraph at lines 623--625
+[29 <./Figure45a200mT-eps-converted-to.pdf>]
+Overfull \hbox (3.02007pt too wide) in paragraph at lines 769--771
 \T1/lmr/m/n/10 Schwin-gen des Seils stark ver-mieden wird. Es sorgt dafür, dass
  das die Auslenkung
  []
 
 
-Overfull \hbox (17.89714pt too wide) in paragraph at lines 626--627
+Overfull \hbox (17.89714pt too wide) in paragraph at lines 772--773
  \T1/lmr/bx/n/10 Fazit: \T1/lmr/m/n/10 Das Fazit, was aus diesem Ver-such gezo-
 gen wer-den muss ist, dass die diskretisierung
  []
 
-<PDRegler.png, id=145, 793.16325pt x 469.755pt>
+<PDRegler.png, id=185, 793.16325pt x 469.755pt>
 File: PDRegler.png Graphic file (type png)
 <use PDRegler.png>
-Package pdftex.def Info: PDRegler.png  used on input line 630.
+Package pdftex.def Info: PDRegler.png  used on input line 776.
 (pdftex.def)             Requested size: 224.06775pt x 132.70602pt.
-[26 <./Figure45a200mT-eps-converted-to.pdf> <./45a1mT-eps-converted-to.pdf>]
+[30 <./45a1mT-eps-converted-to.pdf> <./PDRegler.png>]
 Package epstopdf Info: Source file: <PD-ReglerTestReal.eps>
 (epstopdf)                    date: 2019-08-05 11:43:03
 (epstopdf)                    size: 87697 bytes
@@ -835,19 +1161,18 @@ Package epstopdf Info: Source file: <PD-ReglerTestReal.eps>
 (epstopdf)                    size: 20627 bytes
 (epstopdf)             Command: <epstopdf --outfile=PD-ReglerTestReal-eps-conve
 rted-to.pdf PD-ReglerTestReal.eps>
-(epstopdf)             \includegraphics on input line 639.
+(epstopdf)             \includegraphics on input line 785.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./PD-ReglerTestReal-eps-converted-to.pd
 f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<PD-ReglerTestReal-eps-converted-to.pdf, id=156, 421.575pt x 277.035pt>
+<PD-ReglerTestReal-eps-converted-to.pdf, id=193, 421.575pt x 277.035pt>
 File: PD-ReglerTestReal-eps-converted-to.pdf Graphic file (type pdf)
 <use PD-ReglerTestReal-eps-converted-to.pdf>
 Package pdftex.def Info: PD-ReglerTestReal-eps-converted-to.pdf  used on input 
-line 639.
+line 785.
 (pdftex.def)             Requested size: 224.06775pt x 147.24634pt.
-[27 <./PDRegler.png> <./PD-ReglerTestReal-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Figure45b1.eps>
 (epstopdf)                    date: 2019-08-05 11:43:03
 (epstopdf)                    size: 586799 bytes
@@ -856,19 +1181,19 @@ Package epstopdf Info: Source file: <Figure45b1.eps>
 (epstopdf)                    size: 125519 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figure45b1-eps-converted-to
 .pdf Figure45b1.eps>
-(epstopdf)             \includegraphics on input line 650.
+(epstopdf)             \includegraphics on input line 796.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./Figure45b1-eps-converted-to.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figure45b1-eps-converted-to.pdf, id=163, 421.575pt x 277.035pt>
+<Figure45b1-eps-converted-to.pdf, id=194, 421.575pt x 277.035pt>
 File: Figure45b1-eps-converted-to.pdf Graphic file (type pdf)
 <use Figure45b1-eps-converted-to.pdf>
-Package pdftex.def Info: Figure45b1-eps-converted-to.pdf  used on input line 65
-0.
+Package pdftex.def Info: Figure45b1-eps-converted-to.pdf  used on input line 79
+6.
 (pdftex.def)             Requested size: 224.06775pt x 147.24634pt.
-[28 <./Figure45b1-eps-converted-to.pdf>]
+[31 <./PD-ReglerTestReal-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Figure45b5mitSaturation.eps>
 (epstopdf)                    date: 2019-08-05 11:43:03
 (epstopdf)                    size: 87657 bytes
@@ -878,56 +1203,59 @@ df>
 (epstopdf)                    size: 20670 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figure45b5mitSaturation-eps
 -converted-to.pdf Figure45b5mitSaturation.eps>
-(epstopdf)             \includegraphics on input line 663.
+(epstopdf)             \includegraphics on input line 809.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./Figure45b5mitSaturation-eps-converted
 -to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> all
 owed
-<Figure45b5mitSaturation-eps-converted-to.pdf, id=170, 421.575pt x 277.035pt>
+<Figure45b5mitSaturation-eps-converted-to.pdf, id=202, 421.575pt x 277.035pt>
 File: Figure45b5mitSaturation-eps-converted-to.pdf Graphic file (type pdf)
 <use Figure45b5mitSaturation-eps-converted-to.pdf>
 Package pdftex.def Info: Figure45b5mitSaturation-eps-converted-to.pdf  used on 
-input line 663.
+input line 809.
 (pdftex.def)             Requested size: 224.06775pt x 147.24634pt.
-[29 <./Figure45b5mitSaturation-eps-converted-to.pdf>]
-("Praktikum Regelungstechnik.lof")
+[32 <./Figure45b1-eps-converted-to.pdf>] [33 <./Figure45b5mitSaturation-eps-con
+verted-to.pdf>] ("Praktikum Regelungstechnik.lof")
 \tf@lof=\write5
 \openout5 = `"Praktikum Regelungstechnik.lof"'.
 
- [30] ("Praktikum Regelungstechnik.aux")
+ [34]
+("Praktikum Regelungstechnik.aux")
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 5746 strings out of 492895
- 96834 string characters out of 3133479
- 266956 words of memory out of 3000000
- 9509 multiletter control sequences out of 15000+200000
- 80069 words of font info for 66 fonts, out of 3000000 for 9000
+ 7428 strings out of 492895
+ 125936 string characters out of 3133479
+ 290065 words of memory out of 3000000
+ 11164 multiletter control sequences out of 15000+200000
+ 83422 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,14n,51p,9130b,356s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 54i,14n,51p,9130b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
-nc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex
-.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi5.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr1
-2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
-m/lmri7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/lm/lmsy7.pfb>
-Output written on "Praktikum Regelungstechnik.pdf" (30 pages, 1307773 bytes).
+nc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy
+.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program 
+Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
+m/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/lm/lmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
+lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/lm/lmri7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb>
+Output written on "Praktikum Regelungstechnik.pdf" (34 pages, 1637060 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
+ 280 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -17,9 +17,6 @@
 
 \begin {document}
 
-<<<<<<< HEAD
-\title{Praktiukumsarbeit zum Praktikum Regelungstechnik}
-=======
 %--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  %Infobereich: nice to have:
 
@@ -47,7 +44,6 @@
 %--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 \title{Praktikumsarbeit zum Praktikum Regelungstechnik}
->>>>>>> Christian
 \author{Christian Küllmer, Jonas Kallweidt, Leon Blum}
 \date{\today{}, Kassel}
 \maketitle
@@ -61,21 +57,16 @@
 % Chris: Ja find ich cool, aber lass nach hinten machen :)
 % ?????????das Abbildungsverzeichnis, falls wir das haben wollen?????????????????????
 \listoffigures
-<<<<<<< HEAD
 %Textumflossenes Bild 
 %\begin{wrapfigure}{r}{5cm}
 %  \includegraphics[width=4.5cm]{Testbild.jpg}
 %  \caption{Bildunterschrift}
-%\end{wrapfigure}
-=======
 \newpage
 
 
 
 %--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 %Mathlab Roboteraufgabe:
-%Version von 13.08.2019 Jonas: Überarbeitung aller Überschriften und Texte
->>>>>>> master
 
 
 
@@ -99,7 +90,7 @@
 
 
 \section{Rechnerteil Aufgaben aus Kapitel 9.3 des Praktikumsskripts}
-In diesem Praktikumsteil geht es darum, einen Roboterarm am Computer mit Hilfe von Mathlab zu simulieren und zu analysiere. 
+In diesem Praktikumsteil geht es darum, einen Roboterarm am Computer mit Hilfe von Mathlab zu simulieren und zu analysieren. 
 % Der Satz ist halt einfach viel besser, Chris , danke m8 ;)
 
 \subsection{Aufgabe 9.3.a Simulink-Modell erstellen}
@@ -136,7 +127,7 @@ Das System wird gemäß den Vorgaben simuliert und die Zustandsgrößen werden �
 	\label{img:grafik-dummy}
 \end{figure}
 
-Aus dem obenstehenden Diagramm geht hervor, dass das System ein stabiles System darstellt, solange keine Stellgröße eingeprägt wird. Für gewöhlich kann das System eine Ruhelage bei 0\,$^\circ$ annehmen, wenn vorher keine Auslenkung vorgenommen wurde. Hier geht die Auslenkung auf keinen stationären Endwert, da die Expotentialfunktion zur Beschreibung der Dämpfung niemals null wird. In einem realen System wird hier aber wahrscheinlich ein Stillstand nach beliebig langer Wartezeit eintreten, wenn der Roboterarm die Haftreibung nicht mehr Überwinden kann und die Bewegung im Aperiodischen Grenzfall endet.
+Aus dem obenstehenden Diagramm geht hervor, dass das System ein stabiles System darstellt, solange keine Stellgröße eingeprägt wird. Für gewöhlich kann das System eine Ruhelage bei 0\,$^\circ$ annehmen, wenn vorher keine Auslenkung vorgenommen wurde. Hier geht die Auslenkung auf keinen stationären Endwert, da die Expotentialfunktion zur Beschreibung der Dämpfung niemals 0 wird. In einem realen System wird hier aber wahrscheinlich ein Stillstand nach beliebig langer Wartezeit eintreten, wenn der Roboterarm die Haftreibung nicht mehr überwinden kann und die Bewegung im Aperiodischen Grenzfall endet.
 \newpage
 %Version von Jonas und Christian vom 24.07.2019 am 13.08.2019 von Jonas überarbeitet
 
@@ -158,7 +149,7 @@ u(t)  &= \binom{0\,\,\,\,\,\,\,\,\, für\,\, t<1}{0.17\,\, für\,\, t \geq 1}
 	\label{img:grafik-dummy}
 \end{figure}
 
-Das System befindet sich zunächst in Ruhelage zum Zeitpunkt \textit t = 1 wird ein Drehmoment vom Motor aufgebaut,
+Das System befindet sich zunächst in Ruhelage. Zum Zeitpunkt \textit t = 1 wird ein Drehmoment vom Motor aufgebaut,
 das den Roboterarm nach Durchlaufen eines Einschwingvorgangs um die neue Ruhelage in eben diese auslenkt.
 Diese neue Ruhelage hängt von dem Eingangsdrehmoment ab. Der Einschwingvorgang weist dabei ein ähnliches Verhalten wie der Einschwingvorgang von Aufgabe 9.3.b auf.
 %Das Simulinkmodell des Roboterarms wird für die entsprechende Schaltung verändert. Alle Veränderungen werden in dieser Grafik dokumentiert.
@@ -183,7 +174,7 @@ u(t)  &= \binom{0\,\,\,\,\,\,\,\,\, für\,\, t<1}{0.18\,\, für\,\, t \geq 1}
 \end{figure}
 
 Anders als im Versuch 9.3.c befindet sich der Roboterarm nun zum Zeitpunkt \textit t = 0 nicht mehr in der Ruhelage bei einem Winkel von 0\,$^\circ$, 
-sondern in einem Winkel von 40\,$^\circ$. Dies hat zur Folge, dass der Arm zunächst in der Zeit bis  \textit t = 1 sowie in der darauffolgenden Sättigungszeit des PT1-Gliedes das den Motor beschreibt, zurückschwingen kann.
+sondern in einem Winkel von 40\,$^\circ$. Dies hat zur Folge, dass der Arm zunächst in der Zeit bis  \textit t = 1 sowie in der darauffolgenden Sättigungszeit des PT1-Gliedes, das den Motor beschreibt, zurückschwingen kann.
 Sobald das Drehmoment des Motors aufgebaut ist legt der Roboterarm an Geschwindigkeit zu und überschreitet dabei sogar die kritische 180\,$^\circ$
 Marke, ab der der Arm nicht mehr zurückschwingt, sondern einen Überschlag vollführt und weiter an Geschwindigkeit gewinnt.
 Da es sich bei dem betrachtetet Roboterarm um ein gedämpftes Model handelt, geht die Gewschwindigkeit in eine Sättigung über, bis diese um
@@ -200,7 +191,7 @@ Um zu überprüfen, ob der Motor den Arm bei einem Winkel von 40\,$^\circ$ halte
    u_0 = \frac{m*g*l* sin( \varphi (0))}{300} = 0,1471
 \end{align}
 
-Dies entspricht einem Drehmoment von 44,1402 \textit {Nm}. Dieses Drehmoment wird im Modell als konstante Eingangsgröße augegebenen. Der resultierende Winkel wird dann in Grad angegeben und sollte entsprechend der Erwartung einen Winkel von 40\,$^\circ$ entsprechen.
+Dies entspricht einem Drehmoment von 44,1402 \textit {Nm}. Dieses Drehmoment wird im Modell als konstante Eingangsgröße angegebenen. Der resultierende Winkel wird dann in Grad angegeben und sollte entsprechend der Erwartung einen Winkel von 40\,$^\circ$ entsprechen.
 
 \begin{figure}[H]
 	\centering
@@ -209,7 +200,7 @@ Dies entspricht einem Drehmoment von 44,1402 \textit {Nm}. Dieses Drehmoment wir
 	\label{img:grafik-dummy}
 \end{figure}
 
-An dem Diagramm ist zu sehen, dass es sich bei der Auslenkung durch das Drehmoment \textit{u\textsubscript{0}} einstellt. Diese Auslenkung entspricht im Mitte. einem Wert von 0,6971 \textit{Rad}. Daraus ergibt sich eine neue Auslenkung von 40\,$^\circ$. Damit wird die Angabe aus dem Aufgabenscript bestätigt.
+An dem Diagramm ist zu sehen, dass sich die Auslenkung durch das Drehmoment \textit{u\textsubscript{0}} einstellt. Diese Auslenkung entspricht im Mittel einem Wert von ca. 0,6971 \textit{Rad}. Womit die These aus dem Skript bestätigt ist.
 
 
 
@@ -223,7 +214,7 @@ Bei der Linearisirung durch Softwarenutzung von Mathlab ergibt sich folgendes Er
 \end{align}
 
 Die Abweichung zur Musterlösung in der dritten Nachkommastelle des Zählers lässt sich dabei durch einen veränderten Rundungsalgorithmus im Programm begründen. 
-Die Ergebnisse stimmen also überein wodurch G\textsubscript{s} von nun an unsere Funktion der Strecke beschreibt.
+Die Ergebnisse stimmen also überein, wodurch G\textsubscript{s} von nun an unsere Funktion der Strecke beschreibt.
 
 
 
@@ -239,87 +230,95 @@ Um einen Regler zu finden, der die Stabilitätskriterien einhält stellen wir zu
 	\label{img:grafik-dummy}
 \end{figure}
 
-In der Wurzelortskurve kann man direkt sehen, dass zwei Nullstellen in Richtung der zwei noch im positiven Bereich liegenden Polstellen einen guten Regler darstellen würden. 
-Diese müssen dabei nicht die Polstellen kompensieren, sondern lediglich im negativen Bereich der Wurzelortskurve liegen, um Stabilität der Übertragungsfunktion zu gewärleisten.
-%um diese in den stabilen Bereich zu krümmen.
-%dort den zerophilien Anteil der Wurzelortskurve anzuziehen.
-Es entsteht folgende Sprungantwort:
+Die Wurzelortskurve lässt zur Realisierung dabei nur einen Regler zu, der zwei Nullstellen hat. Da dieser abschließend noch realisierbar sein soll, muss der Regler weiterhin mindestens drei Polstellen besitzen. Es ergibt sich folgendes Reglerbild in der Wurzelortskurve:
+
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{WOZ9f2}
-	\caption{Anzeige des Ausgangswertes}
-	\label{img:grafik-dummy}
-\end{figure}
-
-Die sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{WOZ9f3}
+	\includegraphics[width=0.8\textwidth]{2019-08-15_20h07_12.png}
 	\caption{Wurzelortskurve des Systems G\textsubscript{s} mit der Anpassung zweier Nullstellen}
 	\label{img:grafik-dummy}
 \end{figure}
 
+
+Es entsteht folgende Sprungantwort:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{2019-08-15_20h07_22.png}
+	\caption{Anzeige des Ausgangswertes}
+	\label{img:grafik-dummy}
+\end{figure}
+
+
+
 Man sieht deutlich, dass sich hier eine gewünschte Stabilisierung der Funktion ergibt. 
 Es ist natürlich keine unbegrenzte Stabilität von dem System zu erwarten. 
-Der K-Wert sollte dabei so gewählt werden, dass die realen Pole alle im Linken teil der Kurve liegen. 
-Dies hat die Folge, dass sich der K-Wert in einem gewissen Rahmen einstellen lassen können muss.
+Der K-Wert (Verstärkungsfaktor des Reglers) sollte dabei so gewählt werden, dass die Pole alle im linken Teil der Kurve liegen und den gegebenen K-Wert von 10 nicht überschreitet. 
 
 
 \subsection{Aufgabe 9.3.h}
+
+
+
+
+
 %------------------------------------------Antrieb--------------------------------------------------Antrieb-------------------------------------------------------------------
 
-=======
-%----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \section{Versuch Antrieb}
-\subsection{Aufgabe 5 Drehzalregelung)}
-\subsection{Drehzahlregelung}
-%Antrieb 
-%5: 
-%Drehzahlregelung\\
+
+\subsection{Aufgabe 5 Drehzahlregelung}
+
+
 \subsubsection{Aufgabe 5.a}
+
 Die Sprungantwort des Systems soll ohne Filter ermittelt werden. Dabei zeigt sich, dass die Sprungantwort stark um den Wert von 1400 fluktuiert, die Abweichung beträgt dabei $\pm$ 150.
-%b)
+
+
 \subsubsection{Aufgabe 5.b}
-Wird die Sprungantwort mit eingeschaltetem Filter aufgenommen, so fallen signifikante Unterschiede auf. Das ansteigen der Sprungantwort verläuft nur unwesentlich langsammer dafür ergibt sich ein im Verhältnis zur Anfangsmessung geglättetes Signal, die Restwelligkeit  beträgt nur noch $\pm$ 10. Daraus kann die Übertragungsfunktion durch ein PT1 Glied angenähert werden. Es gilt dabei jedoch zu beachten, dass diue Übertragungsfunktion lediglich als Näherung angesehen werden kann, da die wirkliche Sprungantwort um ca 50 überschwingt. Die bestimmte Näherung lautet: 
+
+Wird die Sprungantwort mit eingeschaltetem Filter aufgenommen, so fallen signifikante Unterschiede auf. Das Ansteigen der Sprungantwort verläuft nur unwesentlich langsamer dafür ergibt sich ein im Verhältnis zur Anfangsmessung geglättetes Signal, die Restwelligkeit  beträgt nur noch $\pm$ 10. Daraus kann die Übertragungsfunktion durch ein PT1-Glied angenähert werden. Es gilt dabei jedoch zu beachten, dass die Übertragungsfunktion lediglich als Näherung angesehen werden kann, da die wirkliche Sprungantwort um ca 50 überschwingt. Die so bestimmte Näherung lautet: 
+
 \begin{align}
    G(s)_{PT1}=\frac{1275}{1+9,17s}
 \end{align}
-%c)
+
+
 \subsubsection{Aufgabe 5.c}
-Auf Basis der angenäherten Übertragungsfunktion kann nun ein Simulink Modell erstellt werden, in Figure 9 dargestellt. Durch dies kann ein Regler ausgelegt werden um ihn im realem Versuchsaufbau einzusetzen.\\
+
+Auf Basis der angenäherten Übertragungsfunktion kann nun ein Simulink Modell erstellt werden (in Figure 9 dargestellt). Durch dieses kann ein Regler ausgelegt werden, um ihn im realem Versuchsaufbau einzusetzen.
 
 \begin{wrapfigure}{r}{0.4\textwidth}
   \includegraphics[scale=0.51]{Leon-PRT-Bilder/Drehzahl5cklein}
   \caption{Simulink PT1}
 \end{wrapfigure}
-%d)
+
+
 \subsubsection{Aufgabe 5.d}
-Die Vorgabe für den Regler soll eine t\textsubscript{5\%} Zeit von 0,3 Sekunden sein. Mithilfe einer Faustformel kann nun der der Realteil des Poles bestimmt werden. Es ergibt sich dafür ein Realteil von -10 für den Pol des Geschlossenen Regelkreises des P Reglers. Der Geschlossene Regelkreis weist folgende Form auf: 	
+
+Die Vorgabe für den Regler soll eine \textit{t\textsubscript{5\%}}-Zeit von 0,3 Sekunden sein. Mithilfe einer Faustformel kann nun der Realteil des Pols bestimmt werden. Es ergibt sich dafür ein Realteil von -10 für den Pol des geschlossenen Regelkreises des P-Reglers. Der geschlossene Regelkreis weist folgende Form auf: 	
 
 \begin{align}
    G(s)_{PT1}=\frac{1275}{1+9,17s}
 \end{align}
-\subsubsection{Aufgabe5.b}
-Auf Basis der angenäherten Übertragungsfunktion kann nun ein Simulink Modell erstellt werden. Auf dies kann ein Regler ausgelegt werden und am realem Versuchsaufbau getestet werden.
-\subsubsection{Aufgabe 5.d)}	
-Die Vorgabe für den Regler soll eine t \textsubscript{5\%} Zeit von 0,3 Sekunden sein. Mithilfe einer Faustformel kann nun der Der Realteil des Poles bestimmt werden. Es ergibt sich dafür ein Realteil von -10 für den Pol des Geschlossenen Regelkreises des P Reglers. Der Geschlossene Regelkreis weist folgende Form auf:
-%>>>>>>> master
-\begin{align}
-G(s)_{(geschl.)}&=\frac{1275K_p}{1275K_p+ 1+9,17s}
-\end{align}
-%<<<<<<< HEAD
-Daraus werden die Pole in Abhängigkeit des Faktors Kp bestimmt. Es folgt ein K\textsubscript{p} Wert von 0,0711 \\
+
+
 \subsubsection{Aufgabe 5.e}	
-%e)
-Der P-Regler wird nun am Simulink Modell getestet. Der Sollwert betägt 1600\textdegree/s , als Stationärer Endwert wird 1 angestrebt. Um diesen Zu erreichen wird eine Vorsteuerung mit dem Verstärkungsfaktor  K\textsubscript{vor}=$\frac{1600}{1581,5}$ implementiert.
- die benötigte Stellgröße liegt über 5 Volt aber im realistischen Bereich, dennoch liegt diese über 0,3 Sekunden lang an, sodass hier Handlungsbedarf besteht falls das Reale System einen Error Code ausgibt.\\
+
+Der P-Regler wird nun am Simulink Modell getestet. Der Sollwert betägt 1600\textdegree/s , als Stationärer Endwert wird 1 angestrebt. Um diesen zu erreichen wird eine Vorsteuerung mit dem Verstärkungsfaktor  \textit{K\textsubscript{vor}} = $\frac{1600}{1581,5}$ implementiert. 
+Die benötigte Stellgröße liegt über 5 \textit{Volt} aber noch im realistischen Bereich, dennoch liegt diese über 0,3 Sekunden lang an, sodass hier Handlungsbedarf bestüde, falls das reale System einen Error Code ausgegeben würde.
+
+
 %f)
 \subsubsection{Aufgabe 5.f}	
 Der P-Regler wird mit Vorsteuerung an der realen Maschine getestet. Der Filter ist dabei einzuschalten. Es fällt auf das die Maschine trotz eines überschreitens der kritischen Überspannungszeit, welche in der Simulation auftritt, korrekt arbeitet. Hier sind die Modellabweichungen so groß, dass wir die kritische Spannung weniger als 0,3 Sekunden  lang halten. Es lässt sich durch die nur näherungsweise zutreffende Streckenübertragungsfunktion in Form eines PT1 Gliedes erklären. Das System ist nur für den einen Sollwert von 1600 Grad/s stationär genau. Umso mehr die Sollwertgröße von 1600 Grad/sec abweicht desto Größer wird die Abweichung des Stationären Endwertes. Dies fällt erst bei weniger als 800 Grad/s deutlich auf und ist bei 400 Grad/s gut zu erkennen.\\
+
+
 %g)
 \subsubsection{Aufgabe 5.g}	
 Um Stationäre Genauigkeit für alle Sollwerte zu erreichen wird dem Regler ein I-Anteil hinzugefügt. Der PI-Regler wird über das SISO Tool ausgelegt. Aus den Anforderungen t\textsubscript{5\%}=0,4s und keinem Überschwingen, woraus sich ergibt das die Pole rein reell sein müssen, ergibt sich für den schnellst möglichen Regler die Übertragungsfunktion:
+
+
 %=======Beginn MÜLL
 %nun werden daraus die Pole in Abhängigkeit des Faktors K_p bestimmt. Daraus folgt das der Wert für K \textsubscript{p}=0,0711 betragen muss. 
 %\subsubsection{e)}	
@@ -336,13 +335,17 @@ G(s)_{PI}&=0,00745*\frac{1-7,1s}{s}
 
 
 %6------------------------------------
+
 \subsection{Aufgabe 6 Kaskadierte Positionsregelung}
 \subsubsection{Aufgabe 6.a}	
 Statt dem PI-Regler soll nun eine Regelstruktur bestehend aus einem kaskadiertem P-Regler verwendet werden. Die Übertragungsfunktion des geschlossenen Regelkreises lautet:
+
 \begin{align}
 G(s)_{ua\dot{\theta}}&=G(s)_{PT1}*G(s)_{p} \notag \\
    G(s)_{ua\dot{\theta}}&=\frac{90,6525}{91,6252+9,17s}
 \end{align} 
+
+
 \subsubsection{Aufgabe 6.b}	
 %b)
 Erweitert man diese Gleichung um die Eigenschaften der Positionsregelung so ergibt sich die folgende Übertragungsfunktion:
@@ -578,10 +581,6 @@ Man könnte im Nachgang diesen Versuch mit etwas Öl auf den Lagern wiederholen 
 %<<<<<<< HEAD
 \newpage
 \section{Versuch Kran}
-\subsection{Vorbereitungsaufgaben}
-% subsection sollte rausfliegen
-%\subsection{Vorbereitungsaufgaben}
-%Welcome to Jonas part3
 \subsection{Regelung der Wagenposition y\textsubscript{w}}
 \subsubsection {Arbeitsposition einnehmen}
 Der Kran ist in die zukünftige Arbeitsposition zu bewegen, das bedeutet er soll sich auf der mittleren x\textsubscript{w}-Position sowie auf der mittleren R-Position (Höhenposition) befinden. Diese beiden Parameter sowie die dazugehörigen Stellgrößen bleiben für den Rest des Versuchs unverändert, während in der y\textsubscript{w}-Richtung gearbeiten wird. 
@@ -648,31 +647,22 @@ Gegeben sind der Verstärkungsfaktor\textit{R\textsubscript{y}} und die Position
 
 \newpage
 %end of Jonas part3
-<<<<<<< HEAD
-\subsection{ZusätzlicheRregelung des Winkels $\alpha$ }
-Februar 2019 durchgeführt.
-a)	Es handelt sich um ein um die Ruhelage linearisiertes Zeitinvariantes System. Dies im LTI Block implementiert wird. Die Rückkopplungen sind ebenfalls Linear weshalb die gesamte Regler Struktur Linear ist.
-Das Linearisierte Modell kann in zwei Versionen in Mathlab bzw. Simulink implementiert werden:
-1) Es kann über die Verschiedenen Beziehungen der einzelnen Zustandsgrößen und Eingangsgrößen ein Simulink Modell erstellt werden.
-2) Die Linearisierten Gleichungen in Matrizen Form können direkt in Mathlab eingegeben werden, woraus Mathlab selbstständig ein LTI System realiesiert. 
-Beide Varianten liefern das gleiche Ergebnis.
-Wir benutzten den 1. Weg. 
->>>>>>> master
-%Zweigrafiken nebeneinander: Schema
-%\begin{figure} 
-%    \subfigure[Bezeichnung der linken Grafik]{\includegraphics[width=0.49\textwidth]{ordner/name1.jpg}} 
-%    \subfigure[Bezeichnung der rechten Grafik]{\includegraphics[width=0.49\textwidth]{ordner/name2.jpg}} 
-%\caption{Titel unterm gesamten Bild} 
-%\end{figure}
-<<<<<<< HEAD
-\begin{figure}[H]  %Darauf achten, dass diese Figur an der richtigen Stelle ist
-=======
-\newpage
-\section{Versuch Kran}
-\subsection{Vorbereitungsaufgaben}
-\subsection{Regelung der Wagenposition y\textsubscript{w}}
-\subsection{Zusätzliche regelung des Winkels $\alpha$ }
-=======
+%<<<<<<< HEAD
+%\subsection{ZusätzlicheRregelung des Winkels $\alpha$ }
+%Februar 2019 durchgeführt.
+%a)	Es handelt sich um ein um die Ruhelage linearisiertes Zeitinvariantes System. Dies im LTI Block implementiert wird. Die Rückkopplungen sind ebenfalls Linear weshalb die gesamte Regler Struktur Linear ist.
+%Das Linearisierte Modell kann in zwei Versionen in Mathlab bzw. Simulink implementiert werden:
+%1) Es kann über die Verschiedenen Beziehungen der einzelnen Zustandsgrößen und Eingangsgrößen ein Simulink Modell erstellt werden.
+%2) Die Linearisierten Gleichungen in Matrizen Form können direkt in Mathlab eingegeben werden, woraus Mathlab selbstständig ein LTI System realiesiert. 
+%Beide Varianten liefern das gleiche Ergebnis.
+%Wir benutzten den 1. Weg. 
+%>>>>>>> master
+%%Zweigrafiken nebeneinander: Schema
+%%\begin{figure} 
+%%    \subfigure[Bezeichnung der linken Grafik]{\includegraphics[width=0.49\textwidth]{ordner/name1.jpg}} 
+%%    \subfigure[Bezeichnung der rechten Grafik]{\includegraphics[width=0.49\textwidth]{ordner/name2.jpg}} 
+%%\caption{Titel unterm gesamten Bild} 
+%%\end{figure}
 \subsection{Aufgabe 4.4 Zusätzliche Regelung des Winkels $\alpha$ }
 >>>>>>> Leon
 %a)	+ b)
@@ -685,18 +675,13 @@ Das Linearisierte Modell kann in zwei Versionen in Mathlab bzw. Simulink impleme
 Beide Varianten liefern das gleiche Ergebnis.
 Wir benutzten den 1. Weg. \\
 Die Konstante R \textsubscript{y} besitzt den Wert 5 und die Startwerte der Integratorenkette sind identisch, gleich Null.\\
-<<<<<<< HEAD
-\begin{figure}  %Darauf achten, dass diese Figur an der richtigen Stelle ist
-=======
+
 \begin{figure} [H]
- %Darauf achten, dass diese Figur an der richtigen Stelle ist
-%>>>>>>> master
->>>>>>> Leon
->>>>>>> master
     \subfigure[Simulink Modell ]{\includegraphics[width=0.6\textwidth]{Leon-PRT-Bilder/Simulink1}} 
     \subfigure[Simulink LTI Block]{\includegraphics[width=0.42\textwidth]{Leon-PRT-Bilder/Simulink2}} 
 \caption{Simulink Modell mit aufgetrennter Rückkoplung} 
 \end{figure}
+
 \subsubsection{Aufgabe 4.4.c}	
 Aus dem Modell werden die Übertragungsfunktion und ihre Pole bestimmt.
 
