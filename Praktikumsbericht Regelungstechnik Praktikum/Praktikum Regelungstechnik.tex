@@ -14,7 +14,29 @@
 
 \begin {document}
 
+<<<<<<< HEAD
 \title{Praktiukumsarbeit zum Praktikum Regelungstechnik}
+=======
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ %Infobereich: nice to have:
+
+
+
+%Griechisches Alphabet:
+
+ %$ \alpha\beta\gamma\delta\epsilon\varepsilon\zeta\eta\theta\vartheta\iota\kappa\lambda\mu\nu\xi\pi
+ %\varpi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega\Gamma\Delta\Theta\Lambda\Xi
+ %\Pi\Sigma\Upsilon\Phi\Psi\Omega $
+
+
+
+
+%(gerne ergänzen)
+
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\title{Praktikumsarbeit zum Praktikum Regelungstechnik}
+>>>>>>> Christian
 \author{Christian Küllmer, Jonas Kallweidt, Leon Blum}
 \date{\today{}, Kassel}
 \maketitle
@@ -24,9 +46,12 @@
 \renewcommand{\contentsname}{Inhaltsverzeichnis}
 \tableofcontents
 \newpage
+%das Abbildungsverzeichnis, falls wir das haben wollen
+% Chris: Ja find ich cool, aber lass nach hinten machen :)
 % ?????????das Abbildungsverzeichnis, falls wir das haben wollen?????????????????????
 \listoffigures
 \newpage
+
 
 
 %--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -56,7 +81,7 @@
 
 \section{Rechnerteil Aufgaben aus Kapitel 9.3 des Praktikumsskripts}
 In diesem Praktikumsteil geht es darum, einen Roboterarm am Computer mit Hilfe von Mathlab zu simulieren und zu analysiere. 
-
+% Der Satz ist halt einfach viel besser, Chris
 \subsection{Aufgabe 9.3a Simulink-Modell erstellen}
 Es sind diverse Konstanten und ein Blockschaltbild des Roboterarms gegeben, aus denen es zunächst ein Simulink-Modell zu erstellen gilt. Dabei ist zu beachten, dass das Modell initialisierbar sein soll und deshalb der Motor als eigener geschlossener Regelkreis implementiert werden muss. Aus diesen Vorgabenen resultiert das folgende Simulink-Modell:
 \begin{figure}[H]
@@ -115,12 +140,15 @@ Das System wird gemäß den Vorgaben simuliert und die Zustandsgrößen werden �
 
 Aus dem obenstehenden Diagramm geht hervor, dass das System ein stabiles System darstellt, solange keine Stellgröße eingeprägt wird. Für gewöhlich kann das System eine Ruhelage bei 0\,$^\circ$ annehmen, wenn vorher keine Auslenkung vorgenommen wurde. Hier geht die Auslenkung auf keinen stationären Endwert, da die Expotentialfunktion zur Beschreibung der Dämpfung niemals null wird. In einem Realen System wird hier aber wahrscheinlich ein Stillstand nach beliebig langer Wartezeit eintreten, wenn der Roboterarm die Haftreibung nicht mehr Überwinden kann und die Bewegung im Aperiodischen Grenzfall endet.
 \newpage
+\subsection{Aufgabe c)}
+
 %Version von Jonas und Christian vom 24.07.2019 am 13.08.2019 von Jonas überarbeitet
 
 
 
 \subsection{Aufgabe 9.3.c  Simulation mit Eingangssignal ohne Startwert}
 Es soll eine Simulation mit den folgenden Vorgaben durchgeführt werden: 
+>>>>>>> Jonas
 \begin{align}
 \varphi  (0) &= 0 \\
 \dot \varphi (0) &= 0 \\
@@ -236,26 +264,30 @@ Die sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
 	\label{img:grafik-dummy}
 \end{figure}
 
+<<<<<<< HEAD
+Man sieht deutlich, dass es hier eine Stabilisierung der Funktion ergibt. Es ist natürlich keine unbegrenzte Stabilität von dem System zu erwarten. Der K-Wert sollte dabei so gewählt werden, dass die realen Pole alle im Linken teil der Kurve liegen sollten. Das wiederum hat dann die Folge, dass sich der K-Wert in einem gewissen Rahmen einstellen lassen können muss.
+=======
 \subsection{Aufgabe 9.3.h}
 %missing input
+>>>>>>> Jonas
 
 %Präsensversuche
 %----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \section{Versuch Antrieb}
-a)	Die Sprungantwort des Systems soll ohne Filter ermittelt werden. Dabei zeigt sich jedoch das die Sprungantwort stark um den Wert von 300 fluktuiert.
+\subsection{a)}	Die Sprungantwort des Systems soll ohne Filter ermittelt werden. Dabei zeigt sich jedoch das die Sprungantwort stark um den Wert von 300 fluktuiert.
 	Nun soll die Sprungantwort mit eingeschaltetem Filter aufgenommen werden. Daraus wurde die Übertragungsfunktion durch ein PT1 Glied angenähert. Das Überschwingen wurde vernachlässigt. Die bestimmte Näherung lautet: 
 \begin{align}
    G(s)_{PT1}=\frac{1275}{1+9,17s}
 \end{align}
-c)	Auf Basis der angenäherten Übertragungsfunktion kann nun ein Simulink Modell erstellt werden. Auf dies kann ein Regler ausgelegt werden und am realem Versuchsaufbau getestet werden.
-d)	Die Vorgabe für den Regler soll eine t \textsubscript{5\%} Zeit von 0,3 Sekunden sein. Mithilfe einer Faustformel kann nun der Der Realteil des Poles bestimmt werden. Es ergibt sich dafür ein Realteil von -10 für den Pol des Geschlossenen Regelkreises des P Reglers. Der Geschlossene Regelkreis weist folgende Form auf:
+\subsection{c)}	Auf Basis der angenäherten Übertragungsfunktion kann nun ein Simulink Modell erstellt werden. Auf dies kann ein Regler ausgelegt werden und am realem Versuchsaufbau getestet werden.
+\subsection{d)}	Die Vorgabe für den Regler soll eine t \textsubscript{5\%} Zeit von 0,3 Sekunden sein. Mithilfe einer Faustformel kann nun der Der Realteil des Poles bestimmt werden. Es ergibt sich dafür ein Realteil von -10 für den Pol des Geschlossenen Regelkreises des P Reglers. Der Geschlossene Regelkreis weist folgende Form auf:
 \begin{align}
    G(s)_{PT1-geschlossen}=\frac{1275K_p}{1275K_p+9,17s}
 \end{align}
 %nun werden daraus die Pole in Abhängigkeit des Faktors K_p bestimmt. Daraus folgt das der Wert für K \textsubscript{p}=0,0711 betragen muss. 
-e)	Der P-Regler wird nun am Simulink Modell getestet. Als Stationärer Endwert wird 1 angestrebt. Um diesen Zu erreichen wird eine Vorsteuerung mit dem Verstärkungsfaktor K \textsubscript{vor}= $ \frac{1600}{1581,5} $ die benötigte Stellgröße liegt über 5Volt aber im realistischen Bereich, dennoch liegt diese über 0,3 Sekunden lang an, sodass hier Handlungsbedarf besteht wenn das Reale System einen Error Code ausgibt.
-f)	Der P-Regler wird mit Vorsteuerung an der realen Maschine getestet. Es fällt auf das die Maschine trotz eines überschreitens der kritischen Überspannungszeit in der Simulation korrekt arbeitet. Hier sind die Modellabweichungen so groß, dass wir die kritische Spannung weniger als 0,3 Sekunden  lang halten. Es lässt sich durch die nur näherungsweise zutreffende Streckenübertragungsfunktion in form eines PT1 Gliedes erklären. Das System ist nur für den einen Sollwert von 1600 Grad/sec stationär genau. Umso mehr die Sollwertgröße von 1600 Grad/sec abweicht desto Größer wird die Abweichung des Stationären Endwertes. Dies fällt erst bei weniger als 800 Grad/sec deutlich auf und ist bei 400 Grad/sec gut zu erkennen.
-g)	Um Stationäre Genauigkeit für alle Sollwerte zu erreichen wird dem Regler ein I-Anteil hinzugefügt. Der PI-Regler wird über das SISO Tool ausgelegt. Aus den Anforderungen t \textsubscript{5\%}=0,4s und kein Überschwingen woraus sich ergibt das die Pole rein reell sein müssen ergibt sich für den schnellst möglichen Regler die Übertragungsfunktion
+\subsection{e)}	Der P-Regler wird nun am Simulink Modell getestet. Als Stationärer Endwert wird 1 angestrebt. Um diesen Zu erreichen wird eine Vorsteuerung mit dem Verstärkungsfaktor K \textsubscript{vor}= $ \frac{1600}{1581,5} $ die benötigte Stellgröße liegt über 5Volt aber im realistischen Bereich, dennoch liegt diese über 0,3 Sekunden lang an, sodass hier Handlungsbedarf besteht wenn das Reale System einen Error Code ausgibt.
+\subsection{f)}	Der P-Regler wird mit Vorsteuerung an der realen Maschine getestet. Es fällt auf das die Maschine trotz eines überschreitens der kritischen Überspannungszeit in der Simulation korrekt arbeitet. Hier sind die Modellabweichungen so groß, dass wir die kritische Spannung weniger als 0,3 Sekunden  lang halten. Es lässt sich durch die nur näherungsweise zutreffende Streckenübertragungsfunktion in form eines PT1 Gliedes erklären. Das System ist nur für den einen Sollwert von 1600 Grad/sec stationär genau. Umso mehr die Sollwertgröße von 1600 Grad/sec abweicht desto Größer wird die Abweichung des Stationären Endwertes. Dies fällt erst bei weniger als 800 Grad/sec deutlich auf und ist bei 400 Grad/sec gut zu erkennen.
+\subsection{g)}	Um Stationäre Genauigkeit für alle Sollwerte zu erreichen wird dem Regler ein I-Anteil hinzugefügt. Der PI-Regler wird über das SISO Tool ausgelegt. Aus den Anforderungen t \textsubscript{5\%}=0,4s und kein Überschwingen woraus sich ergibt das die Pole rein reell sein müssen ergibt sich für den schnellst möglichen Regler die Übertragungsfunktion
 \begin{align}
    G(s)_{PI}=0,0074*\frac{1-7,1s}{s}
 \end{align} 
@@ -278,6 +310,73 @@ Mithilfe des SISO Tools kann ein P-Regler ausgelegt werden der die t \textsubscr
  Allerdings ist dies ohne weiteres nicht möglich da das reale System einen Error Code ausgibt. 
 Dies liegt an mehreren Problemen.
 	Zuerst muss das Problem der Überspannung gelöst werden. Dies kann dadurch geschehen, dass ein Sättigungsblock in den Regelkreis eingebaut wird, sodass der Motor mit Maximal 5 Volt versorgt wird. Als nächstes muss die zu große Winkelgeschwindigkeit verringert werden. Dazu wird wieder ein Sättigungsblock eingebaut, weher die Winkelgeschwindigkeit auf Maximal 2000 Grad/sec wachsen lässt. Sind diese Probleme behoben kann der Motor in diesem Versuch einwandfrei benutzt werden. 
+\subsection{Verbesserte Positionsregelung}
+\subsubsection{Berechnen der Kaskadenregelung und der Führungsübertragungsfunktion}
+Die Faustformel aus der Vorlesung schreibt folgende berechnung der Führungsübertragungsfunktion dar:
+\begin{align}
+   m=\frac{Im(\lambda)}{Re(\lambda)}
+\end{align} 
+Es soll der dominante Pol unter diesem hinblick untersucht werden. Dabei wird folgendes Ergebnis erziehlt:
+\begin{itemize}
+\item Berechnen der Pole der Streckenübertragungsfunktion und das prozentuale Überschwingen:
+\begin{align}
+G_{w} = \frac{186,0496}{(s+13,46) * (s-13,46)}
+\end{align} 
+Daraus ergeben sich folgende Polstellen:
+\begin{align}
+ x_1 = 23.4600 ,\,\,\
+ x_2 =-10.0000 -13.4600i
+\end{align}
+
+\item \subsubsection{Bestimmen der Verstärkung des P-Reglers} Bestimmen der P-Regelkoeffizienten dieser Anordnung kann folgend vorgenommen werden:
+Bei der Anordnung können die kaskadierten Werte der P-Regler K\textsubscript{P} und K\textsubscript{I} 
+
+Allgemein gilt für die Formel:
+\begin{align}
+G_{w} = \frac{\frac{K_P * K_s*K_D}{T}}{s^2+(\frac{K_D*K_P}{T}+\frac{1}{T})*s+\frac{K_P*K_I*K_S}{T}}
+\end{align} 
+\begin{align}
+G_{w} = \frac{186,0496}{(s+13,46) * (s-13,46)}
+\end{align} 
+Aus der oben genanten Gleichung kann also gefolgert werden:
+\begin{align}
+\frac{K_P * K_s*K_I}{T} =186,0496
+\end{align}
+Wir können also K\textsubscript{R} bestimmen als:
+\begin{align}
+K_P * K_I = K = 0,04377637647
+\end{align}
+% m_{\Delta}=\frac{Im(\lambda)}{Re(\lambda)} ,\
+\item \subsubsection{Simulieren des Regler und Überprüfung auf die Vorgaben}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\textwidth]{Drehzahl6e3neu.png}
+	\caption{Simulation der berechneten Regelgrößen und der Berechneten K-Werte bei der Führungsgröße 90 $^\circ$.}
+	\label{img:grafik-dummy}
+\end{figure}
+Anhand der Führungsgröße bleibt zu sehen, dass nun angepasst Verhalten von  $\Delta$ m und t\textsubscript{5\%}.
+Beim Ablesen der Werte aus dem Diagramm können folgende Werte Festgehalten werden:
+\begin{align}
+\Delta m = 0
+\end{align}
+Dies könnte ebenfalls daraus gefolgdert werden, dass es sich um ein PT-1-Glied handelt und diese in keinem Fall ein Überschwingen erzeugen.
+\begin{align}
+t\textsubscript{5\%} = 3s
+\end{align}
+Die t\textsubscript{5\%} Zeit liegt mit 3 Sekunden im erwarteten Rahmen.
+\end{itemize}
+
+\subsubsection{Implementation und versuch an der Maschine im Praktikum}
+Der Test im realen System zeigt, dass das System sich real nicht, wie ein PT-1-Glied verhält. Dies ist vorallem mit den sehr hohen Reibungskoeffizienten am Versuchsaufbau zu erklären. Daraus ergibt sich folgendes Diagramm der Drehung um 90 $^\circ$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.2\textwidth]{Drehzahl57B.png}
+	\caption{Realer Messwert des Systems bei einer geregelten Drehung um 90 $^\circ$}
+	\label{img:grafik-dummy}
+\end{figure}
+Man könnte im Nachgang diesen Versuch mit etwas Öl auf den Lagern wiederholen um verbesserte Ergebnisse zu erzielen, ein Überschwingen ist ebenfalls nicht eingetreten allerdings hat der Verlauf des realen System nicht die erwarteten gemeinsamkeinten mit einer PT-1-Strecke.
+\newpage
+
 
 
 %--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -511,9 +610,9 @@ $G(s)_PI=0,0074*(1-7,1s)/s$ ferner ist keine Vorsteuerung erforderlich, da der P
 In diesem Versuch wird der Einfluss der Abtastzeit auf das Ergebnis der Regelung genommen. Da wir die Regelfunktion des PD-Regler diskretisiert haben und danach sich das Ergebnis im k Bereich befindet, muss dieses Ergebnis dann noch in die Bildebene Z gebracht werden. 
 %TODO Deltas aus dem Text entfernen!
 \begin{align}
-   G_R(s) = K_P + K_D s = K_P *s + K_D *·(1 + s *T_D)  \\
+   G(s)_R = K_P + K_D s = K_P *s + K_D *·(1 + s *T_D)  \\
    y_k= K_P * k+ \frac{K_D}{T_D} *( k - 1 )  \\
-   G_R(z) = K_p * z + \frac{K_D}{T_D*T} *\frac{z-1}{z}
+   G(z)_R = K_p * z + \frac{K_D}{T_D*T} *\frac{z-1}{z}
 \end{align}
 Was dabei einkalkuliert wurde, ist, dass T direkt die Abtastzeit des Reglers Berücksichtigt und daraus sich der Regelkreis beeinflussen lässt.
 \begin{enumerate}
@@ -578,7 +677,7 @@ Nach einigen Versuchsreihen wurde ein Stellte sich der beste Kompromiss bei eine
 	\label{img:grafik-dummy}
 \end{figure}
 
-Es lässt sich dabei festhalten 
+Es lässt sich dabei festhalten, dass zwar eine Regelverbesserung eintritt, allerdings das Zittern des Versuchs erneut vorhanden ist. Vielleicht könnte dies mit dem im Kapitel vorher gezeigten Filterglied in der Griff verbessert werden. Hierbei muss also die Abtastzeit der Messeinrichtung berücksichtigt werden um dieses Zittern zu vermieden und eine bessere Regelaussteuerung zu ermöglichen.
 \subsection{Regelung der x- und y- Achse}
 
 %Modell zum Einfügen eines Bildes
@@ -588,6 +687,8 @@ Es lässt sich dabei festhalten
 %	\caption{Teamlogo: Team A}
 %	\label{img:grafik-dummy}
 %\end{figure}
+\newpage
+\listoffigures
 
 
 \end{document}
