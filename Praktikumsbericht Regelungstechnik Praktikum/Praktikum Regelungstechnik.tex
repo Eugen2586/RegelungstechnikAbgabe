@@ -279,11 +279,6 @@ Die sich damit realisierende Ausgabe wurde von dieser Wurzelortskurve erzeugt.
 Man sieht deutlich, dass es hier eine Stabilisierung der Funktion ergibt. Es ist natürlich keine unbegrenzte Stabilität von dem System zu erwarten. Der K-Wert sollte dabei so gewählt werden, dass die realen Pole alle im Linken teil der Kurve liegen sollten. Das wiederum hat dann die Folge, dass sich der K-Wert in einem gewissen Rahmen einstellen lassen können muss.
 =======
 \subsection{Aufgabe 9.3.h}
-%missing input
->>>>>>> Jonas
-
-%Präsensversuche
-<<<<<<< HEAD
 %------------------------------------------Antrieb--------------------------------------------------Antrieb-------------------------------------------------------------------
 \section{Versuch Antrieb}
 \subsection{Drehzahlregelung}
@@ -411,6 +406,28 @@ Der Peak am Start lässt sich durch den D-Anteil erklären welcher Differenziere
     \subfigure[Regelgröße]{\includegraphics[width=0.49\textwidth]{Leon-PRT-Bilder/Sch-Regel39}} 
 \caption{PID Regelung} 
 \end{figure}
+
+%11)
+\subsection{11}
+Die Übertragungsfunktion wird von der Vorsteuerung soweit korregiert, dass am Ende kein Steckenverhalten mehr auf dem Resultat überig bleibt. sondern das Steckenverhalten findet ab diesem Punkt nur noch Anwendung, wenn es zu einer Störgröße kommt. T' hat dabei den Einfluss, dass die Wirkung von 
+
+Das bedeutet, wenn T' in der Größe variiert wird der Teil des Systems verschoben, der die Strecke abbildet. Über ein größeres T' nimmt die Vorsteuerfähigkeit und dadurch bekommt das System eine größere Möglichkeit auf äußere Störwirkungen zu reagieren. Wird T' kleiner nimmt die Fähigkeit zur Reaktion auf Störungen ab.
+
+\subsection{12}
+Bei dem Test an dem Realen System hat die Vorsteuerung die Auswirkung, dass jetzt nur noch eine Abweichung von der Führungsgröße ausgeglicken wird. In der Section mit der Blauen hinterlegung wirken zwei Störgrößen, welche beide innerhalb weniger Sekunden zurück in das 5\% Band gebracht werden. Dazu benötigt der Regler eine Zeit von t\textsubscript{5\%}  = 8 \textit{s}. 
+
+Das bedeutet unser System kann jetzt gut auf die Anfallenden Störungs
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\textwidth]{Figure312Regel}
+	\caption{Aufzeichnung des echten Systems mit einer Störgröße}
+	\label{img:grafik-dummy}
+\end{figure}
+
+
+
+
+
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 =======
 	Zuerst muss das Problem der Überspannung gelöst werden. Dies kann dadurch geschehen, dass ein Sättigungsblock in den Regelkreis eingebaut wird, sodass der Motor mit Maximal 5 Volt versorgt wird. Als nächstes muss die zu große Winkelgeschwindigkeit verringert werden. Dazu wird wieder ein Sättigungsblock eingebaut, weher die Winkelgeschwindigkeit auf Maximal 2000 Grad/sec wachsen lässt. Sind diese Probleme behoben kann der Motor in diesem Versuch einwandfrei benutzt werden. 
@@ -626,7 +643,6 @@ Wir benutzten den 1. Weg.
 %    \subfigure[Bezeichnung der rechten Grafik]{\includegraphics[width=0.49\textwidth]{ordner/name2.jpg}} 
 %\caption{Titel unterm gesamten Bild} 
 %\end{figure}
-<<<<<<< HEAD
 \newpage
 \section{Versuch Kran}
 \subsection{Vorbereitungsaufgaben}
@@ -641,10 +657,7 @@ Das Linearisierte Modell kann in zwei Versionen in Mathlab bzw. Simulink impleme
 Beide Varianten liefern das gleiche Ergebnis.
 Wir benutzten den 1. Weg. \\
 Die Konstante R \textsubscript{y} besitzt den Wert 5 und die Startwerte der Integratorenkette sind identisch, gleich Null.\\
-\begin{figure} [H]
-=======
 \begin{figure}  %Darauf achten, dass diese Figur an der richtigen Stelle ist
->>>>>>> master
     \subfigure[Simulink Modell ]{\includegraphics[width=0.6\textwidth]{Leon-PRT-Bilder/Simulink1}} 
     \subfigure[Simulink LTI Block]{\includegraphics[width=0.42\textwidth]{Leon-PRT-Bilder/Simulink2}} 
 \caption{Simulink Modell mit aufgetrennter Rückkoplung} 
