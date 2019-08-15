@@ -1,0 +1,20 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces In Simulink gebautes Modell des Systems des Roboterarms}}{6}% 
+\contentsline {figure}{\numberline {2}{\ignorespaces Darstellung des Winkels f\IeC {\"u}r eine anf\IeC {\"a}ngliche Auslenkung von 40 Grad. }}{7}% 
+\contentsline {figure}{\numberline {3}{\ignorespaces Darstellung des Winkels f\IeC {\"u}r eine anf\IeC {\"a}ngliche Auslenkung von 40 Grad. }}{8}% 
+\contentsline {figure}{\numberline {4}{\ignorespaces Darstellung des Winkels f\IeC {\"u}r eine anf\IeC {\"a}ngliche Auslenkung von 40 Grad. }}{9}% 
+\contentsline {figure}{\numberline {5}{\ignorespaces Darstelung des Winkelgraphen bei einem gegebenen Drehmoment}}{10}% 
+\contentsline {figure}{\numberline {6}{\ignorespaces Wurzelortskurve des Systems G\textsubscript {s}}}{11}% 
+\contentsline {figure}{\numberline {7}{\ignorespaces Anzeige des Ausgangswertes}}{11}% 
+\contentsline {figure}{\numberline {8}{\ignorespaces Wurzelortskurve des Systems G\textsubscript {s} mit der Anpassung zweier Nullstellen}}{12}% 
+\contentsline {figure}{\numberline {9}{\ignorespaces Simulation der berechneten Regelgr\IeC {\"o}\IeC {\ss }en und der Berechneten K-Werte bei der F\IeC {\"u}hrungsgr\IeC {\"o}\IeC {\ss }e 90 $^\circ $.}}{16}% 
+\contentsline {figure}{\numberline {10}{\ignorespaces Realer Messwert des Systems bei einer geregelten Drehung um 90 $^\circ $}}{17}% 
+\contentsline {figure}{\numberline {11}{\ignorespaces Anzeige des Ausgangswertes}}{19}% 
+\contentsline {figure}{\numberline {12}{\ignorespaces Simulink Modell mit aufgetrennter R\IeC {\"u}ckkoplung}}{23}% 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Simulink Modell }}}{23}% 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Simulink LTI Block}}}{23}% 
+\contentsline {figure}{\numberline {13}{\ignorespaces Verlauf des Experimentes mit einer Abtastzeit von 200ms}}{26}% 
+\contentsline {figure}{\numberline {14}{\ignorespaces Verlauf des Experimentes mit einer Abtastzeit von 1ms}}{26}% 
+\contentsline {figure}{\numberline {15}{\ignorespaces Aufbau der PD-Regelung im realen System}}{27}% 
+\contentsline {figure}{\numberline {16}{\ignorespaces Aufbau der PD-Regelung im realen System}}{27}% 
+\contentsline {figure}{\numberline {17}{\ignorespaces Aufbau der PD-Regelung im realen System erg\IeC {\"a}nzt mit einer PT1-Strecke zur Filterung der Kleinstabweichungen}}{28}% 
+\contentsline {figure}{\numberline {18}{\ignorespaces Regelungsdarstellung mit der Stellgr\IeC {\"o}\IeC {\ss }enbeschr\IeC {\"a}nkung und einem PD-Regler}}{29}% 
