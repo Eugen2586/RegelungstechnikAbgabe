@@ -325,34 +325,32 @@ K_P * K_I = K = 0,04377637647
 \item \subsubsection{Simulieren des Regler und Überprüfung auf die Vorgaben}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.2\textwidth]{Drehzahl6e3neu.png}
+	\includegraphics[width=1.1\textwidth]{Drehzahl6e3neu.png}
 	\caption{Simulation der berechneten Regelgrößen und der Berechneten K-Werte bei der Führungsgröße 90 $^\circ$.}
 	\label{img:grafik-dummy}
 \end{figure}
 Anhand der Führungsgröße bleibt zu sehen, dass nun angepasst Verhalten von  $\Delta$ m und t\textsubscript{5\%}.
 Beim Ablesen der Werte aus dem Diagramm können folgende Werte Festgehalten werden:
-\begin{itemize}
-\item Das Ergebnis ist bei einer Führungsgröße von 2000
 \begin{align}
-% Muss noch geändert werden. Hier müssen Winkel rein.
-\Delta m = \frac{2100}{2000} = 1,05\,\frac{U}{s} \,\,und\,\,\, t\textsubscript{5\%} = 1,2\,s.
+\Delta m = 0
 \end{align}
-\item Das Ergebnis ist bei einer Führungsgröße mit 0 gleicht dem Wert der 2000 U/s. Dabei bleibt festzuhalten, dass der Motor einen Error meldet sobald dieser Versuch arbeitet. Dies liegt daran, dass die Stellgrößerenwerte des Motors stark überschritten werden würden.
+Dies könnte ebenfalls daraus gefolgdert werden, dass es sich um ein PT-1-Glied handelt und diese in keinem Fall ein Überschwingen erzeugen.
+\begin{align}
+t\textsubscript{5\%} = 3s
+\end{align}
+Die t\textsubscript{5\%} Zeit liegt mit 3 Sekunden im erwarteten Rahmen.
 \end{itemize}
 
 \subsubsection{Implementation und versuch an der Maschine im Praktikum}
-Der Test im realen System zeigt eine bedeutend kürzere einschwingzeit und eine bedeutend kleinere Überschwinggröße. Dies ist vorallem mit den sehr hohen Reibungskoeffizienten am Versuchsaufbau zu erklären. Daraus ergibt sich folgendes Diagramm der Drehung um 90 $^\circ$.
+Der Test im realen System zeigt, dass das System sich real nicht, wie ein PT-1-Glied verhält. Dies ist vorallem mit den sehr hohen Reibungskoeffizienten am Versuchsaufbau zu erklären. Daraus ergibt sich folgendes Diagramm der Drehung um 90 $^\circ$.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.2\textwidth]{Drehzahl57B.png}
 	\caption{Realer Messwert des Systems bei einer geregelten Drehung um 90 $^\circ$}
 	\label{img:grafik-dummy}
 \end{figure}
-
-
-
- \end{itemize}
-
+Man könnte im Nachgang diesen Versuch mit etwas Öl auf den Lagern wiederholen um verbesserte Ergebnisse zu erzielen, ein Überschwingen ist ebenfalls nicht eingetreten allerdings hat der Verlauf des realen System nicht die erwarteten gemeinsamkeinten mit einer PT-1-Strecke.
+\newpage
 
 
 
